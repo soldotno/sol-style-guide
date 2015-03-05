@@ -1,0 +1,32 @@
+/**
+ * Roboto Slab 700
+ * 
+ * Intended use: headers.
+ *
+ * Usage:
+ *
+ * h1 {
+ *     font-family: 'Roboto Slab', serif;
+ *     font-weight: bold;
+ * }
+ */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700);
+
+@function roboto() {
+	@return 'Roboto Slab', 'serif';
+}
+
+/**
+ * Helvetica Neue
+ *
+ * Intended use: Body copy.
+ *
+ * Usage:
+ *
+ * p {
+ *     font-family: 'Helvetica'
+ * }
+ */
+@function helvetica() {
+	@return 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+}

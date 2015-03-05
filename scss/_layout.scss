@@ -1,0 +1,32 @@
+@mixin spacing() {
+	margin:$verticalBase $horizontalBase;
+	padding:0 $horizontalBase $verticalBase;
+}
+
+@mixin paper() {
+	@include spacing();
+	@include box-shadow(rgb(221,221,221) 0px 0px 2px);
+
+	background:$paperColor;
+	border:1px solid darken($bgColor, 6.5%);
+}
+
+body {
+	background:$bgColor;
+}
+
+main {
+	max-width:66.6rem;
+	max-width:98.0rem;
+	margin:auto;
+}
+
+article {
+	@include paper();
+}
+
+.byline {
+	background-color:$bylineBgColor;
+	margin-left:-$horizontalBase;
+	margin-right:-$horizontalBase;
+}
