@@ -42,6 +42,7 @@ h3 {
 }
 h4 {
     padding-top:$verticalBase;
+    padding-bottom:$verticalBase;
 }
 h5 {
 	padding-top:$verticalBase*3/5;
@@ -79,6 +80,11 @@ em {
 	font-style:italic;
 }
 
+img {
+    max-width:100%;
+    height:auto;
+}
+
 /**
  * Lists
  */
@@ -96,7 +102,11 @@ ol {
 }
 
 li {
+    padding-bottom:$verticalBase;
 
+    :last-child {
+        margin-bottom:0;
+    }
 }
 
 dl {

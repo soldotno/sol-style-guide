@@ -1,11 +1,21 @@
-@mixin spacing() {
+@mixin margin() {
 	margin:$verticalBase $horizontalBase;
+}
+@mixin padding() {
 	padding:0 $horizontalBase $verticalBase;
+}
+@mixin spacing() {
+    @include margin();
+    @include padding();
+}
+
+@mixin paper-shadow() {
+	@include box-shadow(rgb(221,221,221) 0px 0px 2px);
 }
 
 @mixin paper() {
 	@include spacing();
-	@include box-shadow(rgb(221,221,221) 0px 0px 2px);
+    @include paper-shadow();
 
 	background:$paperColor;
 	border:1px solid darken($bgColor, 6.5%);

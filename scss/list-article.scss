@@ -4,41 +4,70 @@
 article.list {
     @include nopaper();
 
-    .entry-content > ol {
-        padding-left:0;
-        padding-right:0;
+    header {
+        @include paper-shadow();
+        background:$paperColor;
+        margin:0rem $horizontalBase*-1 $verticalBase;
+        padding:0 $horizontalBase;
+    }
 
-        list-style:none;
-        counter-reset:li-counter;
+    .entry-content {
+        > ol {
+            padding-left:0;
+            padding-right:0;
 
-        > li {
-            @include paper();
-            @include spacing();
+            list-style:none;
+            counter-reset:li-counter;
 
-            overflow:hidden;
+            > li {
+                @include paper();
+                margin:$verticalBase 0;
+                padding:0 $horizontalBase $verticalBase;
 
-            &:before {
-                @include spacing();
-                margin-left:0;
+                overflow:hidden;
 
-                content:counter(li-counter);
-                counter-increment:li-counter;
-                display:inline-block;
-                width:2*$verticalBase;
-                height:2*$verticalBase;
-                border-radius:50%;
-                text-align:center;
-                line-height:2*$verticalBase;
-                float:left;
-                clear:left;
+                &:before {
+                    @include spacing();
+                    margin-left:0;
+                    padding:0;
 
-                background:$solColor;
-                color:white;
+                    content:counter(li-counter);
+                    counter-increment:li-counter;
+                    display:inline-block;
+                    width:2*$verticalBase;
+                    height:2*$verticalBase;
+                    border-radius:50%;
+                    text-align:center;
+                    line-height:2*$verticalBase;
+                    float:left;
+                    clear:left;
+
+                    background:$solColor;
+                    color:white;
+
+                    font-family:helvetica();
+                    font-weight:bold;
+                    font-size:2.4rem;
+                }
+
+                :first-child {
+                    clear:none;
+                }
             }
+        }
 
-            h4:first-of-type {
-                clear:none;
+        .wp-caption {
+            margin:0 -$horizontalBase;
+            width:auto !important;
+
+            > img {
+                width:100%;
             }
+        }
+
+        .wp-caption-text {
+            @extend cite;
+            @include padding();
         }
     }
 }
