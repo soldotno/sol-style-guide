@@ -7,12 +7,10 @@ var reload = browserSync.reload;
 
 var production = process.env.NODE_ENV === 'production';
 
-gulp.task('sass', function (cb) {
+gulp.task('sass', function() {
     gulp.src('./scss/*.scss')
-        .pipe(sass({
-        }))
+        .pipe(sass())
         .pipe(production ? cssmin() : (new NopStream()))
         .pipe(gulp.dest('./css'))
         .pipe(reload({stream: true}));
-    cb()
 });

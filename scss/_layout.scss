@@ -11,6 +11,21 @@
 	border:1px solid darken($bgColor, 6.5%);
 }
 
+@mixin nopaper() {
+    margin:0;
+    box-shadow:none;
+    background:transparent;
+    border:none;
+}
+
+@mixin standout() {
+	background-color:$bylineBgColor;
+	margin-left: -$horizontalBase;
+	margin-right:-$horizontalBase;
+    padding-left: $horizontalBase;
+    padding-right:$horizontalBase;
+}
+
 body {
 	background:$bgColor;
 }
@@ -26,7 +41,11 @@ article {
 }
 
 .byline {
-	background-color:$bylineBgColor;
-	margin-left:-$horizontalBase;
-	margin-right:-$horizontalBase;
+    @include standout();
+}
+
+.entry-footer {
+    @include standout();
+    margin-top:2*$verticalBase;
+    margin-bottom:-$verticalBase;
 }

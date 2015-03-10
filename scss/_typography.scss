@@ -40,11 +40,12 @@ h3 {
 	padding-top:$verticalBase*8/5;
 	padding-bottom:$verticalBase*2/5;
 }
-h4,h5 {
-	padding-top:$verticalBase*3/5;
-	padding-bottom:$verticalBase*2/5;
+h4 {
+    padding-top:$verticalBase;
 }
 h5 {
+	padding-top:$verticalBase*3/5;
+	padding-bottom:$verticalBase*2/5;
 	font-size:1.4rem;
 	color:$lightHeadingColor;
 }
@@ -83,7 +84,7 @@ em {
  */
 
 ul, ol {
-	margin-left:2*$horizontalBase;
+	padding-left:2*$horizontalBase;
 }
 
 ul {
@@ -127,8 +128,10 @@ dd {
 		display:inline;
 	}
 }
+.entry-footer {
+    @extend h5;
+}
 // Lede
 h1 + p {
 	font-size:1.8rem;
 }
-

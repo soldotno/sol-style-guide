@@ -1,0 +1,44 @@
+@import
+    'style';
+
+article.list {
+    @include nopaper();
+
+    .entry-content > ol {
+        padding-left:0;
+        padding-right:0;
+
+        list-style:none;
+        counter-reset:li-counter;
+
+        > li {
+            @include paper();
+            @include spacing();
+
+            overflow:hidden;
+
+            &:before {
+                @include spacing();
+                margin-left:0;
+
+                content:counter(li-counter);
+                counter-increment:li-counter;
+                display:inline-block;
+                width:2*$verticalBase;
+                height:2*$verticalBase;
+                border-radius:50%;
+                text-align:center;
+                line-height:2*$verticalBase;
+                float:left;
+                clear:left;
+
+                background:$solColor;
+                color:white;
+            }
+
+            h4:first-of-type {
+                clear:none;
+            }
+        }
+    }
+}
