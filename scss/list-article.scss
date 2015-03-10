@@ -23,6 +23,7 @@ article.list {
                 @include paper();
                 margin:$verticalBase 0;
                 padding:0 $horizontalBase $verticalBase;
+                padding:0 $horizontalBase;
 
                 position:relative;
                 overflow:hidden;
@@ -57,17 +58,20 @@ article.list {
                 > :first-child {
                     clear:none;
                     padding-left:$horizontalBase + 2*$verticalBase;
+                    min-height:4*$verticalBase;
                 }
 
+                /*
                 :last-child {
                     padding-bottom:0;
                     margin-bottom:0;
                 }
+                */
             }
         }
 
         .wp-caption {
-            margin:0 -$horizontalBase;
+            margin:0rem $horizontalBase*-1;
             width:auto !important;
 
             > img {
