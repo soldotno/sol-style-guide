@@ -1,13 +1,14 @@
 // Palette
 $neutralColor:rgb(238,238,238);
 $whiteColor:rgb(255,255,255);
-$offwhiteColor:darken($whiteColor,4%);
+$lightShade:rgba(0,0,0,0.04);
+$offwhiteColor:#f5f5f5;
 
 // Backgrounds
 $bgColor: $neutralColor;
 $paperColor: $whiteColor;
-$bylineBgColor: $offwhiteColor;
-$linkBgColor: $offwhiteColor;
+$bylineBgColor: $lightShade;
+$linkBgColor: $lightShade;
 
 // Copy
 $headingColor:#333;
@@ -16,5 +17,7 @@ $lightTextColor:#777;
 $bylineColor:#8f8f8f;
 $lightHeadingColor:lighten($headingColor,36%);
 $linkColor:#08e;
+$linkHighlightColor:$offwhiteColor;
 
 $solColor:#e20613;
+$solRed:$solColor;
