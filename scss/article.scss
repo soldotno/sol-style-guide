@@ -12,6 +12,12 @@
     a {
         color:inherit;
         text-decoration:none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color:$linkBgColor;
+        }
     }
 
     dt,dd {

@@ -2,11 +2,18 @@
     margin:$verticalBase $horizontalBase;
 }
 @mixin padding() {
-    padding:0 $horizontalBase $verticalBase;
+    padding:$verticalBase $horizontalBase;
 }
 @mixin spacing() {
     @include margin();
     @include padding();
+
+    > :first-child {
+        margin-top:0;
+    }
+    > :last-child {
+        margin-bottom:0;
+    }
 }
 
 @mixin paper-shadow() {
@@ -58,4 +65,22 @@ article {
     @include standout();
     margin-top:2*$verticalBase;
     margin-bottom:-$verticalBase;
+}
+
+.post-navigation {
+    @include paper();
+    @include spacing();
+    @include clearfix();
+
+    .nav-previous,
+    .nav-next {
+    }
+
+    .nav-previous {
+        float:left;
+    }
+
+    .nav-next {
+        float:right;
+    }
 }

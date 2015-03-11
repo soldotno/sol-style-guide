@@ -22,9 +22,6 @@ article.list {
 
             > li {
                 @include paper();
-                margin:$verticalBase 0;
-                padding:0 $horizontalBase $verticalBase;
-                padding:0 $horizontalBase;
 
                 position:relative;
                 overflow:hidden;
@@ -57,17 +54,18 @@ article.list {
                 }
 
                 > :first-child {
-                    clear:none;
                     padding-left:$horizontalBase + 2*$verticalBase;
-                    min-height:4*$verticalBase;
+                    min-height:2*$verticalBase;
+                    margin-bottom:$verticalBase;
                 }
 
-                /*
-                :last-child {
-                    padding-bottom:0;
+                > :last-child {
                     margin-bottom:0;
                 }
-                 */
+
+                > .wp-caption:last-child :last-child {
+                    margin-bottom:0;
+                }
             }
         }
 
@@ -82,7 +80,9 @@ article.list {
 
         .wp-caption-text {
             @extend cite;
-            @include padding();
+            padding-left:$horizontalBase;
+            padding-right:$horizontalBase;
+            margin-bottom:$verticalBase;
         }
     }
 }

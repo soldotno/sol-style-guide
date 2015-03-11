@@ -41,8 +41,6 @@ h3 {
     padding-bottom:$verticalBase*2/5;
 }
 h4 {
-    padding-top:$verticalBase;
-    padding-bottom:$verticalBase;
 }
 h5 {
     padding-top:$verticalBase*3/5;
@@ -78,6 +76,7 @@ a {
         text-decoration:none;
         background:$linkColor;
         color:$linkBgColor;
+        z-index:9;
     }
 
     &:active {
