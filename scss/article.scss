@@ -16,12 +16,16 @@
         &:hover,
         &:active,
         &:focus {
-            color:$linkBgColor;
+            color:$linkHighlightColor;
         }
     }
 
     dt,dd {
         display:inline;
+    }
+
+    dd {
+        padding-left:0;
     }
 }
 .entry-footer {
