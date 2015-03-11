@@ -63,6 +63,28 @@ p {
 	margin-bottom:$verticalBase;
 }
 
+a {
+    display:inline;
+    text-decoration:underline;
+    padding:$verticalBase/7 $horizontalBase/2;
+    background:$linkBgColor;
+    color:$linkColor;
+    @include border-radius(3px);
+    position:relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration:none;
+        background:$linkColor;
+        color:$linkBgColor;
+    }
+
+    &:active {
+        top:1px;
+    }
+}
+
 strong {
 	font-weight:bold;
 }
@@ -116,27 +138,3 @@ dd {
 
 }
 
-/**
- * Template specific classes
- */
-.byline {
-	@extend h5;
-	padding-left:$horizontalBase;
-	padding-right:$horizontalBase;
-
-	a {
-		color:inherit;
-		text-decoration:none;
-	}
-
-	dt,dd {
-		display:inline;
-	}
-}
-.entry-footer {
-    @extend h5;
-}
-// Lede
-h1 + p {
-	font-size:1.8rem;
-}
