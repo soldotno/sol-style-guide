@@ -72,11 +72,15 @@ article.list {
                 }
 
                 .embed-youtube iframe {
-
                 }
 
                 > iframe {
                     width:100%;
+                    margin:0 auto $verticalBase !important;
+
+                    &:last-child {
+                        margin-bottom:0 !important;
+                    }
                 }
             }
         }
