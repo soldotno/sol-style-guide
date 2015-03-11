@@ -59,12 +59,24 @@ article.list {
                     margin-bottom:$verticalBase;
                 }
 
+                > h3:first-child {
+                    margin-top:-$verticalBase;
+                }
+
                 > :last-child {
                     margin-bottom:0;
                 }
 
                 > .wp-caption:last-child :last-child {
                     margin-bottom:0;
+                }
+
+                .embed-youtube iframe {
+
+                }
+
+                > iframe {
+                    width:100%;
                 }
             }
         }
@@ -76,6 +88,11 @@ article.list {
             > img {
                 width:100%;
             }
+        }
+        img.aligncenter {
+            width:100%;
+            height:auto;
+            margin-left:-$horizontalBase;
         }
 
         .wp-caption-text {
