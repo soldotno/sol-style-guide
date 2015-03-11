@@ -1,8 +1,8 @@
 @mixin margin() {
-	margin:$verticalBase $horizontalBase;
+    margin:$verticalBase $horizontalBase;
 }
 @mixin padding() {
-	padding:0 $horizontalBase $verticalBase;
+    padding:0 $horizontalBase $verticalBase;
 }
 @mixin spacing() {
     @include margin();
@@ -10,15 +10,15 @@
 }
 
 @mixin paper-shadow() {
-	@include box-shadow(rgb(221,221,221) 0px 0px 2px);
+    @include box-shadow(rgb(221,221,221) 0px 0px 2px);
 }
 
 @mixin paper() {
-	@include spacing();
+    @include spacing();
     @include paper-shadow();
 
-	background:$paperColor;
-	border:1px solid darken($bgColor, 6.5%);
+    background:$paperColor;
+    border:1px solid darken($bgColor, 6.5%);
 }
 
 @mixin nopaper() {
@@ -29,25 +29,25 @@
 }
 
 @mixin standout() {
-	background-color:$bylineBgColor;
-	margin-left: -$horizontalBase;
-	margin-right:-$horizontalBase;
+    background-color:$bylineBgColor;
+    margin-left: -$horizontalBase;
+    margin-right:-$horizontalBase;
     padding-left: $horizontalBase;
     padding-right:$horizontalBase;
 }
 
 body {
-	background:$bgColor;
+    background:$bgColor;
 }
 
 main {
-	max-width:66.6rem;
-	max-width:98.0rem;
-	margin:auto;
+    max-width:66.6rem;
+    max-width:98.0rem;
+    margin:auto;
 }
 
 article {
-	@include paper();
+    @include paper();
 }
 
 .byline {

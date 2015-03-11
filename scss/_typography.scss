@@ -1,10 +1,10 @@
 @import 'fonts';
 
 body {
-	font-family:helvetica();
-	font-size:1.6rem;
-	line-height:$verticalBase;
-	color:$textColor;
+    font-family:helvetica();
+    font-size:1.6rem;
+    line-height:$verticalBase;
+    color:$textColor;
 }
 
 /**
@@ -12,55 +12,55 @@ body {
  */
 
 h1,h2,h3,h4,h5,h6 {
-	clear:both;
-	font-weight:bold;
-	color:$headingColor;
+    clear:both;
+    font-weight:bold;
+    color:$headingColor;
 }
 h1,h2,h3,h5 {
-	font-family:roboto();
+    font-family:roboto();
 }
 
 h1 {
-	font-size:3.0rem;
-	line-height:2*$verticalBase;
-	padding-top:$verticalBase*12/5;
-	padding-bottom:$verticalBase*3/5;
-	text-align:center;
+    font-size:3.0rem;
+    line-height:2*$verticalBase;
+    padding-top:$verticalBase*12/5;
+    padding-bottom:$verticalBase*3/5;
+    text-align:center;
 }
 h2,h3 {
-	padding-top:$verticalBase*7/5;
-	padding-bottom:$verticalBase*3/5;
+    padding-top:$verticalBase*7/5;
+    padding-bottom:$verticalBase*3/5;
 }
 h2 {
-	font-size:2.5rem;
-	line-height:2*$verticalBase;
+    font-size:2.5rem;
+    line-height:2*$verticalBase;
 }
 h3 {
-	font-size:2.0rem;
-	padding-top:$verticalBase*8/5;
-	padding-bottom:$verticalBase*2/5;
+    font-size:2.0rem;
+    padding-top:$verticalBase*8/5;
+    padding-bottom:$verticalBase*2/5;
 }
 h4 {
     padding-top:$verticalBase;
     padding-bottom:$verticalBase;
 }
 h5 {
-	padding-top:$verticalBase*3/5;
-	padding-bottom:$verticalBase*2/5;
-	font-size:1.4rem;
-	color:$lightHeadingColor;
+    padding-top:$verticalBase*3/5;
+    padding-bottom:$verticalBase*2/5;
+    font-size:1.4rem;
+    color:$lightHeadingColor;
 }
 h6 {
-	font-size:1.5rem;
-	font-weight:normal;
-	font-style:italic;
+    font-size:1.5rem;
+    font-weight:normal;
+    font-style:italic;
 }
 
 /**
  * Body copy
  */
 p {
-	margin-bottom:$verticalBase;
+    margin-bottom:$verticalBase;
 }
 
 a {
@@ -86,20 +86,20 @@ a {
 }
 
 strong {
-	font-weight:bold;
+    font-weight:bold;
 }
 
 small {
-	font-size:1.4rem;
-	color:$lightTextColor;
+    font-size:1.4rem;
+    color:$lightTextColor;
 }
 
 cite {
-	@extend small;
+    @extend small;
 }
 
 em {
-	font-style:italic;
+    font-style:italic;
 }
 
 img {
@@ -112,15 +112,15 @@ img {
  */
 
 ul, ol {
-	padding-left:2*$horizontalBase;
+    padding-left:2*$horizontalBase;
 }
 
 ul {
-	list-style-type:disc;
+    list-style-type:disc;
 }
 
 ol {
-	list-style-type: decimal;
+    list-style-type: decimal;
 }
 
 li {
@@ -131,7 +131,7 @@ dl {
 }
 
 dt {
-	@extend h4;
+    @extend h4;
 }
 
 dd {

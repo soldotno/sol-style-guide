@@ -2,84 +2,84 @@
  * Mixins
  */
 @mixin box-shadow($value1,$value2:"") {
-	@if $value2 != "" {
-		-webkit-box-shadow: $value1,$value2;
-		-moz-box-shadow: $value1,$value2;
-		box-shadow: $value1,$value2;
-	} @else {
-		-webkit-box-shadow: $value1;
-		-moz-box-shadow: $value1;
-		box-shadow: $value1;
-	}
+    @if $value2 != "" {
+        -webkit-box-shadow: $value1,$value2;
+        -moz-box-shadow: $value1,$value2;
+        box-shadow: $value1,$value2;
+    } @else {
+        -webkit-box-shadow: $value1;
+        -moz-box-shadow: $value1;
+        box-shadow: $value1;
+    }
 
 }
 
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin flexible-width ($context, $target) {
-	width: (($target / $context) * 100%);
+    width: (($target / $context) * 100%);
 }
 
 @mixin box-sizing($value) {
-	-webkit-box-sizing: $value;
-	-moz-box-sizing: $value;
-	box-sizing: $value;
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
 }
 
 @mixin gradient($colorFrom, $alphaFrom, $colorTo, $alphaTo) {
-	$rgbaFrom: rgba($colorFrom, $alphaFrom);
-	$ie-hex-strFrom: ie-hex-str($rgbaFrom);
+    $rgbaFrom: rgba($colorFrom, $alphaFrom);
+    $ie-hex-strFrom: ie-hex-str($rgbaFrom);
 
-	$rgbaTo: rgba($colorTo, $alphaTo);
-	$ie-hex-strTo: ie-hex-str($rgbaTo);
+    $rgbaTo: rgba($colorTo, $alphaTo);
+    $ie-hex-strTo: ie-hex-str($rgbaTo);
 
-	background-color	: $colorTo; /* fallback color */
+    background-color	: $colorTo; /* fallback color */
 
-	background: linear-gradient(to bottom, $rgbaFrom 0%, $rgbaTo 100%); /* W3C */
-	background: -moz-linear-gradient(top,  $rgbaFrom, $rgbaTo);
-	background: -ms-linear-gradient(top,$rgbaFrom 0%, $rgbaTo 100%); /* IE 10+ */
-	background: -webkit-gradient(linear, left top, left bottom, from($rgbaFrom), to($rgbaTo));
+    background: linear-gradient(to bottom, $rgbaFrom 0%, $rgbaTo 100%); /* W3C */
+    background: -moz-linear-gradient(top,  $rgbaFrom, $rgbaTo);
+    background: -ms-linear-gradient(top,$rgbaFrom 0%, $rgbaTo 100%); /* IE 10+ */
+    background: -webkit-gradient(linear, left top, left bottom, from($rgbaFrom), to($rgbaTo));
 
-	/* IE */
-	background-color: transparent\9;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-strFrom}, endColorstr= #{$ie-hex-strTo});
+    /* IE */
+    background-color: transparent\9;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-strFrom}, endColorstr= #{$ie-hex-strTo});
 }
 
 @mixin background-alpha($color, $alpha) {
-	$rgba: rgba($color, $alpha);
-	$ie-hex-str: ie-hex-str($rgba);
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
 
-	background-color: $color; /* fallback color */
-	background-color: $rgba;
-	/* IE */
-	.ie & {
-		background-color: transparent;
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-str}, endColorstr= #{$ie-hex-str});
-	}
+    background-color: $color; /* fallback color */
+    background-color: $rgba;
+    /* IE */
+    .ie & {
+        background-color: transparent;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-str}, endColorstr= #{$ie-hex-str});
+    }
 }
 
 @mixin transition($transition-property, $transition-time, $method: ease) {
-	-webkit-transition: $transition-property $transition-time $method;
-	-moz-transition: $transition-property $transition-time $method;
-	-ms-transition: $transition-property $transition-time $method;
-	-o-transition: $transition-property $transition-time $method;
-	transition: $transition-property $transition-time $method;
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }
 
 @mixin clearfix() {
-	display: block;
+    display: block;
 
-	&:after {
-		content: ".";
-		display: block;
-		height: 0;
-		clear: both;
-		visibility: hidden;
-	}
+    &:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
 }
 
 
