@@ -1,8 +1,8 @@
 @import 'fonts';
 
 @mixin padded-text() {
-    display:inline;
     padding:$verticalBase/10 $horizontalBase/2;
+    margin:$verticalBase*-1/10 0;
     background:$linkBgColor;
     @include border-radius(3px);
 }
@@ -57,7 +57,7 @@ h5 {
 h6 {
     padding-top:$verticalBase*3/5;
     padding-bottom:$verticalBase*2/5;
-    font-size:1.4rem;
+    font-size:1.3rem;
 }
 
 /**

@@ -10,22 +10,29 @@
     padding-right:$horizontalBase;
 
     a {
-        color:inherit;
         text-decoration:none;
+        background:inherit;
+        color:inherit;
 
         &:hover,
         &:active,
         &:focus {
             color:$linkHighlightColor;
+            background:$linkColor;
         }
     }
 
-    dt,dd {
+    dt {
+        display:none;
+    }
+    dd {
         display:inline;
+        padding-left:0;
+        margin:0 $horizontalBase*-1/2;
     }
 
-    dd {
-        padding-left:0;
+    .published-date {
+        font-weight:normal;
     }
 }
 .entry-footer {
@@ -33,5 +40,5 @@
 }
 // Lede
 h1 + p {
-    font-size:1.7rem;
+    font-size:1.8rem;
 }
