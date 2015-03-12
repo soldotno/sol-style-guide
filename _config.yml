@@ -2,3 +2,4 @@ title: Style guide for projects at sol.no.
 
 sass:
   sass_dir: scss
+  style: :compressed
