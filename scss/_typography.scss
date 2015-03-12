@@ -2,7 +2,7 @@
 
 @mixin padded-text() {
     display:inline;
-    padding:$verticalBase/7 $horizontalBase/2;
+    padding:$verticalBase/6.5 $horizontalBase/2;
     background:$linkBgColor;
     @include border-radius(3px);
 }
@@ -34,17 +34,15 @@ h1 {
     padding-bottom:$verticalBase*3/5;
     text-align:center;
 }
-h2,h3 {
-    padding-top:$verticalBase*7/5;
-    padding-bottom:$verticalBase*3/5;
-}
 h2 {
     font-size:2.2rem;
     line-height:2*$verticalBase;
+    padding-top:$verticalBase*7/5;
+    padding-bottom:$verticalBase*3/5;
 }
 h3 {
     font-size:2.0rem;
-    padding-top:$verticalBase*8/5;
+    padding-top:$verticalBase*3/5;
     padding-bottom:$verticalBase*2/5;
 }
 h4 {
@@ -53,13 +51,13 @@ h5,h6 {
     color:$lightHeadingColor;
 }
 h5 {
+    font-size:1.8rem;
+    font-weight:normal;
+}
+h6 {
     padding-top:$verticalBase*3/5;
     padding-bottom:$verticalBase*2/5;
     font-size:1.4rem;
-}
-h6 {
-    font-size:1.8rem;
-    font-weight:normal;
 }
 
 /**
@@ -113,12 +111,13 @@ img {
 }
 
 blockquote {
-    @extend h6;
+    @extend h5;
     margin-left:$horizontalBase;
     padding-left:$horizontalBase;
     border-left:2px solid $solRed;
 
     cite {
+        font-family:helvetica();
         display:block;
         clear:left;
         padding-top:$verticalBase;
@@ -126,7 +125,7 @@ blockquote {
 }
 
 q {
-    @extend h6;
+    @extend h5;
     font-variant:italic;
 }
 

@@ -5,7 +5,7 @@
  * Template specific classes
  */
 .byline {
-    @extend h5;
+    @extend h6;
     padding-left:$horizontalBase;
     padding-right:$horizontalBase;
 
@@ -29,7 +29,7 @@
     }
 }
 .entry-footer {
-    @extend h5;
+    @extend h6;
 }
 // Lede
 h1 + p {
