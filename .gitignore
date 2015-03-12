@@ -3,6 +3,7 @@ Gemfile.lock
 _site/
 
 css/*.css
+css/*.css.map
 .sass-cache/
 
 node_modules/
