@@ -2,7 +2,7 @@
 
 @mixin padded-text() {
     display:inline;
-    padding:$verticalBase/6.5 $horizontalBase/2;
+    padding:$verticalBase/10 $horizontalBase/2;
     background:$linkBgColor;
     @include border-radius(3px);
 }
