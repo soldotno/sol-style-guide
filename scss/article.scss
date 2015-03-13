@@ -6,8 +6,8 @@
  */
 .byline {
     @extend h6;
-    padding-left:$horizontalBase;
-    padding-right:$horizontalBase;
+    padding:$verticalBase*2/3 $horizontalBase $verticalBase*1/3;
+    border-bottom:1px solid $borderColor;
 
     a {
         text-decoration:none;
@@ -28,7 +28,7 @@
     dd {
         display:inline;
         padding-left:0;
-        margin:0 $horizontalBase*-1/2;
+        margin-left:$horizontalBase*-1/2;
     }
 
     .published-date {
@@ -37,6 +37,8 @@
 }
 .entry-footer {
     @extend h6;
+    padding-top:$verticalBase*2/3;
+    padding-bottom:$verticalBase*1/3;
 }
 // Lede
 h1 + p {

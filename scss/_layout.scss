@@ -25,7 +25,7 @@
     @include paper-shadow();
 
     background:$paperColor;
-    border:1px solid darken($bgColor, 6.5%);
+    border:1px solid $borderColor;
 }
 
 @mixin nopaper() {
