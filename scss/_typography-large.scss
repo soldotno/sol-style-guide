@@ -1,0 +1,21 @@
+/**
+ * Typography changes for desktop-width viewports.
+ */
+@media screen and (min-width:950px) {
+    h1 {
+        font-size:5.2rem;
+        line-height:$verticalBase*3;
+    }
+    h2 {
+        font-size:2.8rem;
+    }
+    h3,h4 {
+        font-size:2.0rem;
+    }
+
+    // Lede
+    h1 + p {
+        font-size:2.2rem;
+    }
+
+}
