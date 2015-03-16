@@ -2,6 +2,9 @@
  * Typography changes for desktop-width viewports.
  */
 @media screen and (min-width:$desktopWidth) {
+    /**
+     * Headings
+     */
     h1 {
         font-size:5.2rem;
         line-height:$verticalBase*3;
@@ -13,6 +16,9 @@
         font-size:2.0rem;
     }
 
+    /**
+     * Body copy
+     */
     // Lede
     h1 + p {
         font-size:2.2rem;
@@ -34,7 +40,33 @@
         }
     }
 
+    blockquote {
+        margin-left:$verticalBase*2 + $horizontalBase;
+    }
+
+    /**
+     * Template specific styles
+     */
+
     html .byline dd {
         margin-left:0;
+    }
+    article.list .entry-content > ol > li {
+        &:after {
+            content:'';
+            display:block;
+            height:2*$verticalBase;
+            border-right:2px solid $solColor;
+            position:absolute;
+            top:$verticalBase;
+            left:2*$verticalBase + 2*$horizontalBase;
+        }
+        > :first-child {
+            padding-left:2*$horizontalBase + 2*$verticalBase !important;
+        }
+
+        blockquote {
+            @extend blockquote;
+        }
     }
 }

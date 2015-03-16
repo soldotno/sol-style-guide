@@ -29,6 +29,7 @@ article.list {
                 overflow:hidden;
                 min-height:4*$verticalBase;
 
+                // Custom list-markers
                 &:before {
                     @include spacing();
                     margin-left:0;
