@@ -1,7 +1,7 @@
 /**
  * Typography changes for desktop-width viewports.
  */
-@media screen and (min-width:950px) {
+@media screen and (min-width:$desktopWidth) {
     h1 {
         font-size:5.2rem;
         line-height:$verticalBase*3;

@@ -3,3 +3,7 @@ $horizontalBase: $verticalBase/1.618; // It's golden!
 
 $paperWidth: 98rem;
 $contentWidth: 66rem;
+
+// When should we reflow?
+$largeCellWidth: 350px;
+$desktopWidth: 750px;
