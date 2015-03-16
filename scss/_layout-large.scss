@@ -1,7 +1,10 @@
 @media screen and (min-width:950px) {
-    html article.list header {
-        max-width:$paperWidth;
-        margin-left:auto;
-        margin-right:auto;
+    html article.list {
+        header,
+        footer {
+            max-width:$paperWidth;
+            margin-left:auto;
+            margin-right:auto;
+        }
     }
 }
