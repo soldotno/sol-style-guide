@@ -4,14 +4,35 @@
 /**
  * Template specific classes
  */
-.byline {
-    @extend h6;
+article header {
+    h1,
+    p,
+    .byline {
+        max-width:$contentWidth;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+article footer {
+    max-width:none;
+
+    > * {
+        max-width:$contentWidth;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+.entry-meta {
     padding:$verticalBase*2/3 $horizontalBase $verticalBase*1/3;
     border-bottom:1px solid $borderColor;
+}
+.byline {
+    @extend h6;
 
     a {
         text-decoration:none;
-        border:inherit;
+        background:inherit;
         color:inherit;
 
         &:hover,
@@ -27,13 +48,19 @@
         display:none;
     }
     dd {
-        display:inline;
         padding-left:0;
         margin-left:$horizontalBase*-1/2;
+        margin-bottom:0;
     }
 
+    @media screen and (min-width:380px) {
+        dd {
+            display:inline;
+        }
+    }
     .published-date {
         font-weight:normal;
+
     }
 }
 .entry-footer {

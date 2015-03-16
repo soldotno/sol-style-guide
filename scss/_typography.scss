@@ -3,13 +3,13 @@
 @mixin padded-text() {
     padding:$verticalBase/10 $horizontalBase/4;
     margin:$verticalBase*-1/10 0;
-    border:1px solid $linkBgColor;
+    background:$linkBgColor;
     @include border-radius(3px);
 }
 @mixin no-padded-text() {
     padding:0;
     margin:0;
-    border:0px none;
+    background:transparent;
 }
 
 body {
@@ -60,7 +60,7 @@ h5 {
     font-weight:normal;
 }
 h6 {
-    font-size:1.2rem;
+    font-size:1.4rem;
 }
 
 /**

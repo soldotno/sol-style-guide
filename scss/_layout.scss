@@ -26,6 +26,15 @@
 
     background:$paperColor;
     border:1px solid $borderColor;
+    max-width:$paperWidth;
+    margin-left:auto;
+    margin-right:auto;
+
+    > * {
+        max-width:$contentWidth;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 @mixin nopaper() {
@@ -33,6 +42,13 @@
     box-shadow:none;
     background:transparent;
     border:none;
+    max-width:none;
+
+    > * {
+        max-width:none;
+        margin-left:0;
+        margin-right:0;
+    }
 }
 
 @mixin standout() {
@@ -47,17 +63,17 @@ body {
     background:$bgColor;
 }
 
-main {
-    max-width:66.6rem;
-    max-width:98.0rem;
-    margin:auto;
-}
-
 article {
     @include paper();
+
+    header {
+        max-width:$paperWidth;
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
-.byline {
+.entry-meta {
     @include standout();
 }
 
@@ -68,8 +84,8 @@ article {
 }
 
 .post-navigation {
-    @include paper();
     @include spacing();
+    @include paper();
     @include clearfix();
 
     .nav-previous,

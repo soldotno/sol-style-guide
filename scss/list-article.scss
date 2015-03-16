@@ -7,6 +7,7 @@ article.list {
 
     header {
         @include paper-shadow();
+
         background:$paperColor;
         margin:0rem $horizontalBase*-1 $verticalBase;
         padding:0 $horizontalBase;
@@ -22,6 +23,7 @@ article.list {
 
             > li {
                 @include paper();
+                max-width:$contentWidth;
 
                 position:relative;
                 overflow:hidden;
