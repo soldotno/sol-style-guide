@@ -1,10 +1,15 @@
 @import 'fonts';
 
 @mixin padded-text() {
-    padding:$verticalBase/10 $horizontalBase/2;
+    padding:$verticalBase/10 $horizontalBase/4;
     margin:$verticalBase*-1/10 0;
-    background:$linkBgColor;
+    border:1px solid $linkBgColor;
     @include border-radius(3px);
+}
+@mixin no-padded-text() {
+    padding:0;
+    margin:0;
+    border:0px none;
 }
 
 body {

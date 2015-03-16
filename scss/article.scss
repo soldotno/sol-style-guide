@@ -11,7 +11,7 @@
 
     a {
         text-decoration:none;
-        background:inherit;
+        border:inherit;
         color:inherit;
 
         &:hover,
@@ -19,6 +19,7 @@
         &:focus {
             color:$linkHighlightColor;
             background:$linkColor;
+            outline:none;
         }
     }
 
