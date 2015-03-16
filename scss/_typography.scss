@@ -64,6 +64,10 @@ h6 {
 p {
     margin-bottom:$verticalBase;
 }
+// Lede
+h1 + p {
+    font-size:1.8rem;
+}
 
 a {
     @include padded-text();
