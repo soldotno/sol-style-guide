@@ -5,6 +5,37 @@
  * Template specific classes
  */
 article header {
+    figure {
+        margin:0 $horizontalBase*-1;
+        position:relative;
+        line-height:0;
+
+        img {
+            width:100%;
+            height:auto;
+            min-height:$verticalBase;
+        }
+        figcaption {
+            padding:0 $horizontalBase;
+            position:absolute;
+            bottom:0;
+            right:0;
+            background:$overlayColor;
+            color:white;
+            line-height:$verticalBase;
+
+            a {
+                color:inherit;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background:white;
+                    color:$textColor;
+                }
+            }
+        }
+    }
     h1,
     p,
     .byline {
