@@ -29,6 +29,17 @@ article.list {
                 overflow:hidden;
                 min-height:4*$verticalBase;
 
+                // Bleeding list items on the very smallest screens
+                @media screen and (max-width:349px) {
+                    margin:0 $horizontalBase*-1;
+                    border:0;
+                    border-bottom:1px solid $borderColor;
+
+                    &:first-child {
+                            border-top:1px solid $borderColor;
+                    }
+                }
+
                 // Custom list-markers
                 &:before {
                     @include spacing();
