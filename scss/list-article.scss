@@ -92,6 +92,15 @@ article.list {
                         margin-bottom:0 !important;
                     }
                 }
+
+                blockquote {
+                    margin-left:$horizontalBase;
+                }
+
+                > blockquote:first-child {
+                    margin-left:$verticalBase*2 + $horizontalBase;
+                    padding-left:$horizontalBase;
+                }
             }
         }
 

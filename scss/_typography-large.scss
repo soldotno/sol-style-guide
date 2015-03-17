@@ -51,7 +51,7 @@
     html .byline dd {
         margin-left:0;
     }
-    article.list .entry-content > ol > li {
+    html article.list .entry-content > ol > li {
         &:after {
             content:'';
             display:block;
@@ -67,6 +67,10 @@
 
         blockquote {
             margin-left:$verticalBase*2 + $horizontalBase;
+        }
+
+        > blockquote:first-child {
+            padding-left:$horizontalBase !important;
         }
     }
 }
