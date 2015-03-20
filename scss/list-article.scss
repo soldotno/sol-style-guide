@@ -1,6 +1,7 @@
 @import
     'style',
-    'article';
+    'article',
+    'advert';
 
 article.list {
     @include nopaper();

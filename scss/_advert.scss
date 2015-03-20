@@ -1,0 +1,67 @@
+div.advert {
+
+    @include paper();
+    padding:0;
+    background: $adColor;
+    max-width: $contentWidth;
+    position: relative;
+    overflow: hidden;
+    min-height: 4*$verticalBase;
+    // Bleeding list items on the very smallest screens
+    @media screen and (max-width: 349px) {
+        margin: 0 $horizontalBase*-1;
+        border: 0;
+        border-bottom: 1px solid $borderColor;
+        &:first-child {
+            border-top: 1px solid $borderColor;
+        }
+    }
+    figure {
+        margin: 0 $horizontalBase*-1;
+        width: 100%;
+    }
+    > h4 {
+        padding-left: $horizontalBase + 2*$verticalBase;
+        min-height: 2*$verticalBase;
+        margin-bottom: $verticalBase;
+    }
+    &:before {
+        @include spacing();
+        margin-left: 0;
+        padding: 0 0;
+        position: absolute;
+        top: $verticalBase;
+        left: $horizontalBase;
+        content: "&";
+        display: inline-block;
+        width: 2*$verticalBase;
+        height: 2*$verticalBase;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2*$verticalBase;
+        background: $textColor;
+        color: white;
+        font-family: helvetica();
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+    @media screen and (min-width:$desktopWidth) {
+        &:after {
+            content:'';
+            display:block;
+            height:2*$verticalBase;
+            border-right:2px solid $lightBorderColor;
+            position:absolute;
+            top:$verticalBase;
+            left:2*$verticalBase + 2*$horizontalBase;
+        }
+        > :first-child {
+            padding-left:2*$horizontalBase + 2*$verticalBase !important;
+        }
+    }
+    .advert-marker {
+        background-color: $overlayColor;
+        margin-bottom: $verticalBase*2;
+        width: 100%;
+    }
+}
