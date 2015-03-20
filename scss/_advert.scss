@@ -21,9 +21,13 @@ div.advert {
         width: 100%;
     }
     > h4 {
-        padding-left: $horizontalBase + 2*$verticalBase;
+        padding-left: 2*$horizontalBase + 2*$verticalBase;
+        padding-right:$horizontalBase;
         min-height: 2*$verticalBase;
         margin-bottom: $verticalBase;
+    }
+    > p{
+        padding:0 $horizontalBase;
     }
     &:before {
         @include spacing();
@@ -32,7 +36,7 @@ div.advert {
         position: absolute;
         top: $verticalBase;
         left: $horizontalBase;
-        content: "&";
+        content: "$";
         display: inline-block;
         width: 2*$verticalBase;
         height: 2*$verticalBase;
@@ -52,16 +56,18 @@ div.advert {
             height:2*$verticalBase;
             border-right:2px solid $lightBorderColor;
             position:absolute;
-            top:$verticalBase;
+            top:2*$verticalBase;
             left:2*$verticalBase + 2*$horizontalBase;
         }
-        > :first-child {
-            padding-left:2*$horizontalBase + 2*$verticalBase !important;
+        > h4 {
+            padding-left:3*$horizontalBase + 2*$verticalBase !important;
         }
     }
     .advert-marker {
+        color:#FFFFFF;
         background-color: $overlayColor;
-        margin-bottom: $verticalBase*2;
+        margin-bottom: $verticalBase;
+        padding:0 $horizontalBase;
         width: 100%;
     }
 }
