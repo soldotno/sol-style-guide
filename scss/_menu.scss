@@ -2,6 +2,7 @@
  * Menu.
  *
  * Menu styles copied from the solskinn project 2015-03-24. This project should hopefully be it's final resting place.
+ * Some changes have been made to standardize colors.
  */
 #page-header {
   overflow: hidden;
@@ -10,17 +11,17 @@
 #page-header-content {
   position: fixed;
   width:100%;
-  height: 56px;
+  height: $headerHeight;
   top:0;
   left:0;
-  color: $secondFontColor;
+  color: $offwhiteColor;
   background: $headerColor;
   text-align:center;
   z-index:99999;
   overflow: hidden;
 
   .toggled {
-    background:$menuBtnActive;
+    background:$menuButtonActiveColor;
   }
 }
 
@@ -73,7 +74,7 @@
     vertical-align: bottom;
     border: 0;
     border-radius: 0;
-    background:$inputColor;
+    background:$lightTextColor;
   }
   #search-submit {
     width: 40px;
@@ -83,7 +84,7 @@
     border-radius: 0;
     vertical-align: bottom;
     color: white;
-    background-color: $inputSearchColor;
+    background-color: $solRed;
     font-size: 2.5rem; //25px
     cursor: pointer;
 
@@ -95,9 +96,17 @@
 #header-nav::-webkit-scrollbar {
   display: none;
 }
+
+#page-header #header-nav {
+    display:none;
+}
+#page-header.toggled #header-nav {
+    display:block;
+}
+
 #header-nav {
   position: fixed;
-  background: $firstLevelColor;
+  background: $offwhiteColor;
   top: 56px;
   z-index: 9999;
   width: 100%;
@@ -118,9 +127,9 @@
       list-style: none;
       line-height: 1.2rem; //12px
       text-decoration: none;
-      color: $mainFontColor;
+      color: $textColor;
       width: 100%;
-      border-top: 1px solid $menuBorderColor;
+      border-top: 1px solid $borderColor;
 
       a {
         display: block;
@@ -135,9 +144,9 @@
         right: 0;
         width: 96px;
         height: 50px;
-        border-left: 1px solid $menuBorderColor;
+        border-left: 1px solid $borderColor;
         cursor: pointer;
-        color: $menuColor;
+        color: $textColor;
 
         .icon-arrow-right {
           position: absolute;
@@ -157,12 +166,12 @@
       }
     }
     #main-menu-children {
-      background-color: $secondLevelColor;
+      background-color: $offwhiteColor;
       padding: 0;
 
       li {
         list-style: none;
-        border-top: 1px solid $menuBorderColor;
+        border-top: 1px solid $borderColor;
 
         a {
           font-size: 1.7rem; //17px
@@ -185,7 +194,7 @@
       a {
         display: block;
         padding: 14px 5px 12px;
-        color: $lightFontColor;
+        color: $whiteColor;
         font-size: 1.8rem; //18px
         font-weight: 900;
         line-height:2.9rem; //29px;
