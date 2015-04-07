@@ -1,1 +1,1 @@
-http://soldotno.github.io/style-guide
+http://soldotno.github.io/sol-style-guide
