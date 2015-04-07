@@ -12,13 +12,6 @@
     background:transparent;
 }
 
-body {
-    font-family:helvetica();
-    font-size:1.6rem;
-    line-height:$verticalBase;
-    color:$textColor;
-}
-
 /**
  * Headings
  */
@@ -65,6 +58,14 @@ h6 {
 /**
  * Body copy
  */
+body,
+p {
+    font-family:helvetica();
+    font-size:1.6rem;
+    line-height:$verticalBase;
+    color:$textColor;
+}
+
 p {
     margin-bottom:$verticalBase;
 }
