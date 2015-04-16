@@ -3,7 +3,7 @@
     'article',
     'advert';
 
-article.list {
+.list {
     @include nopaper();
 
     header {
@@ -14,116 +14,115 @@ article.list {
         padding:0 $horizontalBase;
     }
 
-    .entry-content {
-        > ol {
-            padding-left:0;
-            padding-right:0;
+    ol {
+        padding-left:0;
+        padding-right:0;
 
-            list-style:none;
-            counter-reset:li-counter;
+        list-style:none;
+        counter-reset:li-counter;
+    }
+    li {
+      @include paper();
+      max-width:$contentWidth;
 
-            > li {
-                @include paper();
-                max-width:$contentWidth;
+      position:relative;
+      overflow:hidden;
+      min-height:4*$verticalBase;
 
-                position:relative;
-                overflow:hidden;
-                min-height:4*$verticalBase;
+      // Bleeding list items on the very smallest screens
+      @media screen and (max-width:349px) {
+          margin:0 $horizontalBase*-1;
+          border:0;
+          border-bottom:1px solid $borderColor;
 
-                // Bleeding list items on the very smallest screens
-                @media screen and (max-width:349px) {
-                    margin:0 $horizontalBase*-1;
-                    border:0;
-                    border-bottom:1px solid $borderColor;
+          &:first-child {
+                  border-top:1px solid $borderColor;
+          }
+      }
 
-                    &:first-child {
-                            border-top:1px solid $borderColor;
-                    }
-                }
+      // Custom list-markers
+      &:before {
+          @include spacing();
+          margin-left:0;
+          padding:0;
 
-                // Custom list-markers
-                &:before {
-                    @include spacing();
-                    margin-left:0;
-                    padding:0;
+          position:absolute;
+          top:0;
+          left:$horizontalBase;
 
-                    position:absolute;
-                    top:0;
-                    left:$horizontalBase;
+          content:counter(li-counter);
+          counter-increment:li-counter;
+          display:inline-block;
+          width:2*$verticalBase;
+          height:2*$verticalBase;
+          border-radius:50%;
+          text-align:center;
+          line-height:2*$verticalBase;
 
-                    content:counter(li-counter);
-                    counter-increment:li-counter;
-                    display:inline-block;
-                    width:2*$verticalBase;
-                    height:2*$verticalBase;
-                    border-radius:50%;
-                    text-align:center;
-                    line-height:2*$verticalBase;
+          background:$solColor;
+          color:white;
 
-                    background:$solColor;
-                    color:white;
+          font-family:helvetica();
+          font-weight:bold;
+          font-size:2.4rem;
+      }
 
-                    font-family:helvetica();
-                    font-weight:bold;
-                    font-size:2.4rem;
-                }
+      > :first-child {
+          padding-left:$horizontalBase + 2*$verticalBase;
+          min-height:2*$verticalBase;
+          margin-bottom:$verticalBase;
+      }
 
-                > :first-child {
-                    padding-left:$horizontalBase + 2*$verticalBase;
-                    min-height:2*$verticalBase;
-                    margin-bottom:$verticalBase;
-                }
+      > :last-child {
+          margin-bottom:0;
+      }
 
-                > :last-child {
-                    margin-bottom:0;
-                }
+      > .wp-caption:last-child :last-child {
+          margin-bottom:0;
+      }
 
-                > .wp-caption:last-child :last-child {
-                    margin-bottom:0;
-                }
+      .embed-youtube iframe {
+      }
 
-                .embed-youtube iframe {
-                }
+      > iframe {
+          width:100%;
+          margin:0 auto $verticalBase !important;
 
-                > iframe {
-                    width:100%;
-                    margin:0 auto $verticalBase !important;
+          &:last-child {
+              margin-bottom:0 !important;
+          }
+      }
 
-                    &:last-child {
-                        margin-bottom:0 !important;
-                    }
-                }
+      blockquote {
+          margin-left:$horizontalBase;
+      }
 
-                blockquote {
-                    margin-left:$horizontalBase;
-                }
+      > blockquote:first-child {
+          margin-left:$verticalBase*2 + $horizontalBase;
+          padding-left:$horizontalBase;
+      }
+    }
 
-                > blockquote:first-child {
-                    margin-left:$verticalBase*2 + $horizontalBase;
-                    padding-left:$horizontalBase;
-                }
-            }
-        }
 
-        .wp-caption {
-            margin:0rem $horizontalBase*-1;
-            width:auto !important;
+    img.aligncenter {
+      width:100%;
+      height:auto;
+      margin-left:-$horizontalBase;
+    }
 
-            > img {
-                width:100%;
-            }
-        }
-        img.aligncenter {
-            width:100%;
-            height:auto;
-            margin-left:-$horizontalBase;
-        }
+    .wp-caption {
+      margin:0rem $horizontalBase*-1;
+      width:auto !important;
 
-        .wp-caption-text {
-            @extend cite;
-            padding-left:$horizontalBase;
-            padding-right:$horizontalBase;
-            margin-bottom:$verticalBase;
-        }
+      > img {
+        width:100%;
+      }
+    }
+
+    .wp-caption-text {
+      @extend cite;
+      padding-left:$horizontalBase;
+      padding-right:$horizontalBase;
+      margin-bottom:$verticalBase;
     }
 }

@@ -1,76 +1,46 @@
 /**
  * Advertorials.
  */
-div.advert {
+.list .advert {
 
-    @include paper();
-    padding:0;
-    background: $adColor;
-    max-width: $contentWidth;
-    position: relative;
-    overflow: hidden;
-    min-height: 4*$verticalBase;
-    // Bleeding list items on the very smallest screens
-    @media screen and (max-width: 349px) {
-        margin: 0 $horizontalBase*-1;
-        border: 0;
-        border-bottom: 1px solid $borderColor;
-        &:first-child {
-            border-top: 1px solid $borderColor;
-        }
+  @include paper();
+  padding:0;
+  background: $adColor;
+  max-width: $contentWidth;
+  position: relative;
+  overflow: hidden;
+  min-height: 4*$verticalBase;
+  // Bleeding list items on the very smallest screens
+  @media screen and (max-width: 349px) {
+    margin: 0 $horizontalBase*-1;
+    border: 0;
+    border-bottom: 1px solid $borderColor;
+    &:first-child {
+      border-top: 1px solid $borderColor;
     }
-    figure {
-        margin: 0 $horizontalBase*-1;
-        width: 100%;
-    }
-    > h4 {
-        padding-left: 2*$horizontalBase + 2*$verticalBase;
-        padding-right:$horizontalBase;
-        min-height: 2*$verticalBase;
-        margin-bottom: $verticalBase;
-    }
-    > p{
-        padding:0 $horizontalBase;
-    }
-    &:before {
-        @include spacing();
-        margin-left: 0;
-        padding: 0 0;
-        position: absolute;
-        top: $verticalBase;
-        left: $horizontalBase;
-        content: "$";
-        display: inline-block;
-        width: 2*$verticalBase;
-        height: 2*$verticalBase;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 2*$verticalBase;
-        background: $textColor;
-        color: white;
-        font-family: helvetica();
-        font-weight: bold;
-        font-size: 2.4rem;
-    }
-    @media screen and (min-width:$desktopWidth) {
-        &:after {
-            content:'';
-            display:block;
-            height:2*$verticalBase;
-            border-right:2px solid $lightBorderColor;
-            position:absolute;
-            top:2*$verticalBase;
-            left:2*$verticalBase + 2*$horizontalBase;
-        }
-        > h4 {
-            padding-left:3*$horizontalBase + 2*$verticalBase !important;
-        }
-    }
-    .advert-marker {
-        color:#FFFFFF;
-        background-color: $overlayColor;
-        margin-bottom: $verticalBase;
-        padding:0 $horizontalBase;
-        width: 100%;
-    }
+  }
+  figure {
+    margin: 0 0 1.2rem;
+    width: auto!important
+  }
+  > h4 {
+    padding-left: $horizontalBase;
+    padding-right:$horizontalBase;
+    margin-bottom: $verticalBase;
+  }
+  > p{
+    margin-bottom: 1.8rem;
+    padding:0 $horizontalBase;
+  }
+  img {
+    display: block;
+  }
+  .advert-marker {
+    color:#FFFFFF;
+    background-color: $overlayColor;
+    margin-bottom: $verticalBase;
+    padding:0 $horizontalBase;
+    width: 100%;
+    font-size: 0.875em;
+  }
 }
