@@ -11,7 +11,6 @@
         -moz-box-shadow: $value1;
         box-shadow: $value1;
     }
-
 }
 
 @mixin border-radius($radius) {
@@ -20,54 +19,10 @@
     border-radius: $radius;
 }
 
-@mixin flexible-width ($context, $target) {
-    width: (($target / $context) * 100%);
-}
-
 @mixin box-sizing($value) {
     -webkit-box-sizing: $value;
     -moz-box-sizing: $value;
     box-sizing: $value;
-}
-
-@mixin gradient($colorFrom, $alphaFrom, $colorTo, $alphaTo) {
-    $rgbaFrom: rgba($colorFrom, $alphaFrom);
-    $ie-hex-strFrom: ie-hex-str($rgbaFrom);
-
-    $rgbaTo: rgba($colorTo, $alphaTo);
-    $ie-hex-strTo: ie-hex-str($rgbaTo);
-
-    background-color	: $colorTo; /* fallback color */
-
-    background: linear-gradient(to bottom, $rgbaFrom 0%, $rgbaTo 100%); /* W3C */
-    background: -moz-linear-gradient(top,  $rgbaFrom, $rgbaTo);
-    background: -ms-linear-gradient(top,$rgbaFrom 0%, $rgbaTo 100%); /* IE 10+ */
-    background: -webkit-gradient(linear, left top, left bottom, from($rgbaFrom), to($rgbaTo));
-
-    /* IE */
-    background-color: transparent\9;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-strFrom}, endColorstr= #{$ie-hex-strTo});
-}
-
-@mixin background-alpha($color, $alpha) {
-    $rgba: rgba($color, $alpha);
-    $ie-hex-str: ie-hex-str($rgba);
-
-    background-color: $color; /* fallback color */
-    background-color: $rgba;
-    /* IE */
-    .ie & {
-        background-color: transparent;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= #{$ie-hex-str}, endColorstr= #{$ie-hex-str});
-    }
-}
-
-@mixin transition($transition-property, $transition-time, $method: ease) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
 }
 
 @mixin clearfix() {
@@ -80,6 +35,85 @@
         clear: both;
         visibility: hidden;
     }
+}
+
+@mixin padded-text() {
+  padding:$verticalBase/10 $horizontalBase/4;
+  margin:$verticalBase*-1/10 0;
+  background:$linkBgColor;
+  @include border-radius(3px);
+}
+@mixin no-padded-text() {
+  padding:0;
+  margin:0;
+  background:transparent;
+}
+
+@mixin margin() {
+  margin:$verticalBase $horizontalBase;
+}
+@mixin padding() {
+  padding:$verticalBase $horizontalBase;
+}
+
+@mixin spacing() {
+  @include margin();
+  @include padding();
+
+  > :first-child {
+    margin-top:0;
+  }
+  > :last-child {
+    margin-bottom:0;
+  }
+}
+
+@mixin paper-shadow() {
+  @include box-shadow(rgb(221,221,221) 0px 0px 2px);
+}
+
+@mixin paper() {
+  @include spacing();
+  @include paper-shadow();
+
+  background:$paperColor;
+  border:1px solid $borderColor;
+  max-width:$paperWidth;
+  margin-left:auto;
+  margin-right:auto;
+
+  > * {
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@mixin nopaper() {
+  margin:0;
+  box-shadow:none;
+  background:transparent;
+  border:none;
+  max-width:none;
+
+  > * {
+    max-width:none;
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+@mixin standout() {
+  background-color:$bylineBgColor;
+  margin-left: -$horizontalBase;
+  margin-right:-$horizontalBase;
+  padding-left: $horizontalBase;
+  padding-right:$horizontalBase;
+}
+
+%headingStyles {
+  clear:both;
+  font-weight:bold;
+  color:$headingColor;
 }
 
 

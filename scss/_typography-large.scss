@@ -24,7 +24,9 @@
         font-size:1.9rem;
     }
 
-    a {
+    figcaption a,
+    p a,
+    .entry-meta a {
         @include no-padded-text();
 
         &:hover,
@@ -48,10 +50,10 @@
      * Template specific styles
      */
 
-    html .byline dd {
+    .byline dd {
         margin-left:0;
     }
-    html article.list .entry-content > ol > li {
+    .list .entry-content > ol > li {
         &:after {
             content:'';
             display:block;

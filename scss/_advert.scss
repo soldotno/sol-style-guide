@@ -10,6 +10,7 @@
   position: relative;
   overflow: hidden;
   min-height: 4*$verticalBase;
+
   // Bleeding list items on the very smallest screens
   @media screen and (max-width: 349px) {
     margin: 0 $horizontalBase*-1;
