@@ -1,3 +1,9 @@
-@import
-    'style-basic',
-    'advert';
+@import 'style-variables';
+
+//To prevent changes on solfront
+.advert {
+  @import 'style-basic';
+}
+
+@import 'advert';
+
