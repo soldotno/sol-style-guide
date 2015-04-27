@@ -113,6 +113,11 @@
       > img {
         width:100%;
       }
+      > a {
+        display: block;
+        padding: 0;
+        background: transparent;
+      }
     }
 
     .wp-caption-text {
