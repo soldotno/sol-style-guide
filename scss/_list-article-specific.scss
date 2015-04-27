@@ -73,7 +73,7 @@
           }
 
           > .wp-caption {
-            width:100%;
+            width:100% !important; // Override inline styles from WordPress
           }
 
           > .wp-caption:last-child :last-child {

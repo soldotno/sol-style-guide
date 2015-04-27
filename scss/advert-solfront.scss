@@ -3,6 +3,7 @@
 //To prevent changes on solfront
 .advert {
   @import 'style-basic';
+  a {padding:0;}
 }
 
-@import 'advert-specific';
+@import 'advert';

@@ -21,7 +21,7 @@
     }
   }
   figure {
-    margin: 0 0 1.2rem;
+    margin: 0 0 $verticalBase;
     width: auto!important
   }
   > h4 {
@@ -29,8 +29,7 @@
     padding-right:$horizontalBase;
     margin-bottom: $verticalBase;
   }
-  > p{
-    margin-bottom: 1.8rem;
+  > p {
     padding:0 $horizontalBase;
   }
   img {
@@ -42,6 +41,6 @@
     margin-bottom: $verticalBase;
     padding:0 $horizontalBase;
     width: 100%;
-    font-size: 0.875em;
+    font-size: 1.4rem;
   }
 }
