@@ -43,15 +43,20 @@ h6 {
 /**
  * Body copy
  */
+
 body,
 p {
     font-family:$mainFont;
-    font-size:1.6rem;
     line-height:$verticalBase;
     color:$textColor;
 }
 
+// Workaronud for https://code.google.com/p/chromium/issues/detail?id=319623
+body {
+    font-size:1.6em;
+}
 p {
+    font-size:1.6rem;
     margin-bottom:$verticalBase;
 }
 // Lede
