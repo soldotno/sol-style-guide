@@ -72,6 +72,10 @@
             margin-bottom:0;
           }
 
+          > .wp-caption {
+            width:100% !important; // Override inline styles from WordPress
+          }
+
           > .wp-caption:last-child :last-child {
             margin-bottom:0;
           }
@@ -104,21 +108,5 @@
       width:100%;
       height:auto;
       margin-left:-$horizontalBase;
-    }
-
-    .wp-caption {
-      margin:0rem $horizontalBase*-1;
-      width:auto !important;
-
-      > img {
-        width:100%;
-      }
-    }
-
-    .wp-caption-text {
-      @extend cite;
-      padding-left:$horizontalBase;
-      padding-right:$horizontalBase;
-      margin-bottom:$verticalBase;
     }
 }

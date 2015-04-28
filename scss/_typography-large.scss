@@ -24,9 +24,7 @@
         font-size:1.9rem;
     }
 
-    figcaption a,
-    p a,
-    .entry-meta a {
+    a {
         @include no-padded-text();
 
         &:hover,

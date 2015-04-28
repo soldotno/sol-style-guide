@@ -57,9 +57,7 @@ h1 + p {
     font-size:1.8rem;
 }
 
-figcaption a,
-p a,
-.entry-meta a {
+a {
     @include padded-text();
 
     text-decoration:underline;
