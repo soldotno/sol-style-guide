@@ -1,8 +1,15 @@
-@import 'style-variables';
+@import
+    'colors',
+    'variables',
+    'mixins';
 
 //To prevent changes on solfront
 .advert {
-  @import 'style-basic';
+  @import
+    'fonts',
+    'typography',
+    'typography-large';
+
   a {padding:0;}
 }
 
