@@ -3,7 +3,9 @@
  */
 
 h1,h2,h3,h4,h5,h6 {
-   @extend %headingStyles;
+    clear:both;
+    font-weight:bold;
+    color:$headingColor;
 }
 h1,h2,h5,h6 {
     font-family:$headingFont;

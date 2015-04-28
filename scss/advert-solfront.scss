@@ -1,16 +1,14 @@
 @import
-    'colors',
-    'variables',
-    'mixins';
+    'settings/colors',
+    'settings/variables',
+    'settings/mixins';
 
 //To prevent changes on solfront
 .advert {
   @import
-    'fonts',
-    'typography',
-    'typography-large';
+    'modules/typography';
 
   a {padding:0;}
 }
 
-@import 'advert';
+@import 'modules/advert';

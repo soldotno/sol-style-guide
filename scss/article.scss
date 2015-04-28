@@ -1,11 +1,8 @@
 @import
-    'reset',
-    'colors',
-    'variables',
-    'mixins',
-    'fonts',
-    'typography',
-    'typography-large',
-    'layout',
-    'layout-large'
+    'settings/colors',
+    'settings/variables',
+    'settings/mixins',
+    'modules/reset',
+    'modules/typography',
+    'modules/layout',
     'article-specific';
