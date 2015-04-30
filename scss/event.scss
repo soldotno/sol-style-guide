@@ -1,0 +1,47 @@
+@import
+    'settings/colors',
+    'settings/variables',
+    'settings/mixins',
+
+    'modules/reset',
+    'modules/typography',
+    'modules/layout';
+
+/**
+ * Template specific classes
+ */
+
+.event {
+    /**
+     * Event-headers
+     */
+    main > header {
+        background-position:center center;
+        background-size:cover;
+    }
+
+    /**
+     * Layout-large
+     */
+    main > header,
+    main > .sparks {
+        float: left;
+    }
+
+    body > aside {
+        float: right;
+        width: 38.2%; // Golden ratio
+    }
+
+    .sparks {
+        width: 61.8%; // Golden ratio
+        article a {
+            display: block;
+        }
+    }
+
+    .post-navigation {
+        @extend .sparks;
+    }
+
+}
