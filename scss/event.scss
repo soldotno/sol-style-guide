@@ -40,4 +40,8 @@
         }
     }
 
+    .post-navigation {
+        @extend .sparks;
+    }
+
 }
