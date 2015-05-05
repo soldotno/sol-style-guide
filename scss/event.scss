@@ -16,6 +16,13 @@ $goldenFbCommentsWidth:801px;
  * Template specific classes
  */
 
+// Targeting block-level links, actually .event article > a
+// Kept outside everything to avoid adding specificity
+:link {
+    background:transparent;
+    text-decoration:none;
+}
+
 .event {
     /**
      * Event-headers
@@ -34,6 +41,9 @@ $goldenFbCommentsWidth:801px;
         @extend .sparks;
     }
 
+    article > :link {
+        display:block;
+    }
 }
 
 /**
