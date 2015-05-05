@@ -37,12 +37,14 @@ $goldenFbCommentsWidth:801px;
         @include margin();
     }
 
-    .post-navigation {
-        @extend .sparks;
-    }
-
     article > :link {
         display:block;
+    }
+
+    .post-navigation {
+        clear:both;
+        margin-left:$horizontalBase;
+        margin-right:$horizontalBase;
     }
 }
 
