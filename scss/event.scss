@@ -24,6 +24,16 @@ $goldenFbCommentsWidth:801px;
         background-position:center center;
         background-size:cover;
     }
+
+    .sparks,
+    > aside {
+        @include margin();
+    }
+
+    .post-navigation {
+        @extend .sparks;
+    }
+
 }
 
 /**
@@ -31,25 +41,35 @@ $goldenFbCommentsWidth:801px;
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
     .event {
+        // Move margin() to main element
+        .sparks,
+        > aside {
+            margin:0;
+        }
+        main {
+            margin: $verticalBase $horizontalBase;
+        }
+
         main > header,
         main > .sparks {
             float: left;
         }
 
-        body > aside {
+        main > header {
+            width:100%;
+        }
+
+        > aside {
             float: right;
             width: 38.2%; // Golden ratio
         }
 
         .sparks {
             width: 61.8%; // Golden ratio
+
             article a {
                 display: block;
             }
-        }
-
-        .post-navigation {
-            @extend .sparks;
         }
 
     }
