@@ -8,6 +8,11 @@
     'modules/layout';
 
 /**
+ * Custom vars
+ */
+$goldenFbCommentsWidth:801px;
+
+/**
  * Template specific classes
  */
 
@@ -19,29 +24,33 @@
         background-position:center center;
         background-size:cover;
     }
+}
 
-    /**
-     * Layout-large
-     */
-    main > header,
-    main > .sparks {
-        float: left;
-    }
-
-    body > aside {
-        float: right;
-        width: 38.2%; // Golden ratio
-    }
-
-    .sparks {
-        width: 61.8%; // Golden ratio
-        article a {
-            display: block;
+/**
+ * Layout-large
+ */
+@media screen and (min-width:$goldenFbCommentsWidth) {
+    .event {
+        main > header,
+        main > .sparks {
+            float: left;
         }
-    }
 
-    .post-navigation {
-        @extend .sparks;
-    }
+        body > aside {
+            float: right;
+            width: 38.2%; // Golden ratio
+        }
 
+        .sparks {
+            width: 61.8%; // Golden ratio
+            article a {
+                display: block;
+            }
+        }
+
+        .post-navigation {
+            @extend .sparks;
+        }
+
+    }
 }
