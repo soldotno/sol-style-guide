@@ -36,9 +36,9 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         .event-summary,
         .event-summary-footer {
             padding:$verticalBase/2 $horizontalBase;
-            background:rgba(0,0,0,0.7);
-            color:white;
-            p {color:white;}
+            background:$overlayColor;
+            color:$overlayTextColor;
+            p {color:$overlayTextColor;}
         }
 
         .event-summary-footer {
