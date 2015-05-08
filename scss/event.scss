@@ -8,8 +8,20 @@
     'modules/layout';
 
 /**
+ * Custom vars
+ */
+$goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
+
+/**
  * Template specific classes
  */
+
+// Targeting block-level links, actually .event article > a
+// Kept outside everything to avoid adding specificity
+:link {
+    background:transparent;
+    text-decoration:none;
+}
 
 .event {
     /**
@@ -20,28 +32,57 @@
         background-size:cover;
     }
 
-    /**
-     * Layout-large
-     */
-    main > header,
-    main > .sparks {
-        float: left;
+    .sparks,
+    > aside {
+        @include margin();
     }
 
-    body > aside {
-        float: right;
-        width: 38.2%; // Golden ratio
-    }
-
-    .sparks {
-        width: 61.8%; // Golden ratio
-        article a {
-            display: block;
-        }
+    article > :link {
+        display:block;
     }
 
     .post-navigation {
-        @extend .sparks;
+        clear:both;
+        margin-left:$horizontalBase;
+        margin-right:$horizontalBase;
     }
+}
 
+/**
+ * Layout-large
+ */
+@media screen and (min-width:$goldenFbCommentsWidth) {
+    .event {
+        // Move margin() to main element
+        .sparks,
+        > aside {
+            margin:0;
+        }
+        main {
+            margin: $verticalBase $horizontalBase;
+        }
+
+        main > header,
+        main > .sparks {
+            float: left;
+        }
+
+        main > header {
+            width:100%;
+        }
+
+        > aside {
+            float: right;
+            width: 38.2%; // Golden ratio
+        }
+
+        .sparks {
+            width: 61.8%; // Golden ratio
+
+            article a {
+                display: block;
+            }
+        }
+
+    }
 }
