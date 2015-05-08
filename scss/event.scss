@@ -30,6 +30,37 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     main > header {
         background-position:center center;
         background-size:cover;
+        padding-top:$verticalBase*15;
+
+        h1,
+        .event-summary,
+        .event-summary-footer {
+            padding:$verticalBase/2 $horizontalBase;
+            background:rgba(0,0,0,0.7);
+            color:white;
+            p {color:white;}
+        }
+
+        .event-summary-footer {
+            overflow:hidden;
+        }
+
+        .social {
+            display:block;
+            width:38.2%; // It's golden!
+            float:right;
+            text-align:right;
+        }
+
+        h1 {
+        }
+        .event-summary {
+
+        }
+        .event-summary-footer{
+
+        }
+
     }
 
     .sparks,
@@ -45,6 +76,10 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         clear:both;
         margin-left:$horizontalBase;
         margin-right:$horizontalBase;
+    }
+
+    > footer {
+        clear:both;
     }
 }
 
@@ -69,6 +104,15 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
 
         main > header {
             width:100%;
+            padding-top:$verticalBase*8;
+
+            h1,
+            .event-summary {
+                width: 61.8%; // Golden ratio
+            }
+            .event-summary-footer {
+                margin-top:$verticalBase;
+            }
         }
 
         > aside {
