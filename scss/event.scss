@@ -8,8 +8,20 @@
     'modules/layout';
 
 /**
+ * Custom vars
+ */
+$goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
+
+/**
  * Template specific classes
  */
+
+// Targeting block-level links, actually .event article > a
+// Kept outside everything to avoid adding specificity
+:link {
+    background:transparent;
+    text-decoration:none;
+}
 
 .event {
     /**
@@ -18,34 +30,107 @@
     main > header {
         background-position:center center;
         background-size:cover;
-    }
+        padding-top:$verticalBase*15;
 
-    /**
-     * Layout-large
-     */
-    main > header,
-    main > .sparks {
-        float: left;
-    }
-
-    body > aside {
-        float: right;
-        width: 38.2%; // Golden ratio
-    }
-
-    .sparks {
-        width: 61.8%; // Golden ratio
-        article a {
-            display: block;
+        h1,
+        .event-summary,
+        .event-summary-footer {
+            padding:$verticalBase/2 $horizontalBase;
+            background:$overlayColor;
+            color:$overlayTextColor;
+            p {color:$overlayTextColor;}
         }
+
+        .event-summary-footer {
+            overflow:hidden;
+        }
+
+        .social {
+            display:block;
+            width:38.2%; // It's golden!
+            float:right;
+            text-align:right;
+        }
+
+        h1 {
+        }
+        .event-summary {
+
+        }
+        .event-summary-footer{
+
+        }
+
+    }
+
+    .sparks,
+    > aside {
+        @include margin();
+    }
+
+    article > :link {
+        display:block;
     }
 
     .post-navigation {
-        @extend .sparks;
+        clear:both;
+        margin-left:$horizontalBase;
+        margin-right:$horizontalBase;
+    }
+
+    > footer {
+        clear:both;
     }
     
     a {
         text-decoration: none;
     }
+}
 
+/**
+ * Layout-large
+ */
+@media screen and (min-width:$goldenFbCommentsWidth) {
+    .event {
+        // Move margin() to main element
+        .sparks,
+        > aside {
+            margin:0;
+        }
+        main {
+            margin: $verticalBase $horizontalBase;
+        }
+
+        main > header,
+        main > .sparks {
+            float: left;
+        }
+
+        main > header {
+            width:100%;
+            padding-top:$verticalBase*8;
+
+            h1,
+            .event-summary {
+                width: 61.8%; // Golden ratio
+            }
+            .event-summary-footer {
+                margin-top:$verticalBase;
+            }
+        }
+
+        > aside {
+            float: right;
+            width: 38.2%; // Golden ratio
+        }
+
+        .sparks {
+            width: 61.8%; // Golden ratio
+
+            article a {
+                display: block;
+            }
+        }
+
+    }
 }
