@@ -15,6 +15,16 @@
         margin:0rem $horizontalBase*-1 $verticalBase;
         padding:0 $horizontalBase;
     }
+    
+    h1 {
+        font-family: "roboto slab";
+    }
+    
+    h1, p.entry-excerpt {
+        text-align: center;
+    }
+    
+    
 
     .entry-content > ol {
         padding-left:0;

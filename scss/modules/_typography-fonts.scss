@@ -10,8 +10,16 @@
  *     font-weight: bold;
  * }
  */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
-$headingFont: 'Roboto Slab', 'serif';
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:800");
+$headingFont: 'Open Sans', 'sans-serif';
+
+
+/*ROBOTO AS HEADER ONLY TO BE USED ON THEMES*/
+
+@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+$listHeadingFont: 'Roboto Slab', 'serif';
+
 
 /**
  * Helvetica Neue

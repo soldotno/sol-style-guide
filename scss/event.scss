@@ -43,5 +43,9 @@
     .post-navigation {
         @extend .sparks;
     }
+    
+    a {
+        text-decoration: none;
+    }
 
 }
