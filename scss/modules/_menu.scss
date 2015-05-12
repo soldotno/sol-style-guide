@@ -103,6 +103,7 @@
   position: fixed;
   background: $offwhiteColor;
   top: 56px;
+  left:0;
   z-index: 9999;
   width: 100%;
   overflow: auto;
@@ -132,6 +133,7 @@
         line-height: 1.8rem; //18px
         border-left-width: 7px;
         color: $menuLinkColor;
+        border-radius:0;
       }
       .main-menu-expand {
         position: absolute;
