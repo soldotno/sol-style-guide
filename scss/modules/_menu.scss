@@ -1,9 +1,6 @@
-/**
- * Menu.
- *
- * Menu styles copied from the solskinn project 2015-03-24. This project should hopefully be it's final resting place.
- * Some changes have been made to standardize colors.
- */
+/* --------------------------------------------------------------
+  Menu
+-------------------------------------------------------------- */
 #page-header {
   overflow: hidden;
 }
@@ -11,24 +8,24 @@
 #page-header-content {
   position: fixed;
   width:100%;
-  height: $headerHeight;
+  height: 56px;
   top:0;
   left:0;
-  color: $offwhiteColor;
+  color: $secondFontColor;
   background: $headerColor;
   text-align:center;
   z-index:99999;
   overflow: hidden;
 
   .toggled {
-    background:$menuButtonActiveColor;
+    background:$menuBtnActive;
   }
 }
 
 
 #header-menu {
   display: block;
-  height: 46px;
+  height: 56px;
   float: left;
   padding: 0 8px 10px 12px;
   width: auto;
@@ -68,13 +65,13 @@
   #search-input {
     min-width: 100px;
     width: 148px;
-    height: 19px;
+    height: 35px;
     font-size: 1.9rem; //19px
     padding: 8px;
     vertical-align: bottom;
     border: 0;
     border-radius: 0;
-    background:$lightTextColor;
+    background:$inputColor;
   }
   #search-submit {
     width: 40px;
@@ -84,7 +81,7 @@
     border-radius: 0;
     vertical-align: bottom;
     color: white;
-    background-color: $solRed;
+    background-color: $inputSearchColor;
     font-size: 2.5rem; //25px
     cursor: pointer;
 
@@ -96,17 +93,9 @@
 #header-nav::-webkit-scrollbar {
   display: none;
 }
-
-#page-header #header-nav {
-    display:none;
-}
-#page-header.toggled #header-nav {
-    display:block;
-}
-
 #header-nav {
   position: fixed;
-  background: $offwhiteColor;
+  background: $firstLevelColor;
   top: 56px;
   z-index: 9999;
   width: 100%;
@@ -127,9 +116,9 @@
       list-style: none;
       line-height: 1.2rem; //12px
       text-decoration: none;
-      color: $textColor;
+      color: $mainFontColor;
       width: 100%;
-      border-top: 1px solid $borderColor;
+      border-top: 1px solid $menuBorderColor;
 
       a {
         display: block;
@@ -144,9 +133,9 @@
         right: 0;
         width: 96px;
         height: 50px;
-        border-left: 1px solid $borderColor;
+        border-left: 1px solid $menuBorderColor;
         cursor: pointer;
-        color: $textColor;
+        color: $menuColor;
 
         .icon-arrow-right {
           position: absolute;
@@ -166,12 +155,12 @@
       }
     }
     #main-menu-children {
-      background-color: $offwhiteColor;
+      background-color: $secondLevelColor;
       padding: 0;
 
       li {
         list-style: none;
-        border-top: 1px solid $borderColor;
+        border-top: 1px solid $menuBorderColor;
 
         a {
           font-size: 1.7rem; //17px
@@ -194,7 +183,7 @@
       a {
         display: block;
         padding: 14px 5px 12px;
-        color: $whiteColor;
+        color: $lightFontColor;
         font-size: 1.8rem; //18px
         font-weight: 900;
         line-height:2.9rem; //29px;
