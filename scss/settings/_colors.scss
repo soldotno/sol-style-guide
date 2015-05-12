@@ -29,17 +29,8 @@ $linkHighlightColor:$offwhiteColor;
 
 /*Menu Colors*/
 $headerColor: #2c2c2c;
-$extraMenuBorder: $offwhiteColor;
-$secondFontColor: $offwhiteColor;
-$menuBtnActive: #4e4d4d;
-$inputColor: $whiteColor;
-$inputSearchColor: #e20613;
-$firstLevelColor: $offwhiteColor;
-$secondLevelColor: #e6e6e6;
-$mainFontColor: #333;
-$menuBorderColor: #d1d1d1;
-$menuColor: #666;
-$lightFontColor: $whiteColor;
+$menuButtonActiveColor: lighten($headerColor,10%);
+$menuLinkColor: darken($textColor,20%);
 
 /*Footer*/
 $footerBgColor: #2C2C2C;

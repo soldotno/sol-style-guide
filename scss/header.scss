@@ -18,8 +18,8 @@
     font-style:normal;
 }
 
-.icon-menu:before {
-    content:"\f0c9";
+
+[class*=" icon-"], [class^="icon-"] {
     font-family:icomoon;
     speak:none;
     font-style:normal;
@@ -29,6 +29,22 @@
     line-height:1;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
+}
+
+.icon-search:before {
+    content:"\f002";
+}
+
+.icon-arrow-right:before {
+    content:"\f054";
+}
+
+.icon-arrow-down:before {
+    content:"\f078";
+}
+
+.icon-menu:before {
+    content:"\f0c9";
 }
 
 @import 'modules/menu';
