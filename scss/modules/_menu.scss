@@ -4,8 +4,11 @@
  * Menu styles copied from the solskinn project 2015-03-24. This project should hopefully be it's final resting place.
  * Some changes have been made to standardize colors.
  */
+
 #page-header {
   overflow: hidden;
+  font-family: "Open Sans",sans-serif;
+  line-height: 1.42857;
 }
 
 #page-header-content {
@@ -21,14 +24,14 @@
   overflow: hidden;
 
   .toggled {
-    background:$menuButtonActiveColor;
+    background: $menuButtonActiveColor;
   }
 }
 
 
 #header-menu {
   display: block;
-  height: 46px;
+  height: 56px;
   float: left;
   padding: 0 8px 10px 12px;
   width: auto;
@@ -68,13 +71,13 @@
   #search-input {
     min-width: 100px;
     width: 148px;
-    height: 19px;
+    height: 35px;
     font-size: 1.9rem; //19px
     padding: 8px;
     vertical-align: bottom;
     border: 0;
     border-radius: 0;
-    background:$lightTextColor;
+    background: $whiteColor;
   }
   #search-submit {
     width: 40px;
@@ -96,18 +99,11 @@
 #header-nav::-webkit-scrollbar {
   display: none;
 }
-
-#page-header #header-nav {
-    display:none;
-}
-#page-header.toggled #header-nav {
-    display:block;
-}
-
 #header-nav {
   position: fixed;
   background: $offwhiteColor;
   top: 56px;
+  left:0;
   z-index: 9999;
   width: 100%;
   overflow: auto;
@@ -127,7 +123,6 @@
       list-style: none;
       line-height: 1.2rem; //12px
       text-decoration: none;
-      color: $textColor;
       width: 100%;
       border-top: 1px solid $borderColor;
 
@@ -137,6 +132,8 @@
         font-size: 2.0rem; //20px
         line-height: 1.8rem; //18px
         border-left-width: 7px;
+        color: $menuLinkColor;
+        border-radius:0;
       }
       .main-menu-expand {
         position: absolute;
@@ -199,8 +196,8 @@
         font-weight: 900;
         line-height:2.9rem; //29px;
         text-transform: uppercase;
-        border-top: 1px solid $extraMenuBorder;
-        border-right: 1px solid $extraMenuBorder;
+        border-top: 1px solid $offwhiteColor;
+        border-right: 1px solid $offwhiteColor;
       }
     }
     .soltv {

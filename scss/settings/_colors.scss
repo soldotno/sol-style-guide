@@ -30,6 +30,11 @@ $linkHighlightColor:$offwhiteColor;
 /*Menu Colors*/
 $headerColor: #2c2c2c;
 $menuButtonActiveColor: lighten($headerColor,10%);
-$menuFirstLevelBgColor: $offwhiteColor;
-$menuSecondLevelBgColor: #e6e6e6;
-$extraMenuBorder: $offwhiteColor;
+$menuLinkColor: darken($textColor,20%);
+
+/*Footer*/
+$footerBgColor: #2C2C2C;
+$footerBorderColor: #ff0000;
+$footerColor: #ccc;
+$footerLightColor: $whiteColor;
+$footerHighlightColor: #666;
