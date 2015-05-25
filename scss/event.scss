@@ -167,6 +167,17 @@
     }
   }
 
+  .item-main {
+    padding:0;
+
+    .text-wrap {
+      padding: 15px;
+    }
+    h3 {
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+    }
+  }
   .source {
     font-size: 1.4rem;
   }
