@@ -1,47 +1,133 @@
 @import
-    'settings/colors',
-    'settings/variables',
-    'settings/mixins',
+'settings/colors',
+'settings/variables',
+'settings/mixins',
 
-    'modules/reset',
-    'modules/typography',
-    'modules/layout';
+'modules/reset',
+'modules/typography',
+'modules/layout';
 
 /**
  * Template specific classes
  */
 
 .event {
-    /**
-     * Event-headers
-     */
-    main > header {
-        background-position:center center;
-        background-size:cover;
-    }
+  /**
+   * Event-headers
+   */
+  main > header {
+    background-position:center center;
+    background-size:cover;
+  }
 
-    /**
-     * Layout-large
-     */
+  article {
+    margin:0;
+    padding:0;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 2px solid $eventBorderColor;
+  }
+  .post-navigation {
+    @extend .sparks;
+    article a {
+      display: block;
+    }
+  }
+
+}
+
+
+[class^="item-"] {
+  display:block;
+  position:relative;
+  margin:0;
+  padding: 2.4rem 1.48331rem;
+  border-radius: 0;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: $eventBgColor;
+    text-decoration: none;
+    color: $textColor;
+  }
+
+  & + & {
+    border-top: 2px solid $eventBorderColor;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  h3 {
+    margin: 0 0 5px;
+    padding:0;
+    font-weight: 800;
+    font-size: 2.1rem;
+    color: $headingColor;
+    font-family: $headingEventFont;
+    line-height: 2.5rem;
+  }
+  p {
+    margin-bottom:1rem;
+  }
+}
+
+.item-default {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .img-wrap,
+  .text-wrap {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .img-wrap {
+    padding: 0 12px 0 0;
+    width: 102px;
+  }
+  .text-wrap {
+    width: 100%;
+  }
+}
+
+.source {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: $sourceColor;
+  text-transform: lowercase;
+}
+
+/**
+ * Layout-large
+ */
+@media screen and (min-width:$desktopWidth) {
+  .event {
+
     main > header,
     main > .sparks {
-        float: left;
+      float: left;
     }
 
     body > aside {
-        float: right;
-        width: 38.2%; // Golden ratio
+      float: right;
+      width: 38.2%; // Golden ratio
     }
 
     .sparks {
-        width: 61.8%; // Golden ratio
-        article a {
-            display: block;
-        }
+      width: 61.8%; // Golden ratio
     }
 
-    .post-navigation {
-        @extend .sparks;
+    article {
+      @include margin();
+      @include paper-shadow();
+      border:1px solid $borderColor;
     }
-
+  }
 }
