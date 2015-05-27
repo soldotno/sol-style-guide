@@ -99,6 +99,9 @@ article footer {
 
     }
 }
+.entry-content {
+    padding-top:$verticalBase;
+}
 .entry-footer {
     @extend h6;
     padding-top:$verticalBase*2/3;
