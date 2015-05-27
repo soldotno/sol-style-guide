@@ -1,9 +1,13 @@
 /**
  * Advertorials.
  */
-.list .advert {
 
+@import
+  'layout-mixins';
+
+.list .advert {
   @include paper();
+
   padding:0;
   background: $adColor;
   max-width: $contentWidth;

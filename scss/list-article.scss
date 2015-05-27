@@ -44,7 +44,7 @@
 
           // Custom list-markers
           &:before {
-            @include spacing();
+            @include margin();
             margin-left:0;
             padding:0;
 

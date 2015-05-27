@@ -1,0 +1,67 @@
+@mixin margin() {
+  margin:$verticalBase $horizontalBase;
+}
+@mixin padding() {
+  padding:$verticalBase $horizontalBase;
+}
+
+@mixin spacing() {
+  @include padding();
+
+  @media screen and (min-width:$largeWidth) {
+    @include margin();
+  }
+
+  > :first-child {
+    margin-top:0;
+  }
+  > :last-child {
+    margin-bottom:0;
+  }
+}
+
+@mixin paper-shadow() {
+  @include box-shadow(rgb(221,221,221) 0px 0px 2px);
+}
+
+@mixin paper() {
+  @include spacing();
+  @include paper-shadow();
+
+  background:$paperColor;
+  border:1px solid $borderColor;
+  max-width:$paperWidth;
+
+  @media all { // Overriding the media query in spacing();
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  > * {
+    max-width:$contentWidth;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@mixin nopaper() {
+  margin:0;
+  box-shadow:none;
+  background:transparent;
+  border:none;
+  max-width:none;
+
+  > * {
+    max-width:none;
+    margin-left:0;
+    margin-right:0;
+  }
+}
+
+@mixin standout() {
+  background-color:$bylineBgColor;
+  margin-left: -$horizontalBase;
+  margin-right:-$horizontalBase;
+  padding-left: $horizontalBase;
+  padding-right:$horizontalBase;
+}
