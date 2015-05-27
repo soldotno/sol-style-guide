@@ -21,7 +21,7 @@
     <main id="main" class="site-main" role="main">
         <article>
             <header>
-                <h1 class="entry-title">Why, oh why?</h1>
+                <h1 class="entry-title">Purpose and structure</h1>
                 <p>Explaining reasons and way of thinking.</p>
                 <div class="entry-meta">
                     <dl class="byline">
@@ -39,7 +39,7 @@
             </header><!-- .entry-header -->
 
             <div class="entry-content">
-                <h1>Purpose and structure</h1>
+
                 <p>The purpose and responsibility of this repository is to ensure that...</p>
                 <ul>
                     <li>... SOL design is consistent between projects</li>
@@ -57,62 +57,6 @@
                 <p>Since modules are used between projects, we have to be aware that changes made can affect several projects. Taking this into account, we have defines a set of <em>visual unit tests</em> in the form of static HTML files that use the generated styles for a project.</p>
                 <p>When introducing changes, the developer (or even someone without technical competence) can flick through these tests in a browser to make sure that the changes will not break something else.</p>
 
-                <h1>Grid and spacing</h1>
-                <p>The styles defined in this repo uphold consistent vertical and horizontal spacing. The layout does not conform to a strict grid in the horizontal direction, but strives to do so in the vertical direction.</p>
-                <p>To achieve <strong>vertical rhythm</strong>, the total height of any element should add up to a multiple of the $verticalBase parameter. To achieve consistent shapes of negative space, horizontal margins and paddings follows the same regime. Horizontal widths, on the other hand, should be of variable size. This way the layout will adapt to different screen sizes fluidly.</p>
-                <p>Our style work adheres to a mobile first strategy, and our code reflects that by specifying media queries operating with min-width rather than max-width tests.</p>
-
-                <h3>Implementation guidelines</h3>
-                <p>There are several possible strategies to achieve a vertical rhythm. Some of these strategies involve using automatically calculated spacings to adjust for differences between the desired height of an element and a height that fits in the grid. In order to do this in a way that is both human readable and maintainable, we conform to the following guidelines:</p>
-                <ul>
-                    <li>Inline elements have a line-height that is a multiple of $verticalBase.</li>
-                    <li>Block-level elements are laid out with the border-box box sizing model.</li>
-                    <li>Block-level elements have vertical margins that add up to a multiple of $verticalBase.</li>
-                    <li>Block-level elements have vertical paddings that add up to a multiple of $verticalBase.</li>
-                    <li>Horizontal margins and paddings add up to a multiple of $horizontalBase.</li>
-                </ul>
-
-                <h3>Exceptions</h3>
-                <ul>
-                    <li>Elements that are absolutely positions can deviate from these guidelines if absolutely necessary.</li>
-                    <li>Dynamic images are (for now) allowed to skew the vertical grid.</li>
-                </ul>
-
-                <h2>Examples</h2>
-                <h3>A basic element</h3>
-                <pre>
-                .example {
-                    height: 5*verticalBase;
-                    margin: $verticalBase $horizontalBase;
-                    padding: $verticalBase $horizontalBase;
-                    border: $1px solid $borderColor; // Since we use the border-box box-sizing model, borders can be set freely
-                }
-                </pre>
-
-                <h3>An element with special typography</h3>
-                <pre>
-                .semantic-classname {
-                    font-size: 3.3rem;
-                    line-height: 2*$verticalBase;
-
-                     // vertical margins add up to a multiple of $verticalBase, maintaining the vertical flow
-                     margin-top: 1/3*$verticalBase;
-                    margin-bottom: 2/3*$verticalBase;
-                }
-                </pre>
-
-                <h3>Moving elements around</h3>
-                <pre>
-                .semantic-classname {
-                    font-size: 3.3rem;
-                    line-height: 2*$verticalBase;
-
-                     // The line-height guideline is pretty strict. To get around some of the restrictions it imposes,
-                     // it is possible to move elements around with negative margins
-                     margin-top: -1/3*$verticalBase;
-                    margin-bottom: 4/3*$verticalBase; // Still adding up to a total that is a multiple of $verticalbase
-                }
-                </pre>
             </div><!-- .entry-content -->
 
             <footer class="entry-footer entry-meta">
