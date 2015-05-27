@@ -131,11 +131,10 @@ abbr {
 }
 
 code,pre {
+    @include padded-text();
+
     font-family:monospace;
     word-wrap:break-word;
-}
-code {
-    @include padded-text();
     color:#48bf48;
     background:black;
 }
