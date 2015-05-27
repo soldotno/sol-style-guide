@@ -1,17 +1,17 @@
 /**
- * Roboto Slab 700
+ * Open Sans 800
  *
- * Intended use: headers.
+ * Intended use: Main font for headings.
  *
  * Usage:
  *
  * h1 {
- *     font-family: 'Roboto Slab', serif;
- *     font-weight: bold;
+ *     font-family: $headingFont;
+ *     font-weight: 800;
  * }
  */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
-$headingFont: 'Roboto Slab', 'serif';
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:800');
+$headingFont: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 /**
  * Helvetica Neue
@@ -21,7 +21,7 @@ $headingFont: 'Roboto Slab', 'serif';
  * Usage:
  *
  * p {
- *     font-family: 'Helvetica'
+ *     font-family: $mainFont;
  * }
  */
-$mainFont: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$mainFont: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;

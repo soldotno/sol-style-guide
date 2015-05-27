@@ -1,5 +1,6 @@
 @import
     'article',
+    'modules/typography-fonts-extra',
     'modules/advert';
 
 /**
@@ -7,6 +8,14 @@
  */
 .list {
     @include nopaper();
+
+    // Typography overrides
+    h1,h2,h5,h6 {
+        font-family:$alternativeHeadingFont;
+    }
+    h4 {
+        font-family:2.0rem;
+    }
 
     header {
         @include paper-shadow();
@@ -87,10 +96,6 @@
             margin-bottom:0;
           }
         }
-    }
-
-
-    .embed-youtube iframe {
     }
 
     > iframe {
