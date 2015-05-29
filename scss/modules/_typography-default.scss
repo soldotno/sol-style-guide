@@ -64,12 +64,6 @@ h1 + p {
     font-size:1.8rem;
 }
 
-// Source
-.source {
-    font-size:1.4rem;
-    color:$lightTextColor;
-}
-
 a {
     @include padded-text();
 
@@ -100,6 +94,7 @@ small {
     color:$lightTextColor;
 }
 
+.source,
 cite {
     @extend small;
 }
