@@ -8,24 +8,18 @@
     'modules/layout';
 
 /**
- * Custom vars
+ * Custom vars.
  */
 $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
 
 /**
- * Template specific classes
+ * Template specific classes.
  */
-
-// Targeting block-level links, actually .event article > a
-// Kept outside everything to avoid adding specificity
-:link {
-    background:transparent;
-    text-decoration:none;
-}
-
 .event {
     /**
-     * Event-headers
+     * Event-headers.
+     *
+     * This is the introduction to this specific collection.
      */
     main > header {
         background-position:center center;
@@ -63,13 +57,64 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
 
     }
 
-    .sparks,
-    > aside {
-        @include margin();
-    }
+    /**
+     * Sparks.
+     *
+     * A 'spark' is a mini-collection. Our main collection consists of one or many of these. Within
+     * them, you'll often find links. Together, a spark and a link should look like a set of cards
+     * collapsed together to form a list.
+     *
+     * Looking for 'templates' and 'styles'? Search for .item-default.
+     */
+    article {
+        padding:0;
+        border-top-width:0;
 
-    article > :link {
-        display:block;
+        // Card-like block-level links are the clickable grains of our creation. Read some doge:
+        // Very link.
+        // Such click.
+        // Wow.
+        > a {
+            display:block;
+            @include padding();
+            margin:0 auto;
+            position:relative;
+            overflow:hidden;
+
+            background:transparent;
+            text-decoration:none;
+            color:$textColor;
+
+            border-bottom:1px solid $borderColor;
+            border-radius:0;
+
+            &:last-child {
+                border-bottom:0 none;
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                background:transparent;
+                filter: contrast(105%) saturate(105%);
+            }
+
+            &:focus {
+                outline:1px solid $linkColor;
+/*
+                &:hover {
+                    outline:none;
+                }
+*/
+            }
+        }
+
+
+        .source {
+            position:absolute;
+            right:$horizontalBase;
+            bottom:0;
+        }
     }
 
     .post-navigation {
@@ -78,13 +123,62 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         margin-right:$horizontalBase;
     }
 
+    /**
+     * Site-footer.
+     *
+     * Always at the bottom of our page, the site-footer serves as our colophon.
+     * It's styles are mostly imported from elsewhere.
+     */
     > footer {
         clear:both;
+    }
+
+    // Items have a 'template' and a 'style' that
+    // both should impact their visual appearance.
+    //
+    // Choosing a template allows the editors to
+    // alter the layout, and choosing a style allows
+    // them to set the 'temperature'.
+    //
+    // Let's start with the templates
+    .item-default {
+        img {
+            float:left;
+            margin-right:$horizontalBase;
+        }
+        h3 {
+            clear:none;
+
+            // Typography override
+            padding-top:1/3*$verticalBase;
+            padding-bottom:2/3*$verticalBase;
+        }
+    }
+    .item-main {
+        h3 {
+            clear:none;
+
+            // Typography override
+            font-size:2.4rem;
+        }
+    }
+    .item-gallery {
+        // Item gallery styles are for some reason still in the
+        // sol-event-public repo.
+        // @TODO Move them here
+    }
+    .item-facts {
+    }
+    .item-raw {
+    }
+    .item-advertorial {
+    }
+    .item-banner-ad {
     }
 }
 
 /**
- * Layout-large
+ * Layout-large.
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
     .event {
@@ -123,8 +217,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         .sparks {
             width: 61.8%; // Golden ratio
 
-            article a {
-                display: block;
+            article {
+                border-top-width:1px;
             }
         }
 
