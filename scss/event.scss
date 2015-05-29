@@ -5,7 +5,8 @@
 
     'modules/reset',
     'modules/typography',
-    'modules/layout';
+    'modules/layout',
+    'modules/responsive-embeds';
 
 /**
  * Custom vars.
@@ -173,6 +174,13 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     .item-facts {
     }
     .item-raw {
+        margin:$verticalBase 0;
+
+        iframe {
+            width:100% !important; // Override inline CSS from the embeds themselves
+        }
+
+
     }
     .item-advertorial {
     }
