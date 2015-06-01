@@ -1,0 +1,28 @@
+/* makes iframes responsive*/
+.embed-container-tall {
+    padding-bottom: 140%;
+}
+.embed-container-square {
+    padding-bottom: 120%;
+}
+.embed-container-widescreen {
+    padding-bottom: 56.25%;
+    max-width: 100%;
+}
+.embed-container-tall,
+.embed-container-square,
+.embed-container-widescreen {
+    position: relative;
+    height:0;
+    // overflow:hidden;
+
+    embed,
+    object,
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
