@@ -25,19 +25,42 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     main > header {
         background-position:center center;
         background-size:cover;
-        padding-top:$verticalBase*15;
 
-        h1,
+        h1 {
+            padding:31/2*$verticalBase $horizontalBase $verticalBase/2;
+            background:$overlayGradient;
+            color:$overlayTextColor;
+            text-transform:uppercase;
+        }
+
+        &.text-only h1 {
+            padding:$verticalBase*2 $horizontalBase 0;
+            background:$offwhiteColor;
+            color:$headingColor;
+        }
+
         .event-summary,
         .event-summary-footer {
+            float:left;
+            width:100%;
+        }
+
+        .event-summary {
             padding:$verticalBase/2 $horizontalBase;
-            background:$overlayColor;
-            color:$overlayTextColor;
-            p {color:$overlayTextColor;}
+            background:$offwhiteColor;
         }
 
         .event-summary-footer {
+            padding:$verticalBase/2 $horizontalBase;
+            height:$verticalBase*2;
             overflow:hidden;
+            border-bottom:1px solid $borderColor;
+
+            // 'Add this' social box doesn't listen, wants to do it's own thing
+            .social {
+                position:relative;
+                top:-4px;
+            }
         }
 
         .social {
@@ -67,6 +90,9 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
      *
      * Looking for 'templates' and 'styles'? Search for .item-default.
      */
+    .sparks {
+        clear:both;
+    }
     article {
         padding:0;
         border-top-width:0;
@@ -187,6 +213,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             font-size:1.8rem;
             color:$solRed;
             text-transform:uppercase;
+            padding-top:1/3*$verticalBase;
+            padding-bottom:2/3*$verticalBase;
         }
     }
     .item-raw {
@@ -223,22 +251,12 @@ html {
             margin: $verticalBase $horizontalBase;
         }
 
-        main > header,
         main > .sparks {
             float: left;
         }
 
         main > header {
             width:100%;
-            padding-top:$verticalBase*8;
-
-            h1,
-            .event-summary {
-                width: 61.8%; // Golden ratio
-            }
-            .event-summary-footer {
-                margin-top:$verticalBase;
-            }
         }
 
         > aside {
