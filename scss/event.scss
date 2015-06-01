@@ -71,17 +71,23 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         padding:0;
         border-top-width:0;
 
-        // Card-like block-level links are the clickable grains of our creation. Read some doge:
+        // Card-like block-level links are the clickable grains of our creation,
+        // along with fact boxes (aside nodes) and external embedded content.
+        //
+        // Read some doge:
         // Very link.
         // Such click.
         // Wow.
-        > a {
+        > a,
+        > aside {
             display:block;
             @include padding();
             margin:0 auto;
             position:relative;
             overflow:hidden;
+        }
 
+        > a {
             background:transparent;
             text-decoration:none;
             color:$textColor;
@@ -108,6 +114,10 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
                 }
 */
             }
+        }
+
+        > aside {
+            background:$lightShade;
         }
 
 
@@ -172,6 +182,12 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         // @TODO Move them here
     }
     .item-facts {
+        h3 {
+            // @TODO Move to typography
+            font-size:1.8rem;
+            color:$solRed;
+            text-transform:uppercase;
+        }
     }
     .item-raw {
         margin:$verticalBase 0;
@@ -228,6 +244,7 @@ html {
         > aside {
             float: right;
             width: 38.2%; // Golden ratio
+            margin-top:$verticalBase 0; // Same vertical margins as sparks
         }
 
         .sparks {
