@@ -12,6 +12,7 @@
  * Custom vars.
  */
 $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
+$bgFacts: $offwhiteColor;
 
 /**
  * Template specific classes.
@@ -27,7 +28,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         background-size:cover;
 
         h1 {
-            padding:31/2*$verticalBase $horizontalBase $verticalBase/2;
+            padding:17/2*$verticalBase $horizontalBase $verticalBase/2;
             background:$overlayGradient;
             color:$overlayTextColor;
             text-transform:uppercase;
@@ -142,11 +143,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             }
         }
 
-        > aside {
-            background:$lightShade;
-        }
-
-
         .source {
             position:absolute;
             right:$horizontalBase;
@@ -207,6 +203,9 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         // sol-event-public repo.
         // @TODO Move them here
     }
+    .spark-facts {
+        background:$bgFacts;
+    }
     .item-facts {
         h3 {
             // @TODO Move to typography
@@ -223,8 +222,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         iframe {
             width:100% !important; // Override inline CSS from the embeds themselves
         }
-
-
     }
     .item-advertorial {
     }
@@ -257,6 +254,27 @@ html {
 
         main > header {
             width:100%;
+
+            > * {
+                border:1px solid $borderColor;
+                border-bottom-width:0;
+
+                &:last-child {
+                    border-bottom-width:1px;
+
+                    .social {
+                        top:-5px; // Adjust from -4 for the extra border pixel...
+                    }
+                }
+            }
+
+            .event-summary {
+                background:$paperColor;
+            }
+
+            .event-summary-footer {
+                background:$offwhiteColor;
+            }
         }
 
         > aside {

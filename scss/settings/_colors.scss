@@ -2,7 +2,7 @@
 $solColor:#e20613;
 $solRed:$solColor;
 
-$neutralColor:rgb(238,238,238);
+$neutralColor:rgb(240,240,240);
 $whiteColor:rgb(255,255,255);
 $offwhiteColor:#f5f5f5;
 $lightShade:rgba(0,0,0,0.04);
@@ -17,7 +17,7 @@ $linkBgColor: $lightShade;
 $borderColor:darken($neutralColor,6.5%);
 $lightBorderColor:darken($neutralColor,3%);
 $adColor: #fcf7e8;
-$overlayGradient:linear-gradient(transparent 20%,black);
+$overlayGradient:linear-gradient(transparent 40%,black);
 
 // Copy
 $headingColor:#333;
