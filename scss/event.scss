@@ -12,7 +12,6 @@
  * Custom vars.
  */
 $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
-$bgFacts: $offwhiteColor;
 
 /**
  * Template specific classes.
@@ -204,7 +203,7 @@ $bgFacts: $offwhiteColor;
         // @TODO Move them here
     }
     .spark-facts {
-        background:$bgFacts;
+        background:$offwhiteColor;
     }
     .item-facts {
         h3 {
