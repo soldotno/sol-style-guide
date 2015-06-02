@@ -93,7 +93,10 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     .sparks {
         clear:both;
     }
-    article {
+
+    [class*=" spark-"],
+    [class^="spark-"] {
+        @include paper();
         padding:0;
         border-top-width:0;
 
