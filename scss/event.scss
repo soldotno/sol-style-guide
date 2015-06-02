@@ -29,17 +29,41 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             background-position:center center;
             background-size:cover;
 
-            h1,
+            h1 {
+                padding:17/2*$verticalBase $horizontalBase $verticalBase/2;
+                background:$overlayGradient;
+                color:$overlayTextColor;
+                text-transform:uppercase;
+            }
+
+            &.text-only h1 {
+                padding:$verticalBase*2 $horizontalBase 0;
+                background:$offwhiteColor;
+                color:$headingColor;
+            }
+
             .event-summary,
             .event-summary-footer {
+                float:left;
+                width:100%;
+            }
+
+            .event-summary {
                 padding:$verticalBase/2 $horizontalBase;
-                background:$overlayColor;
-                color:$overlayTextColor;
-                p {color:$overlayTextColor;}
+                background:$offwhiteColor;
             }
 
             .event-summary-footer {
+                padding:$verticalBase/2 $horizontalBase;
+                height:$verticalBase*2;
                 overflow:hidden;
+                border-bottom:1px solid $borderColor;
+
+                // 'Add this' social box doesn't listen, wants to do it's own thing
+                .social {
+                    position:relative;
+                    top:-4px;
+                }
             }
 
             .social {
@@ -49,8 +73,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
                 text-align:right;
             }
 
-            h1 {
-            }
             .event-summary {
 
             }
@@ -63,7 +85,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     .ad-wrapper {
         overflow: hidden;
     }
-q
+
+    .ad-topbanner {
         text-align: center;
         position: absolute;
         top: 80px;
@@ -100,6 +123,9 @@ q
      *
      * Looking for 'templates' and 'styles'? Search for .item-default.
      */
+    .sparks {
+        clear:both;
+    }
     article {
         padding:0;
         border-top-width:0;
@@ -148,11 +174,6 @@ q
 */
             }
         }
-
-        > aside {
-            background:$lightShade;
-        }
-
 
         .source {
             position:absolute;
@@ -214,12 +235,17 @@ q
         // sol-event-public repo.
         // @TODO Move them here
     }
+    .spark-facts {
+        background:$offwhiteColor;
+    }
     .item-facts {
         h3 {
             // @TODO Move to typography
             font-size:1.8rem;
             color:$solRed;
             text-transform:uppercase;
+            padding-top:1/3*$verticalBase;
+            padding-bottom:2/3*$verticalBase;
         }
     }
     .item-raw {
@@ -228,7 +254,6 @@ q
         iframe {
             width:100% !important; // Override inline CSS from the embeds themselves
         }
-
     }
     .item-advertorial {
     }
@@ -255,21 +280,32 @@ html {
             margin: $verticalBase $horizontalBase;
         }
 
-        main > header,
         main > .sparks {
             float: left;
         }
 
         main > header {
             width:100%;
-            padding-top:$verticalBase*8;
 
-            h1,
-            .event-summary {
-                width: 61.8%; // Golden ratio
+            > * {
+                border:1px solid $borderColor;
+                border-bottom-width:0;
+
+                &:last-child {
+                    border-bottom-width:1px;
+
+                    .social {
+                        top:-5px; // Adjust from -4 for the extra border pixel...
+                    }
+                }
             }
+
+            .event-summary {
+                background:$paperColor;
+            }
+
             .event-summary-footer {
-                margin-top:$verticalBase;
+                background:$offwhiteColor;
             }
         }
 
