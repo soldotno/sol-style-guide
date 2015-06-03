@@ -10,6 +10,10 @@ $heavyShade:rgba(0,0,0,0.8);
 $overlayColor:rgba(0,0,0,0.6);
 $overlayTextColor:rgb(255,255,255);
 
+// @TODO: Designer should pick only one of the following
+$beigeColor:#fcf7e8;
+$beigeColor:#fff9df;
+
 // Backgrounds
 $bgColor: $neutralColor;
 $darkBgColor: $heavyShade;
@@ -18,7 +22,7 @@ $bylineBgColor: $lightShade;
 $linkBgColor: $lightShade;
 $borderColor:darken($neutralColor,6.5%);
 $lightBorderColor:darken($neutralColor,3%);
-$adColor: #fcf7e8;
+$adBgColor: $beigeColor;
 $overlayGradient:linear-gradient(transparent 40%,black);
 
 // Copy

@@ -6,6 +6,7 @@
     'modules/reset',
     'modules/typography',
     'modules/layout',
+    'modules/advert',
     'modules/responsive-embeds',
     'modules/image-gallery';
 
@@ -233,8 +234,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         iframe {
             width:100% !important; // Override inline CSS from the embeds themselves
         }
-    }
-    .item-advertorial {
     }
     .item-banner-ad {
     }
