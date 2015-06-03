@@ -7,7 +7,7 @@
     'modules/typography',
     'modules/layout',
     'modules/responsive-embeds',
-    'event-ads';
+    'event-ads',
     'modules/advert',
     'modules/image-gallery';
 
@@ -253,21 +253,31 @@ html {
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
     .event {
+
         // Move margin() to main element
         .sparks,
         > aside {
             margin:0;
         }
         main {
+            display:flex;
+            flex-wrap:wrap;
             margin: $verticalBase $horizontalBase;
-        }
 
-        main > .sparks {
-            float: left;
+            > header {
+                flex: 99 1 1000px;
+            }
+            .sparks {
+                flex: 1 1 500px;
+                margin-right:$horizontalBase;
+            }
+            > aside {
+                flex: 0 0 300px;
+                margin-top:$verticalBase; // Same vertical margins as sparks
+            }
         }
 
         main > header {
-            width:100%;
 
             > * {
                 border:1px solid $borderColor;
@@ -291,15 +301,7 @@ html {
             }
         }
 
-        > aside {
-            float: right;
-            width: 38.2%; // Golden ratio
-            margin-top:$verticalBase 0; // Same vertical margins as sparks
-        }
-
         .sparks {
-            width: 61.8%; // Golden ratio
-
             article {
                 border-top-width:1px;
             }
