@@ -26,31 +26,30 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     }
 
     .ad-topbanner {
+        padding-top: 1.2rem;
+        margin-top: $verticalBase - 1.2rem;
         text-align: center;
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        margin-left: -50%;
-        width: 100%;
-        margin-top: -12px;
+        position: relative;
     }
 
     .ad-netboard {
         text-align: center;
         position: relative;
         clear: both;
+        padding-top: 1.2rem;
         margin-top: $verticalBase;
     }
 
-    .advert-marking {
+    .advert-marking:after {
         @extend small;
         text-align: center;
         text-transform: lowercase;
-        //content: "Annonse";
-        //position: absolute;
-        //top: -11px;
+        content: "Annonse";
+        position: absolute;
+        top: 0px;
         line-height: 1.2rem;
         display: block;
+        width:100%;
     }
 }
 
@@ -59,9 +58,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
     .event {
-        .ad-topbanner {
-            margin-left: -$topbannerRestrictedWidth/2;
-            width: $topbannerRestrictedWidth;
-        }
+
     }
 }
