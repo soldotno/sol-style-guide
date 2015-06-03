@@ -5,11 +5,12 @@
 @import
   'layout-mixins';
 
+.event .item-advertorial,
 .list .advert {
   @include paper();
 
   padding:0;
-  background: $adColor;
+  background: $adBgColor;
   max-width: $contentWidth;
   position: relative;
   overflow: hidden;
@@ -38,6 +39,7 @@
   }
   img {
     display: block;
+    max-width:100%;
   }
   .advert-marker {
     color:#FFFFFF;
@@ -46,5 +48,21 @@
     padding:0 $horizontalBase;
     width: 100%;
     font-size: 1.4rem;
+  }
+}
+.event .item-advertorial {
+  background: $adBgColor !important;
+  border:0;
+
+  &::before {
+    @extend small;
+
+    content:'Annonse';
+    position:absolute;
+    top:$verticalBase;
+    left:$horizontalBase;
+    padding:0 $horizontalBase;
+    background:$overlayColor;
+    color:$whiteColor;
   }
 }
