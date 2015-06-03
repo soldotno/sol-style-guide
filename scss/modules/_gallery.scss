@@ -1,20 +1,28 @@
+/**
+ * Slider-style image gallery.
+ *
+ * Original purpose: In-stream view of multiple images in restricted space.
+ */
 $ig-screen-sm-min: 768px;
 $ig-white: #ffffff;
 $ig-black: #222222;
 $ig-blue: #e20613;
 
-.ImageGallery {
+.image-gallery {
   user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
 
+  background-color: #2c2c2c;
+  color:#FFFFFF;
 
-  .ImageGallery_content {
+  .slider-content {
     position: relative;
-    .ImageGallery_content_left_nav,
-    .ImageGallery_content_right_nav {
+
+    .prev,
+    .next {
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       cursor: pointer;
       position: absolute;
@@ -36,7 +44,7 @@ $ig-blue: #e20613;
       }
     }
 
-    .ImageGallery_content_left_nav {
+    .prev {
       left: 0;
       &:before {
         padding: 50px 15px;
@@ -44,7 +52,7 @@ $ig-blue: #e20613;
       }
     }
 
-    .ImageGallery_content_right_nav {
+    .next {
       right: 0;
       &:before {
         padding: 50px 15px;
@@ -52,16 +60,19 @@ $ig-blue: #e20613;
       }
     }
 
-    .ImageGallery_content_slides {
+    .slides {
       overflow: hidden;
       white-space: nowrap;
       position: relative;
-      .ImageGallery_content_slides_slide {
+
+      .slide {
         opacity: 0;
         display: inline-block;
         width: 100%;
 
-        &.left, &.center, &.right {
+        &.left,
+        &.center,
+        &.right {
           transition: all .35s ease-out;
           position: absolute;
           top: 0;
@@ -109,16 +120,16 @@ $ig-blue: #e20613;
 
   }
 
-  .ImageGallery_bullet_container {
+  .bullet-container {
     position: absolute;
     bottom: 40px;
     width: 100%;
     text-align: center;
-    .ImageGallery_bullet_container_bullets {
+    .bullets {
       margin: 0;
       padding: 0;
 
-      .ImageGallery_bullet_container_bullets_bullet {
+      .bullet {
         cursor: pointer;
         padding: 5px;
         border: 1px solid $ig-white;
@@ -139,17 +150,18 @@ $ig-blue: #e20613;
     }
   }
 
-  .ImageGallery_thumbnail_container {
+  .thumbnail-container {
     overflow: hidden;
     background: $ig-white;
     padding-top: 10px;
-    .ImageGallery_thumbnail_container_thumbnails {
+
+    .thumbnails {
       cursor: pointer;
       text-align: center;
       white-space: nowrap;
       transition: all .45s ease-out;
 
-      .ImageGallery_thumbnail_container_thumbnails_thumbnail {
+      .thumbnail {
         padding-right: 10px;
         display: inline-block;
 
@@ -158,6 +170,7 @@ $ig-blue: #e20613;
           vertical-align: middle;
           transition: border .3s ease-out;
           border: 4px solid transparent;
+
           @media (max-width: $ig-screen-sm-min) {
             width: 75px;
             border: 3px solid transparent;
@@ -167,6 +180,7 @@ $ig-blue: #e20613;
         &.active {
           img {
             border: 4px solid $ig-blue;
+
             @media (max-width: $ig-screen-sm-min) {
               border: 3px solid $ig-blue;
             }
@@ -175,14 +189,4 @@ $ig-blue: #e20613;
       }
     }
   }
-
-
-
-}
-.ImageGallery{
-  background-color: #2c2c2c;
-  color:#FFFFFF;
-}
-.App_sandbox{
-  display:none;
 }
