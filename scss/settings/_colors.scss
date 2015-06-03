@@ -6,6 +6,7 @@ $neutralColor:rgb(240,240,240);
 $whiteColor:rgb(255,255,255);
 $offwhiteColor:#f5f5f5;
 $lightShade:rgba(0,0,0,0.04);
+$heavyShade:rgba(0,0,0,0.8);
 $overlayColor:rgba(0,0,0,0.6);
 $overlayTextColor:rgb(255,255,255);
 
@@ -15,6 +16,7 @@ $beigeColor:#fff9df;
 
 // Backgrounds
 $bgColor: $neutralColor;
+$darkBgColor: $heavyShade;
 $paperColor: $whiteColor;
 $bylineBgColor: $lightShade;
 $linkBgColor: $lightShade;

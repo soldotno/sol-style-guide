@@ -7,7 +7,8 @@
     'modules/typography',
     'modules/layout',
     'modules/advert',
-    'modules/responsive-embeds';
+    'modules/responsive-embeds',
+    'modules/image-gallery';
 
 /**
  * Custom vars.
@@ -172,6 +173,13 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         width:100%;
     }
 
+    [class*=" item-"],
+    [class^="item-"] {
+        h3 {
+            font-family:$headingFont;
+        }
+    }
+
     // Items have a 'template' and a 'style' that
     // both should impact their visual appearance.
     //
@@ -189,8 +197,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             clear:none;
 
             // Typography override
-            padding-top:1/3*$verticalBase;
-            padding-bottom:2/3*$verticalBase;
+            padding-top:1/8*$verticalBase;
+            padding-bottom:7/8*$verticalBase;
         }
     }
     .item-main {
@@ -211,7 +219,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     }
     .item-facts {
         h3 {
-            // @TODO Move to typography
+            // @TODO Move to typography?
+            font-family: $mainFont;
             font-size:1.8rem;
             color:$solRed;
             text-transform:uppercase;
