@@ -189,6 +189,11 @@ ol {
     }
 }
 
+li {
+    margin-top:$verticalBase/2;
+    margin-bottom:$verticalBase/2;
+}
+
 dt {
     @extend h4;
 }
