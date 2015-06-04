@@ -16,6 +16,7 @@
  * Custom vars.
  */
 $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
+$adMarkerSize: 1rem;
 
 /**
  *
@@ -26,7 +27,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     }
 
     .ad-topbanner {
-        margin-top: $verticalBase - 1.2rem;
+        margin-top: $verticalBase - $adMarkerSize;
     }
 
     .ad-netboard {
@@ -34,11 +35,13 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     }
 
     .ad-marker:before {
-        @extend small;
+        font-size: $adMarkerSize;
+        color: $lightTextColor;
         text-transform: lowercase;
         content: "Annonse";
-        line-height: 1.2rem;
+        line-height: $adMarkerSize;
         display: block;
+        text-align: center;
     }
 }
 
