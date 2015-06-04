@@ -26,32 +26,20 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
     }
 
     .ad-topbanner {
-        //padding-top: 1.2rem;
-        //margin-top: $verticalBase - 1.2rem;
-        margin-top: $verticalBase;
-        //text-align: center;
-        //position: relative;
+        margin-top: $verticalBase - 1.2rem;
     }
 
     .ad-netboard {
-        //text-align: center;
-        //position: relative;
         clear: both;
-        //padding-top: 1.2rem;
-        margin-top: $verticalBase;
     }
 
-    //.advert-marking:after {
-    //    @extend small;
-    //    text-align: center;
-    //    text-transform: lowercase;
-    //    content: "Annonse";
-    //    position: absolute;
-    //    top: 0px;
-    //    line-height: 1.2rem;
-    //    display: block;
-    //    width:100%;
-    //}
+    .ad-marker:before {
+        @extend small;
+        text-transform: lowercase;
+        content: "Annonse";
+        line-height: 1.2rem;
+        display: block;
+    }
 }
 
 /**
@@ -59,6 +47,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
     .ad-wrapper {
-        margin: $verticalBase $horizontalBase;
+        margin-left: $horizontalBase;
+        margin-right: $horizontalBase;
     }
 }
