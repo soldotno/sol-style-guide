@@ -106,26 +106,14 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         padding:0;
         border-top-width:0;
 
-        // Card-like block-level links are the clickable grains of our creation,
-        // along with fact boxes (aside nodes) and external embedded content.
-        //
-        // Read some doge:
-        // Very link.
-        // Such click.
-        // Wow.
-        > a,
-        > aside {
+        // Items are the clickable grains of our creation. They can be block-level links,
+        // self-produced content, fact boxes (aside nodes) or external embedded content.
+        .item {
             display:block;
             @include padding();
             margin:0 auto;
             position:relative;
             overflow:hidden;
-        }
-
-        > a {
-            background:transparent;
-            text-decoration:none;
-            color:$textColor;
 
             border-bottom:1px solid $borderColor;
             border-radius:0;
@@ -133,6 +121,21 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             &:last-child {
                 border-bottom:0 none;
             }
+
+            h3 {
+                font-family:$headingFont;
+            }
+        }
+
+        // Read some doge:
+        //
+        // Very link.
+        // Such click.
+        // Wow.
+        a.item {
+            background:transparent;
+            text-decoration:none;
+            color:$textColor;
 
             &:hover,
             &:active,
@@ -158,6 +161,32 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         }
     }
 
+    .image-link {
+        padding:0;
+    }
+    // @TODO Move to typography?
+    .item-title a {
+        text-decoration:none;
+        color:inherit;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration:underline;
+            color:white;
+        }
+    }
+
+    @media screen and (min-width:$largeWidth) {
+        .item-title a {
+            &:hover,
+            &:active,
+            &:focus {
+                color:inherit;
+            }
+        }
+    }
+
     .post-navigation {
         clear:both;
         margin-left:$horizontalBase;
@@ -175,13 +204,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         bottom:0;
         left:0;
         width:100%;
-    }
-
-    [class*=" item-"],
-    [class^="item-"] {
-        h3 {
-            font-family:$headingFont;
-        }
     }
 
     // Items have a 'template' and a 'style' that
@@ -302,10 +324,9 @@ html {
         }
 
         .sparks {
-            article {
+            .spark {
                 border-top-width:1px;
             }
         }
-
     }
 }
