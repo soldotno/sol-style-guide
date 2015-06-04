@@ -239,7 +239,13 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             width:100% !important; // Override inline CSS from the embeds themselves
         }
     }
-    .item-banner-ad {
+    .spark-header {
+        font-size: 20px;
+        color: $whiteColor;
+        padding-left: $horizontalBase;
+        padding-right: $horizontalBase;
+        background-color: $headerColor;
+        line-height: 3/2*$verticalBase;
     }
 }
 
@@ -305,7 +311,11 @@ html {
             article {
                 border-top-width:1px;
             }
-        }
 
+            .spark-header {
+                line-height: 2*$verticalBase;
+                font-size: 28px;
+            }
+        }
     }
 }
