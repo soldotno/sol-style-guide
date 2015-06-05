@@ -100,8 +100,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         clear:both;
     }
 
-    [class*=" spark-"],
-    [class^="spark-"] {
+    .spark {
         @include paper();
         padding:0;
         border-top-width:0;
@@ -336,6 +335,13 @@ html {
             .spark-header {
                 line-height: 2*$verticalBase;
                 font-size: 28px;
+            }
+        }
+
+        .item-main {
+            img {
+                margin:-1*$verticalBase -1*$horizontalBase 0;
+                max-width:calc(100% + #{2*$horizontalBase});
             }
         }
     }
