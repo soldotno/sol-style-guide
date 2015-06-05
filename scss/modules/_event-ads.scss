@@ -16,15 +16,12 @@ $adMarkerSize: 1rem;
         overflow: hidden;
     }
 
-    .ad-topbanner {
-        margin-top: $verticalBase - $adMarkerSize;
-    }
-
     .ad-netboard {
         clear: both;
     }
 
     .ad-marker:before {
+        margin-top: $verticalBase - $adMarkerSize;
         font-size: $adMarkerSize;
         color: $lightTextColor;
         text-transform: lowercase;
