@@ -9,6 +9,10 @@
   overflow: hidden;
   font-family: $headingFont;
   line-height: 1.42857;
+
+  li {
+    margin:0;
+  }
 }
 
 #page-header-content {
