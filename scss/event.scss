@@ -32,7 +32,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
 
         > header {
             h1 {
-                padding:17/2*$verticalBase $horizontalBase $verticalBase/2;
+                padding:8.5*$verticalBase $horizontalBase 0.5*$verticalBase;
                 background:$overlayGradient;
                 background-position:center center;
                 background-size:cover;
@@ -54,7 +54,7 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
             }
 
             .event-summary {
-                padding:$verticalBase/2 $horizontalBase;
+                @include padding();
                 background:$offwhiteColor;
             }
 
@@ -305,6 +305,10 @@ html {
         }
 
         main > header {
+
+            h1 {
+                padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+            }
 
             > * {
                 border:1px solid $borderColor;

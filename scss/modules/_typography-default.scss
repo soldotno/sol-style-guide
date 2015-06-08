@@ -58,6 +58,10 @@ body {
 p {
     font-size:1.6rem;
     margin-bottom:$verticalBase;
+
+    &:last-child {
+        margin-bottom:0;
+    }
 }
 // Lede
 h1 + p {
