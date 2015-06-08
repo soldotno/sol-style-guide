@@ -31,12 +31,12 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         margin-top: $verticalBase;
 
         > header {
-            background-position:center center;
-            background-size:cover;
-
             h1 {
                 padding:17/2*$verticalBase $horizontalBase $verticalBase/2;
                 background:$overlayGradient;
+                background-position:center center;
+                background-size:cover;
+
                 color:$overlayTextColor;
                 text-transform:uppercase;
             }
