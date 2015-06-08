@@ -279,8 +279,8 @@ html {
  * Layout-large.
  */
 @media screen and (min-width:$goldenFbCommentsWidth) {
+    $facebookCommentsWidth: 30.0rem;
     .event {
-
         // Move margin() to main element
         .sparks,
         > aside {
@@ -292,14 +292,14 @@ html {
             margin: $verticalBase $horizontalBase;
 
             > header {
-                flex: 99 1 1000px;
+                flex: 99 1 100.0rem;
             }
             .sparks {
-                flex: 1 1 500px;
+                flex: 1 1 50.0rem;
                 margin-right:$horizontalBase;
             }
             > aside {
-                flex: 0 0 300px;
+                flex: 0 0 $facebookCommentsWidth;
                 margin-top:$verticalBase; // Same vertical margins as sparks
             }
         }
@@ -307,7 +307,7 @@ html {
         main > header {
 
             h1 {
-                padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+                padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase 3*$horizontalBase;
             }
 
             > * {
@@ -323,11 +323,19 @@ html {
                 }
             }
 
+            .event-summary,
+            .event-summary-footer {
+            }
+
             .event-summary {
                 background:$paperColor;
+                padding:1.5*$verticalBase $facebookCommentsWidth 1.5*$verticalBase 3*$horizontalBase;
+                padding-right:$facebookCommentsWidth; // Same as
             }
 
             .event-summary-footer {
+                padding:0.75*$verticalBase $horizontalBase 0.75*$verticalBase 3*$horizontalBase;
+                height:5/2*$verticalBase;
                 background:$offwhiteColor;
             }
         }
