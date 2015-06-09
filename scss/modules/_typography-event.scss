@@ -1,0 +1,72 @@
+/**
+ * Typography overrides for event pages.
+ */
+.event {
+    h1 {
+        padding:8.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+        background:$overlayGradient;
+        background-position:center center;
+        background-size:cover;
+
+        color:$overlayTextColor;
+        text-transform:uppercase;
+    }
+
+    .text-only h1 {
+        padding:$verticalBase*2 $horizontalBase 0;
+        background:$offwhiteColor;
+        color:$headingColor;
+    }
+
+    h2 {
+        line-height: 2*$verticalBase;
+        font-size: 28px;
+        padding: 2.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+        color: $whiteColor;
+        background-color: $headerColor;
+    }
+
+    h3 {
+        clear:none;
+
+        padding-top:1/8*$verticalBase;
+        padding-bottom:7/8*$verticalBase;
+    }
+
+    .item-main h3 {
+        clear:none;
+
+        font-size:2.4rem;
+    }
+
+    .item-facts h3 {
+        font-family: $mainFont;
+        font-size:1.8rem;
+        color:$solRed;
+        text-transform:uppercase;
+        padding-top:1/3*$verticalBase;
+        padding-bottom:2/3*$verticalBase;
+    }
+
+    .item-title a {
+        text-decoration:none;
+        color:inherit;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration:underline;
+            color:$whiteColor;
+        }
+    }
+
+    @media screen and (min-width:$largeWidth) {
+        .item-title a {
+            &:hover,
+            &:active,
+            &:focus {
+                color:inherit;
+            }
+        }
+    }
+}

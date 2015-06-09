@@ -1,0 +1,102 @@
+/**
+ * Sparks.
+ *
+ * A 'spark' is a mini-collection. Our main collection consists of one or many of these. Within
+ * them, you'll often find links. Together, a spark and a link should look like a set of cards
+ * collapsed together to form a list.
+ *
+ * Looking for 'templates' and 'styles'? Search for .item-default.
+ */
+.spark {
+    @include paper();
+    padding:0;
+    border-top-width:0;
+
+    // Items are the clickable grains of our creation. They can be block-level links,
+    // self-produced content, fact boxes (aside nodes) or external embedded content.
+    .item {
+        display:block;
+        @include padding();
+        margin:0 auto;
+        position:relative;
+        overflow:hidden;
+
+        border-bottom:1px solid $borderColor;
+        border-radius:0;
+
+        &:last-child {
+            border-bottom:0 none;
+        }
+
+        h3 {
+            font-family:$headingFont;
+        }
+    }
+
+    // Read some doge:
+    //
+    // Very link.
+    // Such click.
+    // Wow.
+    a.item {
+        background:transparent;
+        text-decoration:none;
+        color:$textColor;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background:transparent;
+            filter: contrast(105%) saturate(105%);
+        }
+
+        &:focus {
+            outline:1px solid $linkColor;
+/*
+            &:hover {
+                outline:none;
+            }
+*/
+        }
+    }
+
+    .source {
+        position:absolute;
+        right:$horizontalBase;
+        bottom:0;
+    }
+
+    // Items have a 'template' and a 'style' that
+    // both should impact their visual appearance.
+    //
+    // Choosing a template allows the editors to
+    // alter the layout, and choosing a style allows
+    // them to set the 'temperature'.
+    //
+    // Let's start with the templates
+    .item-default {
+        img {
+            float:left;
+            margin-right:$horizontalBase;
+        }
+    }
+    .item-main {
+        // On the smallest screens, the only overrides for main items are in typography.
+        // Look in the events-typography module.
+    }
+    .item-gallery {
+        // Item gallery styles are separated out into the image-gallery module
+    }
+    .spark-facts {
+        background:$offwhiteColor;
+    }
+    .item-facts {
+    }
+    .item-raw {
+        margin:$verticalBase 0;
+
+        iframe {
+            width:100% !important; // Override inline CSS from the embeds themselves
+        }
+    }
+}

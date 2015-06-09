@@ -5,16 +5,14 @@
 
     'modules/reset',
     'modules/typography',
+    'modules/typography-event',
+
     'modules/layout',
     'modules/responsive-embeds',
     'modules/event-ads',
     'modules/advert',
-    'modules/image-gallery';
-
-/**
- * Custom vars.
- */
-$goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
+    'modules/image-gallery',
+    'modules/spark';
 
 /**
  * Template specific classes.
@@ -31,22 +29,6 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         margin-top: $verticalBase;
 
         > header {
-            h1 {
-                padding:8.5*$verticalBase $horizontalBase 0.5*$verticalBase;
-                background:$overlayGradient;
-                background-position:center center;
-                background-size:cover;
-
-                color:$overlayTextColor;
-                text-transform:uppercase;
-            }
-
-            &.text-only h1 {
-                padding:$verticalBase*2 $horizontalBase 0;
-                background:$offwhiteColor;
-                color:$headingColor;
-            }
-
             .event-summary,
             .event-summary-footer {
                 float:left;
@@ -77,113 +59,11 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
                 float:right;
                 text-align:right;
             }
-
-            .event-summary {
-
-            }
-            .event-summary-footer{
-
-            }
         }
     }
 
-    /**
-     * Sparks.
-     *
-     * A 'spark' is a mini-collection. Our main collection consists of one or many of these. Within
-     * them, you'll often find links. Together, a spark and a link should look like a set of cards
-     * collapsed together to form a list.
-     *
-     * Looking for 'templates' and 'styles'? Search for .item-default.
-     */
     .sparks {
         clear:both;
-    }
-
-    .spark {
-        @include paper();
-        padding:0;
-        border-top-width:0;
-
-        // Items are the clickable grains of our creation. They can be block-level links,
-        // self-produced content, fact boxes (aside nodes) or external embedded content.
-        .item {
-            display:block;
-            @include padding();
-            margin:0 auto;
-            position:relative;
-            overflow:hidden;
-
-            border-bottom:1px solid $borderColor;
-            border-radius:0;
-
-            &:last-child {
-                border-bottom:0 none;
-            }
-
-            h3 {
-                font-family:$headingFont;
-            }
-        }
-
-        // Read some doge:
-        //
-        // Very link.
-        // Such click.
-        // Wow.
-        a.item {
-            background:transparent;
-            text-decoration:none;
-            color:$textColor;
-
-            &:hover,
-            &:active,
-            &:focus {
-                background:transparent;
-                filter: contrast(105%) saturate(105%);
-            }
-
-            &:focus {
-                outline:1px solid $linkColor;
-/*
-                &:hover {
-                    outline:none;
-                }
-*/
-            }
-        }
-
-        .source {
-            position:absolute;
-            right:$horizontalBase;
-            bottom:0;
-        }
-    }
-
-    .image-link {
-        padding:0;
-    }
-    // @TODO Move to typography?
-    .item-title a {
-        text-decoration:none;
-        color:inherit;
-
-        &:hover,
-        &:active,
-        &:focus {
-            text-decoration:underline;
-            color:white;
-        }
-    }
-
-    @media screen and (min-width:$largeWidth) {
-        .item-title a {
-            &:hover,
-            &:active,
-            &:focus {
-                color:inherit;
-            }
-        }
     }
 
     .post-navigation {
@@ -197,6 +77,8 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
      *
      * Always at the bottom of our page, the site-footer serves as our colophon.
      * It's styles are mostly imported from elsewhere.
+     *
+     * @TODO Use flexbox instead
      */
     > footer {
         position:absolute;
@@ -204,81 +86,17 @@ $goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/
         left:0;
         width:100%;
     }
-
-    // Items have a 'template' and a 'style' that
-    // both should impact their visual appearance.
-    //
-    // Choosing a template allows the editors to
-    // alter the layout, and choosing a style allows
-    // them to set the 'temperature'.
-    //
-    // Let's start with the templates
-    .item-default {
-        img {
-            float:left;
-            margin-right:$horizontalBase;
-        }
-        h3 {
-            clear:none;
-
-            // Typography override
-            padding-top:1/8*$verticalBase;
-            padding-bottom:7/8*$verticalBase;
-        }
-    }
-    .item-main {
-        h3 {
-            clear:none;
-
-            // Typography override
-            font-size:2.4rem;
-        }
-    }
-    .item-gallery {
-        // Item gallery styles are for some reason still in the
-        // sol-event-public repo.
-        // @TODO Move them here
-    }
-    .spark-facts {
-        background:$offwhiteColor;
-    }
-    .item-facts {
-        h3 {
-            // @TODO Move to typography?
-            font-family: $mainFont;
-            font-size:1.8rem;
-            color:$solRed;
-            text-transform:uppercase;
-            padding-top:1/3*$verticalBase;
-            padding-bottom:2/3*$verticalBase;
-        }
-    }
-    .item-raw {
-        margin:$verticalBase 0;
-
-        iframe {
-            width:100% !important; // Override inline CSS from the embeds themselves
-        }
-    }
-    .spark-header {
-        font-size: 2.0rem;
-        color: $whiteColor;
-        padding-left: $horizontalBase;
-        padding-right: $horizontalBase;
-        background-color: $headerColor;
-        line-height: 2*$verticalBase;
-    }
 }
 
 html {
     position:relative;
-    padding-bottom:806px; // Making room for the footer
+    padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
 }
 
 /**
  * Layout-large.
  */
-@media screen and (min-width:$goldenFbCommentsWidth) {
+@media screen and (min-width:$largeWidth) {
     $facebookCommentsWidth: 30.0rem;
     .event {
         // Move margin() to main element
@@ -286,6 +104,8 @@ html {
         > aside {
             margin:0;
         }
+
+        // Flexbox layout
         main {
             display:flex;
             flex-wrap:wrap;
@@ -305,7 +125,7 @@ html {
         }
 
         main > header {
-
+            // Making space for a background image
             h1 {
                 padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase 3*$horizontalBase;
             }
@@ -323,14 +143,10 @@ html {
                 }
             }
 
-            .event-summary,
-            .event-summary-footer {
-            }
-
             .event-summary {
                 background:$paperColor;
                 padding:1.5*$verticalBase $facebookCommentsWidth 1.5*$verticalBase 3*$horizontalBase;
-                padding-right:$facebookCommentsWidth; // Same as
+                padding-right:$facebookCommentsWidth;
             }
 
             .event-summary-footer {
@@ -340,14 +156,8 @@ html {
             }
         }
 
-        .sparks {
-            .spark {
-                border-top-width:1px;
-            }
-            .spark-header {
-                line-height: 2*$verticalBase;
-                font-size: 28px;
-            }
+        .spark {
+            border-top-width:1px;
         }
 
         .item-main {
