@@ -1,0 +1,9 @@
+/**
+ * Includes all the settings.
+ *
+ * The settings files consist of SASS declarations that do not compile into CSS on their own.
+ */
+@import
+    'settings/variables',
+    'settings/colors',
+    'settings/mixins';

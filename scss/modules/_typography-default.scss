@@ -87,6 +87,10 @@ a {
     &:active {
         top:1px;
     }
+
+    &.image-link {
+        padding:0;
+    }
 }
 
 strong {

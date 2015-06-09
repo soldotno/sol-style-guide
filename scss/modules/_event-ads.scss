@@ -5,7 +5,6 @@
 /**
  * Custom vars.
  */
-$goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
 $adMarkerSize: 1rem;
 
 /**
@@ -35,7 +34,7 @@ $adMarkerSize: 1rem;
 /**
  * Layout-large.
  */
-@media screen and (min-width:$goldenFbCommentsWidth) {
+@media screen and (min-width:$largeWidth) {
     .ad-wrapper {
         margin-left: $horizontalBase;
         margin-right: $horizontalBase;
