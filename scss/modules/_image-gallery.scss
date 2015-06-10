@@ -3,6 +3,9 @@
  *
  * Original purpose: In-stream view of multiple images in restricted space.
  */
+@import 'icons';
+
+// Custom vars
 $ig-screen-sm-min: 768px;
 $ig-black: #222222;
 $ig-blue: #e20613;
@@ -48,16 +51,12 @@ $ig-blue: #e20613;
 
     .prev {
       left: 0;
-      &:before {
-        content: '←';
-      }
+      @extend .icon-arrow-circle-left;
     }
 
     .next {
       right: 0;
-      &:before {
-        content: '→';
-      }
+      @extend .icon-arrow-circle-right;
     }
 
     .slides {
