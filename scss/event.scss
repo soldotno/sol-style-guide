@@ -17,7 +17,7 @@
 /**
  * Template specific classes.
  */
-.event {
+.event-page {
     max-width:101rem;
 
     /**
@@ -98,7 +98,7 @@ html {
  */
 @media screen and (min-width:$largeWidth) {
     $facebookCommentsWidth: 30.0rem;
-    .event {
+    .event-page {
         // Move margin() to main element
         .sparks,
         > aside {

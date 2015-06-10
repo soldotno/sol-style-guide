@@ -78,7 +78,7 @@
         img {
             float:left;
             margin-right:$horizontalBase;
-            width:104px;
+            width:27.5%;
             height:auto;
         }
     }
@@ -99,6 +99,14 @@
 
         iframe {
             width:100% !important; // Override inline CSS from the embeds themselves
+        }
+    }
+}
+
+@media screen and (min-width:$largeWidth) {
+    .spark {
+        .item-default img {
+            width:25%;
         }
     }
 }
