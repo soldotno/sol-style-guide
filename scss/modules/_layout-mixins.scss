@@ -2,7 +2,11 @@
   margin:$verticalBase $horizontalBase;
 }
 @mixin padding() {
-  padding:$verticalBase $horizontalBase;
+  padding:2/3*$verticalBase $horizontalBase;
+
+  @media screen and (min-width:$largeWidth) {
+    padding:$verticalBase $horizontalBase;
+  }
 }
 
 @mixin spacing() {

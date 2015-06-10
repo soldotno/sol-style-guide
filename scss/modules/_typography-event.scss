@@ -19,18 +19,23 @@
     }
 
     h2 {
+        font-family: $mainFont;
+        font-size: 1.8rem;
         line-height: 2*$verticalBase;
-        font-size: 28px;
-        padding: 2.5*$verticalBase $horizontalBase 0.5*$verticalBase;
-        color: $whiteColor;
-        background-color: $headerColor;
+        padding: 0 $horizontalBase;
+        margin: $verticalBase 0;
+
+        text-transform :uppercase;
+        color: $solColor;
     }
 
     h3 {
         clear:none;
+        font-family:$headingFont;
 
-        padding-top:1/8*$verticalBase;
-        padding-bottom:7/8*$verticalBase;
+        //padding-top:1/8*$verticalBase;
+        //padding-bottom:7/8*$verticalBase;
+        padding:1/6*$verticalBase 0;
     }
 
     .item-main h3 {
@@ -61,6 +66,28 @@
     }
 
     @media screen and (min-width:$largeWidth) {
+        h2 {
+            font-size:2.4rem;
+        }
+
+        h3 {
+            font-size:2.8rem;
+            /*
+            line-height:3.2rem;
+            padding-top:0;
+            padding-bottom:1.6rem;
+            */
+        }
+
+        .item-main h3 {
+            font-size:3.2rem;
+            /*
+            line-height:3.8rem;
+            padding-top:0;
+            padding-bottom:1.0rem;
+            */
+        }
+
         .item-title a {
             &:hover,
             &:active,
