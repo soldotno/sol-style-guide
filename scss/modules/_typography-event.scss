@@ -22,8 +22,7 @@
         font-family: $mainFont;
         font-size: 1.8rem;
         line-height: 2*$verticalBase;
-        padding: 0 $horizontalBase;
-        margin: $verticalBase 0;
+        padding: $verticalBase $horizontalBase;
 
         text-transform :uppercase;
         color: $solColor;
@@ -88,7 +87,7 @@
             line-height:19/12*$verticalBase;
             margin-top:-7/12*$verticalBase;
 
-            padding:1/2*$verticalBase 0;
+            padding:2/3*$verticalBase 0 1/3*$verticalBase ;
         }
 
         .item-title a {
