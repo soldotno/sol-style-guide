@@ -46,11 +46,16 @@
                 height:$verticalBase*2;
                 overflow:hidden;
                 border-bottom:1px solid $borderColor;
+                color:$bylineColor;
 
                 // 'Add this' social box doesn't listen, wants to do it's own thing
                 .social {
                     position:relative;
                     top:-4px;
+                }
+
+                .counts > * {
+                    margin-right:$horizontalBase;
                 }
             }
 
