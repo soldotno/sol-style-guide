@@ -36,14 +36,16 @@
     }
 
     .item-default h3 {
-        padding:1/6*$verticalBase 0 5/6*$verticalBase;
+        //padding:1/6*$verticalBase 0 5/6*$verticalBase;
+        padding:0;
+        margin:-1/8*$verticalBase 0 1/8*$verticalBase;
 }
     .item-main h3 {
         clear:none;
 
         font-size:2.4rem;
-        line-height:7/6*$verticalBase;
-        margin-top:-1/6*$verticalBase;
+        line-height:5/4*$verticalBase;
+        margin-bottom:-1/4*$verticalBase;
     }
 
     .item-facts h3 {
@@ -70,22 +72,19 @@
             font-size:2.4rem;
         }
 
-        h3 {
-            font-size:2.8rem;
-            line-height:4/3*$verticalBase;
-
-            margin-top:-1/3*$verticalBase;
-        }
-
+        h3,
         .item-default h3 {
-            padding:1/3*$verticalBase 0 2/3*$verticalBase;
+            font-size:2.8rem;
+            line-height:17/12*$verticalBase;
+
+            margin:7/24*$verticalBase 0;
         }
 
         .item-main h3 {
             font-size:3.2rem;
 
             line-height:19/12*$verticalBase;
-            margin-top:-7/12*$verticalBase;
+            margin:-9/24*$verticalBase 0 -5/24*$verticalBase;
 
             padding:2/3*$verticalBase 0 1/3*$verticalBase ;
         }
