@@ -1,3 +1,7 @@
+@import 'font-awesome';
+
+// @TODO Replace icomoon icons with font-awesome icons
+// They are mainly used in the menu.
 @font-face {
     font-family:icomoon;
     src:url(http://www.sol.no/static/fonts/icomoon.woff) format('woff');
@@ -5,7 +9,10 @@
     font-style:normal;
 }
 
-[class*=" icon-"], [class^="icon-"] {
+.icon-search,
+.icon-arrow-right,
+.icon-arrow-down,
+.icon-menu {
     font-family:icomoon;
     speak:none;
     font-style:normal;
@@ -31,4 +38,22 @@
 
 .icon-menu:before {
     content:"\f0c9";
+}
+
+// New and improved: Using strictly font-awesome
+.icon-article {
+    @extend .fa;
+    @extend .fa-file-text-o;
+}
+.icon-camera {
+    @extend .fa;
+    @extend .fa-camera;
+}
+.icon-arrow-circle-left {
+    @extend .fa;
+    @extend .fa-arrow-circle-left;
+}
+.icon-arrow-circle-right {
+    @extend .fa;
+    @extend .fa-arrow-circle-right;
 }

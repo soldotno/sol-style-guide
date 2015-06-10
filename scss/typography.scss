@@ -1,0 +1,25 @@
+/**
+ * This is a stylesheet for the typography unit test.
+ *
+ * It should include all styles related to typography, both general rules and overrides. This makes it a bad idea to use
+ * this file in a production stylesheet, as you probably just want to include the basics and the specifics for your own
+ * project. You may be looking for modules/_typography.scss.
+ */
+@import
+    'settings',
+
+    'modules/reset',
+    'modules/layout-mixins',
+    'modules/typography',
+    'modules/typography-event';
+
+body {
+    background:$bgColor;
+}
+
+.typebox {
+   @include paper();
+   margin:$verticalBase $horizontalBase!important;
+
+   float:left;
+}
