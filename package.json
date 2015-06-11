@@ -4,7 +4,7 @@
   "description": "A style guide for projects at sol.no.",
   "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.2.3",
+    "browser-sync": "2.2.3",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-cssmin": "^0.1.6",
