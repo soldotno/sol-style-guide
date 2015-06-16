@@ -72,7 +72,7 @@ article {
     border-bottom:1px solid $borderColor;
 }
 .byline {
-    @extend h6;
+    @extend small;
 
     a {
         text-decoration:none;
@@ -89,11 +89,17 @@ article {
     }
 
     dt {
-        display:none;
+        @extend small;
+        display:inline;
     }
     dd {
         padding-left:0;
-        margin:0 $horizontalBase*1/4 0 $horizontalBase*-1/4;
+    }
+    .posted-on {
+        display:none;
+    }
+    .author {
+        font-weight:bold;
     }
 
     @media screen and (min-width:380px) {
@@ -101,16 +107,12 @@ article {
             display:inline;
         }
     }
-    .published-date {
-        font-weight:normal;
-
-    }
 }
 .entry-content {
     padding-top:$verticalBase;
 }
 .entry-footer {
-    @extend h6;
+    @extend small;
     padding-top:$verticalBase*2/3;
     padding-bottom:$verticalBase*1/3;
 }
