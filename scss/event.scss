@@ -21,6 +21,14 @@
 .event-page {
     max-width:101rem;
 
+
+    /*
+     * For our Android and IOS apps
+     */
+    &.sol-app {
+        padding-top: 0;
+    }
+
     /**
      * Event-headers.
      *
