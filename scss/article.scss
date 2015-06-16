@@ -71,6 +71,14 @@ article {
 .entry-meta {
     padding:$verticalBase*2/3 $horizontalBase $verticalBase*1/3;
     border-bottom:1px solid $borderColor;
+    overflow:hidden;
+
+    .byline {
+        float:left;
+    }
+    .addthis_sharing_toolbox {
+        float:right;
+    }
 }
 .byline {
     @extend small;
