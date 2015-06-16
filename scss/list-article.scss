@@ -8,6 +8,7 @@
  */
 .list {
     @include nopaper();
+    @include margin();
 
     // Typography overrides
     h1,h2,h5,h6 {

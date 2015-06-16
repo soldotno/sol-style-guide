@@ -46,6 +46,7 @@
 
 @mixin nopaper() {
   margin:0;
+  padding:0;
   box-shadow:none;
   background:transparent;
   border:none;
