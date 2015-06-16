@@ -24,6 +24,11 @@
         background:$paperColor;
         margin:0rem $horizontalBase*-1 $verticalBase;
         padding:0 $horizontalBase;
+
+        h1,
+        p {
+            text-align: center;
+        }
     }
 
     .entry-content > ol {

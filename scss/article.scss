@@ -47,12 +47,13 @@ article {
                 }
             }
         }
-        h1,
-        p,
-        .byline {
-            max-width:$contentWidth;
-            margin-left:auto;
-            margin-right:auto;
+        @media screen and (min-width:$largeWidth) {
+            h1,
+            p,
+            .byline {
+                margin-left:2*$horizontalBase;
+                margin-right:2*$horizontalBase;
+            }
         }
     }
 
@@ -93,7 +94,8 @@ article {
         display:inline;
     }
     dd {
-        padding-left:0;
+        margin:0;
+        padding:0;
     }
     .posted-on {
         display:none;
