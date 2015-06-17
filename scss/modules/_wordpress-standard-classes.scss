@@ -1,14 +1,12 @@
 .alignleft,
-.alignright,
-.alignnone,
-.aligncenter {
+.alignright {
     margin:0 0 $verticalBase;
 }
 .alignleft {
     float:left;
-    margin-right: $horizontalBase;
+    margin:0 $horizontalBase $verticalBase 0;
 }
 .alignright{
     float:right;
-    margin-left: $horizontalBase;
+    margin: 0 0 $verticalBase $horizontalBase;
 }
