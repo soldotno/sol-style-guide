@@ -61,10 +61,6 @@
                     position:relative;
                     top:-4px;
                 }
-
-                .counts > * {
-                    margin-right:$horizontalBase;
-                }
             }
 
             .social {
@@ -72,6 +68,15 @@
                 width:38.2%; // It's golden!
                 float:right;
                 text-align:right;
+            }
+
+            .counts {
+                > * {
+                    margin-right:$horizontalBase;
+                }
+                .denomination {
+                    display:none;
+                }
             }
         }
     }
@@ -167,6 +172,10 @@ html {
                 padding:0.75*$verticalBase $horizontalBase 0.75*$verticalBase 3*$horizontalBase;
                 height:5/2*$verticalBase;
                 background:$offwhiteColor;
+            }
+
+            .counts .denomination {
+                display:inline;
             }
         }
 
