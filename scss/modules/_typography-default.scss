@@ -124,6 +124,7 @@ img {
 blockquote {
     @extend h5;
     margin-left:$horizontalBase;
+    margin-bottom:$verticalBase;
     padding-left:$horizontalBase;
     border-left:2px solid $solRed;
 
