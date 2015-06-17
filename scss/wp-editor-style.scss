@@ -1,6 +1,9 @@
 @import
     'article';
 
+html {
+    background:$bgColor;
+}
 #tinymce {
     @include paper();
 }
