@@ -27,9 +27,8 @@
 
     & > a {
         display: block;
-        padding: $verticalBase $horizontalBase;
+        padding: 1/2*$verticalBase $horizontalBase;
 
-        height: 2*$verticalBase;
         color: $whiteColor;
         font-weight: 700;
         font-size: 2.1rem;
@@ -47,6 +46,10 @@
 
         table {
             margin: 0;
+        }
+
+        br {
+            display:none;
         }
 
         &.addthis_button_facebook {
