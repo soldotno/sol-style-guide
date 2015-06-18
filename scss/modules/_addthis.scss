@@ -1,0 +1,60 @@
+.share-buttons {
+    width: 100%;
+    display: table;
+    margin: 2*$verticalBase 0;
+}
+
+.share-button {
+    display: table-cell;
+    width: 50%;
+    @include box-sizing(border-box);
+
+    .fa {
+        float: left;
+        margin: 0 2*$horizontalBase 0 $horizontalBase;
+        padding: 0 2*$horizontalBase 0 0;
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+        &.fa-twitter,
+        &.fa-facebook {
+            line-height: $verticalBase;
+        }
+    }
+
+    .hidden-mobile {
+        margin-right: 5px;
+    }
+
+    & > a {
+        display: block;
+        padding: 10px;
+        height: 54px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 21px;
+        text-decoration: none;
+        @include border-radius(3px);
+        @include box-sizing(border-box);
+        -webkit-font-smoothing: antialiased;
+
+        img {
+            float: left;
+            height: 18px;
+            margin: 8px;
+        }
+
+        table {
+            margin: 0;
+        }
+
+        &.addthis_button_facebook {
+            margin-right: $horizontalBase;
+            background: $facebookColor;
+        }
+
+        &.addthis_button_twitter {
+            margin-left: $horizontalBase;
+            background: $twitterColor;
+        }
+    }
+}
