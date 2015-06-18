@@ -181,6 +181,7 @@ figure {
 
 ul, ol {
     padding-left:2*$horizontalBase;
+    margin-bottom:$verticalBase;
 }
 
 ul {
@@ -201,11 +202,6 @@ ol {
             list-style-type:lower-alpha;
         }
     }
-}
-
-li {
-    margin-top:$verticalBase/2;
-    margin-bottom:$verticalBase/2;
 }
 
 dt {
