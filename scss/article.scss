@@ -151,3 +151,25 @@ article {
     padding-right:$horizontalBase;
     margin-bottom:$verticalBase;
 }
+
+/**
+ * Site-footer.
+ *
+ * Always at the bottom of our page, the site-footer serves as our colophon.
+ * It's styles are mostly imported from elsewhere.
+ *
+ * Copied from event.scss.
+ *
+ * @TODO Use flexbox instead
+ */
+.site-footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+html {
+    position:relative;
+    padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
+}
