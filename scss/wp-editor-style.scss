@@ -2,9 +2,11 @@
     'article';
 
 html {
-    background:$bgColor;
+    background: $bgColor;
 }
 #tinymce {
     @include paper();
-    min-height:5*$verticalBase;
+    min-height: 5*$verticalBase;
+    padding-top: $verticalBase !important; // WP defaults uses !important
+    padding-bottom: $verticalBase !important; // WP defaults uses !important
 }
