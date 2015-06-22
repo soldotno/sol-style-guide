@@ -6,4 +6,5 @@ html {
 }
 #tinymce {
     @include paper();
+    min-height:5*$verticalBase;
 }
