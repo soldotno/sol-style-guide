@@ -1,16 +1,3 @@
-.alignleft,
-.alignright {
-    margin: 0 0 $verticalBase;
-}
-.alignleft {
-    float: left;
-    margin: 0 $horizontalBase $verticalBase 0;
-}
-.alignright{
-    float: right;
-    margin: 0 0 $verticalBase $horizontalBase;
-}
-
 .wp-caption {
     margin: 0;
     max-width: 100%;
@@ -31,4 +18,17 @@
     padding-left: $horizontalBase;
     padding-right: $horizontalBase;
     margin-bottom: $verticalBase;
+}
+
+.alignleft,
+.alignright {
+    margin: 0 0 $verticalBase;
+}
+.alignleft {
+    float: left;
+    margin: 0 $horizontalBase $verticalBase 0;
+}
+.alignright{
+    float: right;
+    margin: 0 0 $verticalBase $horizontalBase;
 }
