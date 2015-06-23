@@ -104,13 +104,11 @@ article {
     dt {
         @extend small;
         display:inline;
+        display:none;
     }
     dd {
         margin:0;
         padding:0;
-    }
-    .posted-on {
-        display:none;
     }
     .author {
         font-weight:bold;
