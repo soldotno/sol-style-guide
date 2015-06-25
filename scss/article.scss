@@ -167,6 +167,7 @@ article {
         display:block;
         overflow:hidden;
         text-decoration:none;
+        margin-bottom:$verticalBase;
     }
 
     h2 {
@@ -183,7 +184,8 @@ article {
         clear:none;
         font-family:$headingFont;
 
-        padding:1/3*$verticalBase 0 2/3*$verticalBase;
+        margin:0;
+        padding:0;
 
         @media screen and (min-width:$largeWidth) {
             font-size:2.8rem;
