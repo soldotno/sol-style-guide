@@ -162,9 +162,21 @@ article {
 }
 
 // Related posts
-.yarpp-thumbnail a {
-    display:block;
-    overflow:hidden;
+.yarpp-related {
+    a {
+        display:block;
+        overflow:hidden;
+    }
+
+    h2 {
+        font-family: $mainFont;
+        font-size: 1.8rem;
+        line-height: 2*$verticalBase;
+        padding: $verticalBase $horizontalBase;
+
+        text-transform :uppercase;
+        color: $solColor;
+    }
 
     h3 {
         clear:none;
