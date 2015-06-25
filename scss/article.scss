@@ -75,8 +75,15 @@ article {
     }
 
     @media screen and (min-width: $largeWidth) {
-        .likoss img {
-            margin-bottom:2*$verticalBase;
+        .likoss {
+            a {
+                display:block;
+                overflow:hidden;
+            }
+
+            img {
+                margin-bottom:2*$verticalBase;
+            }
         }
     }
 }
