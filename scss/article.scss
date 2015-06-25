@@ -17,6 +17,11 @@ article {
         padding-top:0;
     }
 
+    @media screen and (min-width: $largeWidth) {
+        margin-top: $verticalBase;
+        margin-bottom: $verticalBase;
+    }
+
     header {
         figure {
             margin:0 $horizontalBase*-1;
