@@ -71,10 +71,8 @@ article {
 
     @media screen and (min-width: $largeWidth) {
         .likoss {
-            a {
-                display:block;
-                overflow:hidden;
-            }
+            display:block;
+            overflow:hidden;
 
             img {
                 margin-bottom:2*$verticalBase;
