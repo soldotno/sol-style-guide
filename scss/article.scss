@@ -161,6 +161,12 @@ article {
     padding-bottom:$verticalBase*1/3;
 }
 
+// Related posts
+.yarpp-thumbnail a {
+    display:block;
+    overflow:hidden;
+}
+
 /**
  * Site-footer.
  *
