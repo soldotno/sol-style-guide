@@ -17,7 +17,7 @@ article {
         padding-top:0;
     }
 
-    @media screen and (min-width: $largeWidth) {
+    @media screen and (min-width:$largeWidth) {
         margin-top: $verticalBase;
         margin-bottom: $verticalBase;
     }
