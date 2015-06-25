@@ -166,6 +166,7 @@ article {
     display:block;
     overflow:hidden;
 
+    h3 {
         clear:none;
         font-family:$headingFont;
 
@@ -177,6 +178,7 @@ article {
 
             margin:7/24*$verticalBase 0;
         }
+    }
 }
 
 /**
