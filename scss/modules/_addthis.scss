@@ -1,7 +1,11 @@
 .share-buttons {
     width: 100%;
     display: table;
-    margin: 2*$verticalBase 0;
+    margin: 0 0 $verticalBase;
+
+    @media screen and (min-width: $largeWidth) {
+        margin: 0 0 2*$verticalBase;
+    }
 }
 
 .share-button {

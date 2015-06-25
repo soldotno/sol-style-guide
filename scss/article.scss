@@ -68,6 +68,12 @@ article {
             margin-right:auto;
         }
     }
+
+    @media screen and (min-width: $largeWidth) {
+        .likoss img {
+            margin-bottom:2*$verticalBase;
+        }
+    }
 }
 
 .entry-meta {
