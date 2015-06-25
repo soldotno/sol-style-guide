@@ -166,13 +166,14 @@ article {
     a {
         display:block;
         overflow:hidden;
+        text-decoration:none;
     }
 
     h2 {
         font-family: $mainFont;
         font-size: 1.8rem;
         line-height: 2*$verticalBase;
-        padding: $verticalBase $horizontalBase;
+        padding: $verticalBase 0;
 
         text-transform :uppercase;
         color: $solColor;
