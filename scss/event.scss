@@ -191,3 +191,158 @@ html {
         }
     }
 }
+
+
+// SOL-TV theme stylings
+
+$soltvEventBg: #060606;
+$soltvEventItemBg: #1f1f1f;
+$soltvEventColor: $whiteColor;
+$soltvEventSecondColor: #cdcdcd;
+$soltvEventHeaderColor: #f00000;
+$soltvEventHeaderBorder: #303030;
+
+.soltv.event {
+  max-width: 48rem;
+  background: $soltvEventBg;
+
+  main {
+    > aside,
+    .sparks {
+      flex: 99 1 1000px;
+      margin:$verticalBase 0 0;
+    }
+
+    > header > * {
+      border:none;
+    }
+    > header.text-only h1,
+    > header > * {
+      background: $soltvEventItemBg;
+      color: $soltvEventColor;
+
+      p {
+        color: $soltvEventSecondColor;
+      }
+    }
+  }
+
+  .spark-header {
+    margin: 0 0.3*$verticalBase;
+    padding: 0 0.3*$verticalBase;
+    background: transparent;
+    color:$soltvEventHeaderColor;
+    border-bottom: 2px solid $soltvEventHeaderBorder;
+    line-height: 1.5em;
+  }
+
+  .spark {
+    @include clearfix();
+    @include nopaper();
+    margin-right: 0;
+    margin-left: 0;
+
+    .item-wrap {
+      background:$soltvEventItemBg;
+    }
+    .item {
+      float:left;
+      margin-bottom:0.6*$verticalBase;;
+      padding:0 0.3*$verticalBase;;
+      width:50%;
+      max-width: inherit;
+      border:none;
+
+      h3,
+      & {
+        color:$soltvEventSecondColor;
+      }
+      h3 {
+        padding: 0;
+        margin-bottom: 0.38*$verticalBase;;
+        font-size:1.5rem;
+        font-weight: 400;
+        line-height: 1.3em;
+        overflow: hidden;
+        height: 5.9rem;
+      }
+      .image-wrap {
+        height:14.3rem;
+        overflow:hidden;
+      }
+      img {
+        margin:0;
+        width:100%;
+        height:auto;
+      }
+      .source {
+        display: block;
+        position: static;
+        text-align: right;
+        font-size:1.1rem;
+        line-height: 1.2rem;
+      }
+      .info-wrap {
+        padding:0.5*$verticalBase;;
+      }
+    }
+    //.item-main {
+    .item:first-child {
+      width:100%;
+
+      h3,
+      & {
+        color: $soltvEventColor;
+      }
+      h3 {
+        font-size:3.3rem;
+        font-weight:700;
+        height:auto;
+      }
+      .image-wrap {
+        height:30.4rem;
+      }
+    }
+    .item-desc {
+      display: none;
+    }
+
+    .item-main img {
+      margin: 0;
+      max-width:inherit;
+    }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .soltv.event {
+    max-width: 76.8rem;
+
+    .spark {
+      .item {
+        width:33.33%;
+      }
+      .item:first-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1010px) {
+  .soltv.event {
+    max-width: 101rem;
+
+    .spark {
+      .item {
+        width:25%;
+      }
+      .item:first-child {
+        width: 50%;
+        h3 {
+          height: 159px;
+        }
+      }
+    }
+  }
+}
