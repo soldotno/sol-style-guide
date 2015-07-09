@@ -22,7 +22,7 @@
         @include paper-shadow();
 
         background:$paperColor;
-        margin:0rem $horizontalBase*-1 $verticalBase;
+        margin:0;
         padding:0 $horizontalBase;
 
         h1,

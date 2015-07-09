@@ -196,6 +196,14 @@ article {
     }
 }
 
+// Temporary Cxense overrides to .yarpp-related
+// @TODO Clean up the related posts code
+#targetElement {
+    a {
+        display:inline;
+    }
+}
+
 /**
  * Site-footer.
  *
