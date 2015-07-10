@@ -1,0 +1,32 @@
+/* Sticker ads */
+.ad-sticker_left,
+.ad-horseshoe_left {
+    right: 50%;
+    margin-right: 50rem;
+    position: absolute;
+}
+
+.ad-sticker_right,
+.ad-horseshoe_right {
+    left: 50%;
+    margin-left: 50rem;
+    position: absolute;
+}
+
+.ad-horseshoe_left,
+.ad-horseshoe_right {
+    top: 5.6rem;
+    min-width: 180px;
+}
+
+.ad-sticker_right,
+.ad-sticker_left {
+    top: 120rem;
+    min-width: 180px;
+}
+
+.ad-sticker_left.fixed,
+.ad-sticker_right.fixed {
+    position: fixed;
+    top: 5.6rem;
+}
