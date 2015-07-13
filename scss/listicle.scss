@@ -1,6 +1,6 @@
 @import
     'article',
-    'modules/typography-fonts-extra',
+    'modules/typography-listicle',
     'modules/advert';
 
 /**
@@ -126,5 +126,10 @@
       width:100%;
       height:auto;
       margin-left:-$horizontalBase;
+    }
+
+    .related-posts {
+        max-width:$contentWidth;
+        margin:0 auto $verticalBase;
     }
 }
