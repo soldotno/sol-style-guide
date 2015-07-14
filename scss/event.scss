@@ -1,199 +1,355 @@
 @import
-    'settings/colors',
-    'settings/variables',
-    'settings/mixins',
+'settings/colors',
+'settings/variables',
+'settings/mixins',
 
-    'modules/reset',
-    'modules/typography',
-    'modules/typography-event',
-    'modules/icons',
+'modules/reset',
+'modules/typography',
+'modules/layout',
+'modules/responsive-embeds',
+'modules/event-ads',
+'modules/advert',
+'modules/image-gallery';
 
-    'modules/layout',
-    'modules/responsive-embeds',
-    'modules/event-ads',
-    'modules/advert',
-    'modules/image-gallery',
-    'modules/spark';
+/**
+ * Custom vars.
+ */
+$goldenFbCommentsWidth:801px; // Enough space to fit fb comments side by side w/ content
 
 /**
  * Template specific classes.
  */
 .event-page {
-    max-width:101rem;
+  max-width:101rem;
 
+  /**
+   * Event-headers.
+   *
+   * This is the introduction to this specific collection.
+   */
+  main {
+    margin-top: $verticalBase;
 
-    /*
-     * For our Android and IOS apps
-     */
-    &.sol-app {
-        padding-top: 0;
-    }
+    > header {
+      h1 {
+        padding:8.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+        background:$overlayGradient;
+        background-position:center center;
+        background-size:cover;
 
-    /**
-     * Event-headers.
-     *
-     * This is the introduction to this specific collection.
-     */
-    main {
-        margin-top: $verticalBase;
+        color:$overlayTextColor;
+        text-transform:uppercase;
+      }
 
-        > header {
-            .event-summary,
-            .event-summary-footer {
-                float:left;
-                width:100%;
-            }
+      &.text-only h1 {
+        padding:$verticalBase*2 $horizontalBase 0;
+        background:$offwhiteColor;
+        color:$headingColor;
+      }
 
-            .event-summary {
-                @include padding();
-                background:$offwhiteColor;
-            }
-
-            .event-summary-footer {
-                padding:$verticalBase/2 $horizontalBase;
-                height:$verticalBase*2;
-                overflow:hidden;
-                border-bottom:1px solid $borderColor;
-                color:$bylineColor;
-
-                // 'Add this' social box doesn't listen, wants to do it's own thing
-                .social {
-                    position:relative;
-                    top:-4px;
-                }
-            }
-
-            .social {
-                display:block;
-                width:38.2%; // It's golden!
-                float:right;
-                text-align:right;
-            }
-
-            .counts {
-                > * {
-                    margin-right:$horizontalBase;
-                }
-                .denomination {
-                    display:none;
-                }
-            }
-        }
-    }
-
-    .sparks {
-        clear:both;
-    }
-
-    .post-navigation {
-        clear:both;
-        margin-left:$horizontalBase;
-        margin-right:$horizontalBase;
-    }
-
-    /**
-     * Site-footer.
-     *
-     * Always at the bottom of our page, the site-footer serves as our colophon.
-     * It's styles are mostly imported from elsewhere.
-     *
-     * @TODO Use flexbox instead
-     */
-    > footer {
-        position:absolute;
-        bottom:0;
-        left:0;
+      .event-summary,
+      .event-summary-footer {
+        float:left;
         width:100%;
+      }
+
+      .event-summary {
+        @include padding();
+        background:$offwhiteColor;
+      }
+
+      .event-summary-footer {
+        padding:$verticalBase/2 $horizontalBase;
+        height:$verticalBase*2;
+        overflow:hidden;
+        border-bottom:1px solid $borderColor;
+
+        // 'Add this' social box doesn't listen, wants to do it's own thing
+        .social {
+          position:relative;
+          top:-4px;
+        }
+      }
+
+      .social {
+        display:block;
+        width:38.2%; // It's golden!
+        float:right;
+        text-align:right;
+      }
+
+      .event-summary {
+
+      }
+      .event-summary-footer{
+
+      }
     }
+  }
+
+  /**
+   * Sparks.
+   *
+   * A 'spark' is a mini-collection. Our main collection consists of one or many of these. Within
+   * them, you'll often find links. Together, a spark and a link should look like a set of cards
+   * collapsed together to form a list.
+   *
+   * Looking for 'templates' and 'styles'? Search for .item-default.
+   */
+  .sparks {
+    clear:both;
+  }
+
+  .spark {
+    @include paper();
+    padding:0;
+    border-top-width:0;
+
+    // Items are the clickable grains of our creation. They can be block-level links,
+    // self-produced content, fact boxes (aside nodes) or external embedded content.
+    .item {
+      display:block;
+      @include padding();
+      margin:0 auto;
+      position:relative;
+      overflow:hidden;
+
+      border-bottom:1px solid $borderColor;
+      border-radius:0;
+
+      &:last-child {
+        border-bottom:0 none;
+      }
+
+      h3 {
+        font-family:$headingFont;
+      }
+    }
+
+    // Read some doge:
+    //
+    // Very link.
+    // Such click.
+    // Wow.
+    a.item {
+      background:transparent;
+      text-decoration:none;
+      color:$textColor;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background:transparent;
+        filter: contrast(105%) saturate(105%);
+      }
+
+      &:focus {
+        outline:1px solid $linkColor;
+        /*
+                        &:hover {
+                            outline:none;
+                        }
+        */
+      }
+    }
+
+    .source {
+      position:absolute;
+      right:$horizontalBase;
+      bottom:0;
+    }
+  }
+
+  .image-link {
+    padding:0;
+  }
+  // @TODO Move to typography?
+  .item-title a {
+    text-decoration:none;
+    color:inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration:underline;
+      color:white;
+    }
+  }
+
+  @media screen and (min-width:$largeWidth) {
+    .item-title a {
+      &:hover,
+      &:active,
+      &:focus {
+        color:inherit;
+      }
+    }
+  }
+
+  .post-navigation {
+    clear:both;
+    margin-left:$horizontalBase;
+    margin-right:$horizontalBase;
+  }
+
+  /**
+   * Site-footer.
+   *
+   * Always at the bottom of our page, the site-footer serves as our colophon.
+   * It's styles are mostly imported from elsewhere.
+   */
+  > footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
+
+  // Items have a 'template' and a 'style' that
+  // both should impact their visual appearance.
+  //
+  // Choosing a template allows the editors to
+  // alter the layout, and choosing a style allows
+  // them to set the 'temperature'.
+  //
+  // Let's start with the templates
+  .item-default {
+    img {
+      float:left;
+      margin-right:$horizontalBase;
+    }
+    h3 {
+      clear:none;
+
+      // Typography override
+      padding-top:1/8*$verticalBase;
+      padding-bottom:7/8*$verticalBase;
+    }
+  }
+  .item-main {
+    h3 {
+      clear:none;
+
+      // Typography override
+      font-size:2.4rem;
+    }
+  }
+  .item-gallery {
+    // Item gallery styles are for some reason still in the
+    // sol-event-public repo.
+    // @TODO Move them here
+  }
+  .spark-facts {
+    background:$offwhiteColor;
+  }
+  .item-facts {
+    h3 {
+      // @TODO Move to typography?
+      font-family: $mainFont;
+      font-size:1.8rem;
+      color:$solRed;
+      text-transform:uppercase;
+      padding-top:1/3*$verticalBase;
+      padding-bottom:2/3*$verticalBase;
+    }
+  }
+  .item-raw {
+    margin:$verticalBase 0;
+
+    iframe {
+      width:100% !important; // Override inline CSS from the embeds themselves
+    }
+  }
+  .spark-header {
+    font-size: 2.0rem;
+    color: $whiteColor;
+    padding-left: $horizontalBase;
+    padding-right: $horizontalBase;
+    background-color: $headerColor;
+    line-height: 2*$verticalBase;
+  }
 }
 
 html {
-    position:relative;
-    padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
+  position:relative;
+  padding-bottom:806px; // Making room for the footer
 }
 
 /**
  * Layout-large.
  */
-@media screen and (min-width:$largeWidth) {
-    $facebookCommentsWidth: 30.0rem;
-    .event-page {
-        // Move margin() to main element
-        .sparks,
-        > aside {
-            margin:0;
-        }
+@media screen and (min-width:$goldenFbCommentsWidth) {
+  .event-page {
 
-        // Flexbox layout
-        main {
-            display:flex;
-            flex-wrap:wrap;
-            margin: $verticalBase $horizontalBase;
-
-            > header {
-                flex: 99 1 100.0rem;
-            }
-            .sparks {
-                flex: 1 1 50.0rem;
-                margin-right:$horizontalBase;
-            }
-            > aside {
-                flex: 0 0 $facebookCommentsWidth;
-                margin-top:$verticalBase; // Same vertical margins as sparks
-            }
-        }
-
-        main > header {
-            // Making space for a background image
-            h1 {
-                padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase 3*$horizontalBase;
-            }
-
-            > * {
-                border:1px solid $borderColor;
-                border-bottom-width:0;
-
-                &:last-child {
-                    border-bottom-width:1px;
-
-                    .social {
-                        top:-5px; // Adjust from -4 for the extra border pixel...
-                    }
-                }
-            }
-
-            .event-summary {
-                background:$paperColor;
-                padding:1.5*$verticalBase $facebookCommentsWidth 1.5*$verticalBase 3*$horizontalBase;
-                padding-right:$facebookCommentsWidth;
-            }
-
-            .event-summary-footer {
-                padding:0.75*$verticalBase $horizontalBase 0.75*$verticalBase 3*$horizontalBase;
-                height:5/2*$verticalBase;
-                background:$offwhiteColor;
-            }
-
-            .counts .denomination {
-                display:inline;
-            }
-        }
-
-        .spark {
-            border-top-width:1px;
-        }
-
-        .item-main {
-            img {
-                margin:-1*$verticalBase -1*$horizontalBase 0;
-                max-width:calc(100% + #{2*$horizontalBase});
-            }
-        }
+    // Move margin() to main element
+    .sparks,
+    > aside {
+      margin:0;
     }
+    main {
+      display:flex;
+      flex-wrap:wrap;
+      margin: $verticalBase $horizontalBase;
+
+      > header {
+        flex: 99 1 1000px;
+      }
+      .sparks {
+        flex: 1 1 500px;
+        margin-right:$horizontalBase;
+      }
+      > aside {
+        flex: 0 0 300px;
+        margin-top:$verticalBase; // Same vertical margins as sparks
+      }
+    }
+
+    main > header {
+
+      h1 {
+        padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase;
+      }
+
+      > * {
+        border:1px solid $borderColor;
+        border-bottom-width:0;
+
+        &:last-child {
+          border-bottom-width:1px;
+
+          .social {
+            top:-5px; // Adjust from -4 for the extra border pixel...
+          }
+        }
+      }
+
+      .event-summary {
+        background:$paperColor;
+      }
+
+      .event-summary-footer {
+        background:$offwhiteColor;
+      }
+    }
+
+    .sparks {
+      .spark {
+        border-top-width:1px;
+      }
+      .spark-header {
+        line-height: 2*$verticalBase;
+        font-size: 28px;
+      }
+    }
+
+    .item-main {
+      img {
+        margin:-1*$verticalBase -1*$horizontalBase 0;
+        max-width:calc(100% + #{2*$horizontalBase});
+      }
+    }
+  }
 }
-
-
-// SOL-TV theme stylings
 
 $soltvEventBg: #060606;
 $soltvEventItemBg: #1f1f1f;
@@ -202,7 +358,7 @@ $soltvEventSecondColor: #cdcdcd;
 $soltvEventHeaderColor: #f00000;
 $soltvEventHeaderBorder: #303030;
 
-.soltv.event {
+.soltv.event-page {
   max-width: 48rem;
   background: $soltvEventBg;
 
@@ -315,7 +471,7 @@ $soltvEventHeaderBorder: #303030;
 }
 
 @media screen and (min-width:768px) {
-  .soltv.event {
+  .soltv.event-page {
     max-width: 76.8rem;
 
     .spark {
@@ -330,7 +486,7 @@ $soltvEventHeaderBorder: #303030;
 }
 
 @media screen and (min-width:1010px) {
-  .soltv.event {
+  .soltv.event-page {
     max-width: 101rem;
 
     .spark {
