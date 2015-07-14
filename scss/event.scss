@@ -202,7 +202,7 @@ $soltvEventSecondColor: #cdcdcd;
 $soltvEventHeaderColor: #f00000;
 $soltvEventHeaderBorder: #303030;
 
-.soltv.event {
+.soltv.event-page {
   max-width: 48rem;
   background: $soltvEventBg;
 
@@ -315,7 +315,7 @@ $soltvEventHeaderBorder: #303030;
 }
 
 @media screen and (min-width:768px) {
-  .soltv.event {
+  .soltv.event-page {
     max-width: 76.8rem;
 
     .spark {
@@ -330,7 +330,7 @@ $soltvEventHeaderBorder: #303030;
 }
 
 @media screen and (min-width:1010px) {
-  .soltv.event {
+  .soltv.event-page {
     max-width: 101rem;
 
     .spark {
