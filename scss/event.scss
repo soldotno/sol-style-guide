@@ -128,7 +128,8 @@ html {
         main {
             display:flex;
             flex-wrap:wrap;
-            margin: $verticalBase $horizontalBase;
+            background-color: #efefef;
+            padding: $verticalBase $horizontalBase;
 
             > header {
                 flex: 99 1 100.0rem;
