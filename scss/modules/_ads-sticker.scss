@@ -1,40 +1,64 @@
 /* Sticker ads */
+// Need to delete all classes about "sticker" and "horseshoe" after release
+.ad-sticker-left,
+.ad-horseshoe-left,
 .ad-sticker_left,
-.ad-horseshoe_left {
+.ad-horseshoe_left,
+.ad-sticky-left,
+.ad-skyscraper-left {
     right: 50%;
     margin-right: 50rem;
     position: absolute;
 }
 
+.ad-sticker-right,
+.ad-horseshoe-right,
 .ad-sticker_right,
-.ad-horseshoe_right {
+.ad-horseshoe_right,
+.ad-sticky-right,
+.ad-skyscraper-right {
     left: 50%;
     margin-left: 50rem;
     position: absolute;
 }
 
+.ad-horseshoe-left,
+.ad-horseshoe-right,
 .ad-horseshoe_left,
-.ad-horseshoe_right {
+.ad-horseshoe_right,
+.ad-skyscraper-left,
+.ad-skyscraper-right {
     top: 5.6rem;
     min-width: 180px;
 }
 
+.ad-sticker-right,
+.ad-sticker-left,
 .ad-sticker_right,
-.ad-sticker_left {
+.ad-sticker_left,
+.ad-sticky-left,
+.ad-sticky-right {
     top: 120rem;
     min-width: 180px;
+
+    &.fixed {
+        position: fixed;
+        top: 5.6rem;
+    }
 }
 
-.ad-sticker_left.fixed,
-.ad-sticker_right.fixed {
-    position: fixed;
-    top: 5.6rem;
-}
-
+.ad-horseshoe-left.wallpaper,
+.ad-horseshoe-right.wallpaper,
+.ad-sticker-left.wallpaper,
+.ad-sticker-right.wallpaper,
 .ad-horseshoe_left.wallpaper,
 .ad-horseshoe_right.wallpaper,
 .ad-sticker_left.wallpaper,
-.ad-sticker_right.wallpaper
+.ad-sticker_right.wallpaper,
+.ad-skyscraper-left.wallpaper,
+.ad-skyscraper-right.wallpaper,
+.ad-sticky-left.wallpaper,
+.ad-sticky-right.wallpaper
 {
     display: none;
 }
