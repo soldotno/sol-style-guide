@@ -47,20 +47,22 @@
     }
 }
 
-.ad-horseshoe-left.wallpaper,
-.ad-horseshoe-right.wallpaper,
-.ad-sticker-left.wallpaper,
-.ad-sticker-right.wallpaper,
-.ad-horseshoe_left.wallpaper,
-.ad-horseshoe_right.wallpaper,
-.ad-sticker_left.wallpaper,
-.ad-sticker_right.wallpaper,
-.ad-skyscraper-left.wallpaper,
-.ad-skyscraper-right.wallpaper,
-.ad-sticky-left.wallpaper,
-.ad-sticky-right.wallpaper
+.ad-horseshoe-left,
+.ad-horseshoe-right,
+.ad-sticker-left,
+.ad-sticker-right,
+.ad-horseshoe_left,
+.ad-horseshoe_right,
+.ad-sticker_left,
+.ad-sticker_right,
+.ad-skyscraper-left,
+.ad-skyscraper-right,
+.ad-sticky-left,
+.ad-sticky-right
 {
-    display: none;
+    &.wallpaper {
+        display: none;
+    }
 }
 
 
