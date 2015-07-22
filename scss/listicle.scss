@@ -1,12 +1,12 @@
 @import
     'article',
-    'modules/typography-fonts-extra',
+    'modules/typography-listicle',
     'modules/advert';
 
 /**
  * Template specific classes
  */
-.list {
+.listicle {
     @include nopaper();
     @include margin();
 
@@ -22,7 +22,7 @@
         @include paper-shadow();
 
         background:$paperColor;
-        margin:0rem $horizontalBase*-1 $verticalBase;
+        margin:0;
         padding:0 $horizontalBase;
 
         h1,
@@ -31,7 +31,10 @@
         }
     }
 
-    .entry-content > ol {
+    // Only target lists that are direct children of a WP post
+    // or direct children of the TinyMCE editor
+    .entry-content > ol,
+    > ol {
         padding-left:0;
         padding-right:0;
 
@@ -126,5 +129,10 @@
       width:100%;
       height:auto;
       margin-left:-$horizontalBase;
+    }
+
+    .related-posts {
+        max-width:$contentWidth;
+        margin:0 auto $verticalBase;
     }
 }

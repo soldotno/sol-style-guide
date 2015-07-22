@@ -162,6 +162,17 @@ article {
 }
 
 // Related posts
+
+%rel-posts-h2 {
+    font-family: $mainFont;
+    font-size: 1.8rem;
+    line-height: 2*$verticalBase;
+    padding: $verticalBase 0 0;
+
+    text-transform :uppercase;
+    color: $solColor;
+}
+
 .yarpp-related {
     a {
         display:block;
@@ -171,13 +182,7 @@ article {
     }
 
     h2 {
-        font-family: $mainFont;
-        font-size: 1.8rem;
-        line-height: 2*$verticalBase;
-        padding: $verticalBase 0 0;
-
-        text-transform :uppercase;
-        color: $solColor;
+        @extend %rel-posts-h2;
     }
 
     h3 {
@@ -193,6 +198,19 @@ article {
 
             margin:7/24*$verticalBase 0;
         }
+    }
+}
+.related-posts {
+    h2 {
+        @extend %rel-posts-h2;
+    }
+}
+
+// Temporary Cxense overrides to .yarpp-related
+// @TODO Clean up the related posts code
+#targetElement {
+    a {
+        display:inline;
     }
 }
 
