@@ -2,9 +2,13 @@
 .embed-container-tall {
     padding-bottom: 140%;
 }
+
+// Typical use: Instagram embeds
 .embed-container-square {
-    padding-bottom: 120%;
+    padding-bottom: calc(120% + 8rem);
 }
+
+// Typical use: YouTube videos
 .embed-container-widescreen {
     padding-bottom: 56.25%;
     max-width: 100%;
