@@ -162,47 +162,42 @@ article {
 }
 
 // Related posts
-
-%rel-posts-h2 {
-    font-family: $mainFont;
-    font-size: 1.8rem;
-    line-height: 2*$verticalBase;
-    padding: $verticalBase 0 0;
-
-    text-transform :uppercase;
-    color: $solColor;
-}
-
-.yarpp-related {
-    a {
-        display:block;
-        overflow:hidden;
-        text-decoration:none;
-        margin-bottom:$verticalBase;
-    }
-
-    h2 {
-        @extend %rel-posts-h2;
-    }
-
-    h3 {
-        clear:none;
-        font-family:$headingFont;
-
-        margin:0;
-        padding:0;
-
-        @media screen and (min-width:$largeWidth) {
-            font-size:2.8rem;
-            line-height:17/12*$verticalBase;
-
-            margin:7/24*$verticalBase 0;
-        }
-    }
-}
 .related-posts {
+    margin-bottom: 2.4rem;
+
     h2 {
-        @extend %rel-posts-h2;
+        font-family: $mainFont;
+        font-size: 1.8rem;
+        line-height: 2*$verticalBase;
+        padding: $verticalBase 0 0;
+
+        text-transform :uppercase;
+        color: $solColor;
+    }
+
+    // Not used with .related-posts.cxense
+    &.yarpp {
+        a {
+            display:block;
+            overflow:hidden;
+            text-decoration:none;
+            margin-bottom:$verticalBase;
+        }
+
+        h3 {
+            clear:none;
+            font-family:$headingFont;
+
+            margin:0;
+            padding:0;
+
+            @media screen and (min-width:$largeWidth) {
+                font-size:2.8rem;
+                line-height:17/12*$verticalBase;
+
+                margin:7/24*$verticalBase 0;
+            }
+        }
     }
 }
 
