@@ -1,0 +1,68 @@
+/* Sticker ads */
+// Need to delete all classes about "sticker" and "horseshoe" after release
+.ad-sticker-left,
+.ad-horseshoe-left,
+.ad-sticker_left,
+.ad-horseshoe_left,
+.ad-sticky-left,
+.ad-skyscraper-left {
+    right: 50%;
+    margin-right: 50rem;
+    position: absolute;
+}
+
+.ad-sticker-right,
+.ad-horseshoe-right,
+.ad-sticker_right,
+.ad-horseshoe_right,
+.ad-sticky-right,
+.ad-skyscraper-right {
+    left: 50%;
+    margin-left: 50rem;
+    position: absolute;
+}
+
+.ad-horseshoe-left,
+.ad-horseshoe-right,
+.ad-horseshoe_left,
+.ad-horseshoe_right,
+.ad-skyscraper-left,
+.ad-skyscraper-right {
+    top: 5.6rem;
+    min-width: 180px;
+}
+
+.ad-sticker-right,
+.ad-sticker-left,
+.ad-sticker_right,
+.ad-sticker_left,
+.ad-sticky-left,
+.ad-sticky-right {
+    top: 120rem;
+    min-width: 180px;
+
+    &.fixed {
+        position: fixed;
+        top: 5.6rem;
+    }
+}
+
+.ad-horseshoe-left,
+.ad-horseshoe-right,
+.ad-sticker-left,
+.ad-sticker-right,
+.ad-horseshoe_left,
+.ad-horseshoe_right,
+.ad-sticker_left,
+.ad-sticker_right,
+.ad-skyscraper-left,
+.ad-skyscraper-right,
+.ad-sticky-left,
+.ad-sticky-right
+{
+    &.wallpaper {
+        display: none;
+    }
+}
+
+

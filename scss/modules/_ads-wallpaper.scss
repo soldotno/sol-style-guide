@@ -1,0 +1,13 @@
+.wallpaper-ad-wrapper{
+    -webkit-transition:all .5s ease;
+    -moz-transition:all .5s ease;
+    -ms-transition:all .5s ease;
+    -o-transition:all .5s ease;
+    transition:all .5s ease;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}

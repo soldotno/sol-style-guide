@@ -10,7 +10,7 @@
 
     'modules/layout',
     'modules/responsive-embeds',
-    'modules/event-ads',
+    'modules/ads',
     'modules/advert',
     'modules/image-gallery',
     'modules/spark';
@@ -128,7 +128,8 @@ html {
         main {
             display:flex;
             flex-wrap:wrap;
-            margin: $verticalBase $horizontalBase;
+            background-color: #efefef;
+            padding: $verticalBase $horizontalBase;
 
             > header {
                 flex: 99 1 100.0rem;

@@ -1,0 +1,36 @@
+/**
+ * Custom vars.
+ */
+$adMarkerSize: 1rem;
+
+.ad-wrapper {
+    overflow: hidden;
+}
+
+.banner-ad {
+    clear: both;
+    text-align: center;
+}
+
+.ad-marker:before {
+    margin-top: $verticalBase - $adMarkerSize;
+    font-size: $adMarkerSize;
+    color: $lightTextColor;
+    text-transform: lowercase;
+    content: "Annonse";
+    line-height: $adMarkerSize;
+    display: block;
+    text-align: center;
+}
+
+/**
+ * Layout-large.
+ */
+@media screen and (min-width:$largeWidth) {
+    .ad-wrapper {
+        margin-left: $horizontalBase;
+        margin-right: $horizontalBase;
+    }
+    @import 'ads-sticker';
+    @import 'ads-wallpaper';
+}
