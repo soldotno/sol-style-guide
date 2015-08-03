@@ -28,7 +28,7 @@ $ig-blue: #e20613;
       position: absolute;
       top: 43%;
       line-height: 0;
-      z-index: 1;
+      z-index: 2;
       font-size: 5rem;
       text-shadow: 0 2px 2px $ig-black;
       transition: all .2s ease-out;
@@ -87,6 +87,7 @@ $ig-blue: #e20613;
         }
 
         &.center {
+          z-index: 1;
           opacity: 1;
           -moz-transform: translate3d(0, 0, 0);
           -webkit-transform: translate3d(0, 0, 0);
