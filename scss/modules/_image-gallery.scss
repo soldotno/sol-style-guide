@@ -60,19 +60,20 @@ $ig-blue: #e20613;
     }
 
     .slides {
+      position:relative;
       overflow: hidden;
       white-space: nowrap;
-      position: relative;
 
       .slide {
         opacity: 0;
-        display: inline-block;
         width: 100%;
         white-space: normal;
+        display:none;
 
         &.left,
         &.center,
         &.right {
+          display: inline-block;
           transition: all .35s ease-out;
           position: absolute;
           top: 0;
@@ -95,6 +96,9 @@ $ig-blue: #e20613;
           -o-transform: translate3d(0, 0, 0);
           -ms-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+
+          position:static;
+
           &.relative {
             position: relative;
           }
