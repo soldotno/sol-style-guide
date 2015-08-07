@@ -19,118 +19,132 @@ $ig-blue: #e20613;
 
   background-color: $darkBgColor;
 
-  .slider-content {
-    position: relative;
+  position: relative;
 
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 43%;
-      line-height: 0;
-      z-index: 2;
-      font-size: 5rem;
-      text-shadow: 0 2px 2px $ig-black;
-      transition: all .2s ease-out;
-      color: $whiteColor;
-      text-decoration:none;
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 7*$verticalBase;
+    line-height: 0;
+    z-index: 2;
+    font-size: 5rem;
+    text-shadow: 0 2px 2px $ig-black;
+    transition: transform .2s ease-out, color 0.16s ease-out;
+    color: $whiteColor;
+    text-decoration:none;
 
-      @media (max-width: $ig-screen-sm-min) {
-        font-size: 4em;
-      }
-
-      &:hover {
-        transform: scale(1.4);
-        color: $ig-blue;
-      }
-
-      &:before {
-        padding: 2*$verticalBase $horizontalBase;
-      }
+    @media (max-width: $ig-screen-sm-min) {
+      font-size: 4em;
     }
 
-    .prev {
-      left: 0;
-      @extend .icon-arrow-circle-left;
+    &:hover {
+      transform: scale(1.4);
+    }
+    &:active{
+      color:$ig-blue;
     }
 
-    .next {
-      right: 0;
-      @extend .icon-arrow-circle-right;
+    &:before {
+      padding: 2*$verticalBase $horizontalBase;
     }
+  }
 
-    .slides {
-      position:relative;
-      overflow: hidden;
-      white-space: nowrap;
+  .prev {
+    left: 0;
+    @extend .icon-arrow-circle-left;
+  }
 
-      .slide {
-        opacity: 0;
+  .next {
+    right: 0;
+    @extend .icon-arrow-circle-right;
+  }
+
+  .slides {
+    position:relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .slide {
+      opacity: 0;
+      width: 100%;
+      white-space: normal;
+      display:none;
+
+      &.left,
+      &.center,
+      &.right {
+        display: block;
+        transition: all .35s ease-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.left {
+        -moz-transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -o-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+
+      &.center {
+        z-index: 1;
+        opacity: 1;
+        -moz-transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+
+        position:static;
+      }
+
+      &.right {
+        -moz-transform: translate3d(100%, 0, 0);
+        -webkit-transform: translate3d(100%, 0, 0);
+        -o-transform: translate3d(100%, 0, 0);
+        -ms-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+      }
+
+      img {
         width: 100%;
-        white-space: normal;
-        display:none;
+        display:block;
+      }
 
-        &.left,
-        &.center,
-        &.right {
-          display: inline-block;
-          transition: all .35s ease-out;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
+      h3,
+      h3 a,
+      p {
+        color: $whiteColor;
+      }
 
-        &.left {
-          -moz-transform: translate3d(-100%, 0, 0);
-          -webkit-transform: translate3d(-100%, 0, 0);
-          -o-transform: translate3d(-100%, 0, 0);
-          -ms-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0);
-        }
+      h3 {
+        padding:2/3*$verticalBase $horizontalBase 1/3*$verticalBase;
 
-        &.center {
-          z-index: 1;
-          opacity: 1;
-          -moz-transform: translate3d(0, 0, 0);
-          -webkit-transform: translate3d(0, 0, 0);
-          -o-transform: translate3d(0, 0, 0);
-          -ms-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+        a {
+          text-decoration:none;
 
-          position:static;
-
-          &.relative {
-            position: relative;
+          &:active,
+          &:hover,
+          &:focus {
+            text-decoration:underline;
           }
         }
+      }
 
-        &.right {
-          -moz-transform: translate3d(100%, 0, 0);
-          -webkit-transform: translate3d(100%, 0, 0);
-          -o-transform: translate3d(100%, 0, 0);
-          -ms-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
-        }
+      p {
+        white-space: normal;
+        margin:0.5em 1em;
+      }
 
-        h3,
-        p {
-          color: $whiteColor;
+      h3,p {
+        &:last-child {
+          padding-bottom:$verticalBase;
         }
-
-        h3 {
-            @include padding();
-        }
-        img {
-          width: 100%;
-        }
-        p{
-          white-space: normal;
-          margin:0.5em 1em;
-        }
-
       }
     }
-
   }
 
   .bullet-container {
