@@ -128,6 +128,8 @@ $ig-blue: #e20613;
 
         a {
           text-decoration:none;
+          margin-left:-$horizontalBase/4;
+          margin-right:-$horizontalBase/4;
 
           &:active,
           &:hover,
@@ -231,6 +233,10 @@ $ig-blue: #e20613;
         &:hover {
           transform: scale(1.4);
         }
+    }
+
+    .slides .slide h3 a {
+        margin:0;
     }
   }
 }
