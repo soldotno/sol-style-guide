@@ -112,21 +112,21 @@
     }
 }
 
-// Adjusting for that margins and paddings of course does not collapse
-// @TODO Find prettier way to solve this.
-.event {
-    .spark + h2 {
-        padding-top:0;
-    }
-    h2 + .spark {
-        margin-top:0;
-    }
-}
-
 @media screen and (min-width:$largeWidth) {
     .spark {
         .item-default img {
             width:25%;
+        }
+    }
+
+    // Adjusting for that margins and paddings of course does not collapse
+    // @TODO Find prettier way to solve this.
+    .event {
+        .spark + h2 {
+            padding-top:0;
+        }
+        h2 + .spark {
+            margin-top:0;
         }
     }
 }
