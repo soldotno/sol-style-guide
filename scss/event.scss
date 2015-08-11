@@ -188,6 +188,7 @@ html {
             img {
                 margin:-1*$verticalBase -1*$horizontalBase 0;
                 max-width:calc(100% + #{2*$horizontalBase});
+                width:calc(100% + #{2*$horizontalBase});
             }
         }
     }

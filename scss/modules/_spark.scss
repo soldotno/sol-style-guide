@@ -12,6 +12,12 @@
     padding:0;
     border-top-width:0;
 
+    // Override the standard max-width of paper content, messing up our layout on screens
+    // between 666 and 750 pixels wide
+    > * {
+        max-width:initial;
+    }
+
     // Items are the clickable grains of our creation. They can be block-level links,
     // self-produced content, fact boxes (aside nodes) or external embedded content.
     .item {
@@ -83,8 +89,11 @@
         }
     }
     .item-main {
-        // On the smallest screens, the only overrides for main items are in typography.
+        // On the smallest screens, most of the overrides for main items are in typography.
         // Look in the events-typography module.
+        img {
+            width:100%;
+        }
     }
     .item-gallery {
         // Item gallery styles are separated out into the image-gallery module
