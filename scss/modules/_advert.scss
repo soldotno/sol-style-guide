@@ -64,5 +64,10 @@
     padding:0 $horizontalBase;
     background:$overlayColor;
     color:$whiteColor;
+
+    @media screen and (min-width:$largeWidth) {
+      top:0;
+      left:0;
+    }
   }
 }

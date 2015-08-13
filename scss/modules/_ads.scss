@@ -10,6 +10,11 @@ $adMarkerSize: 1rem;
 .banner-ad {
     clear: both;
     text-align: center;
+
+    .sparks & {
+        @include paper();
+        padding-top:0;
+    }
 }
 
 .ad-marker:before {
