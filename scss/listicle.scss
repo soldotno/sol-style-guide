@@ -10,7 +10,7 @@
     @include nopaper();
     @include margin();
 
-    background:$bgColor;
+    background:$whiteColor;
 
     // Typography overrides
     h1,h2,h5,h6 {
