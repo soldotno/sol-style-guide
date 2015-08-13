@@ -10,6 +10,8 @@
     @include nopaper();
     @include margin();
 
+    background:$bgColor;
+
     // Typography overrides
     h1,h2,h5,h6 {
         font-family:$alternativeHeadingFont;
