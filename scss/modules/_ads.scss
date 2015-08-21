@@ -3,15 +3,15 @@
  */
 $adMarkerSize: 1rem;
 
-@import 'ads-topbanner';
-
 .ad-wrapper {
     overflow: hidden;
 }
 
 .banner-ad {
     clear: both;
+    width:100%;
     text-align: center;
+    margin-bottom:$verticalBase;
 
     .sparks & {
         @include paper();
