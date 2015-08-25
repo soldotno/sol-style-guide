@@ -51,6 +51,10 @@
           overflow:hidden;
           min-height:4*$verticalBase;
 
+          &:first-child {
+            margin-top:0;
+          }
+
           // Bleeding list items on the very smallest screens
           @media screen and (max-width:349px) {
             margin:0 $horizontalBase*-1;
@@ -135,6 +139,6 @@
 
     .related-posts {
         max-width:$contentWidth;
-        margin:0 auto $verticalBase;
+        margin:0 0 $verticalBase;
     }
 }
