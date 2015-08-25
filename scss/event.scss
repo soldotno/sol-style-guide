@@ -143,6 +143,8 @@ html {
         }
 
         main > header {
+            margin-top: $verticalBase;
+
             // Making space for a background image
             h1 {
                 padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase 3*$horizontalBase;
