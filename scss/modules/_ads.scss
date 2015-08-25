@@ -34,10 +34,6 @@ $adMarkerSize: 1rem;
  * Layout-large.
  */
 @media screen and (min-width:$largeWidth) {
-    .ad-wrapper {
-        margin-left: $horizontalBase;
-        margin-right: $horizontalBase;
-    }
     @import 'ads-sticker';
     @import 'ads-wallpaper';
 }
