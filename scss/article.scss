@@ -1,13 +1,12 @@
 @import
-    'settings/colors',
-    'settings/variables',
-    'settings/mixins',
+    'settings',
 
     'modules/reset',
     'modules/typography',
     'modules/wordpress-standard-classes',
     'modules/addthis',
     'modules/layout',
+    'modules/layout-2-column',
     'modules/ads';
 
 /**
@@ -50,14 +49,6 @@ article {
                 }
             }
         }
-        @media screen and (min-width:$largeWidth) {
-            h1,
-            p,
-            .entry-meta .byline {
-                margin-left:3*$horizontalBase;
-                margin-right:4*$horizontalBase;
-            }
-        }
     }
 
     footer {
@@ -88,6 +79,10 @@ article {
     padding:$verticalBase*1/2 $horizontalBase;
     border-bottom:1px solid $borderColor;
     overflow:hidden;
+
+    &.entry-footer {
+        height:auto;
+    }
 
     .byline {
         float:left;
@@ -149,10 +144,9 @@ article {
     }
 }
 .entry-content {
-    padding-top:$verticalBase;
+    margin-top:$verticalBase;
 
     @media screen and (min-width:$largeWidth) {
-        margin-top: $verticalBase;
         margin-bottom: $verticalBase;
     }
 }
