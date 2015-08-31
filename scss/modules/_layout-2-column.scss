@@ -30,6 +30,11 @@
             flex: 0 0 30rem;
             width:30rem;
             margin-top:0;
+
+            // Override inline styles for firefox on mac
+            iframe {
+                width:30rem !important;
+            }
         }
 
         > aside {
