@@ -26,6 +26,12 @@
             margin-right:$horizontalBase;
         }
 
+        > .fb-comments {
+            flex: 0 0 30rem;
+            margin-top:0;
+            max-width:30rem;
+        }
+
         > aside {
             flex: 0 0 30rem;
         }
