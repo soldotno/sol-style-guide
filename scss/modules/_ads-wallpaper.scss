@@ -4,8 +4,8 @@
     -ms-transition:all .5s ease;
     -o-transition:all .5s ease;
     transition:all .5s ease;
-    position:fixed;
-    top:0;
+    position:absolute;
+    top:$headerHeight;
     left:0;
     right:0;
     bottom:0;
