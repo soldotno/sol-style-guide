@@ -8,7 +8,8 @@
  */
 .listicle {
     @include nopaper();
-    @include margin();
+    @include padding();
+    padding-top:$verticalBase;
 
     background:$bgColor;
 
