@@ -9,7 +9,11 @@
 .listicle {
     @include nopaper();
     @include padding();
-    padding-top:$verticalBase;
+
+    // Adjust to wallpapers
+    &.has-post-thumbnail {
+        padding-top:$verticalBase;
+    }
 
     background:$bgColor;
 
