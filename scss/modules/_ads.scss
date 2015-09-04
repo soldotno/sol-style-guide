@@ -13,6 +13,9 @@ $adMarkerSize: 1rem;
     text-align: center;
     margin-bottom:$verticalBase;
 
+    // Above wallpaper, beneath everything else
+    z-index:2;
+
     .sparks & {
         @include paper();
         padding-top:0;
