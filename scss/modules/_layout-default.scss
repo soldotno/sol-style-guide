@@ -5,6 +5,10 @@ body {
     margin: auto;
 }
 
+main {
+    z-index:3;
+}
+
 article {
     @include paper();
 
