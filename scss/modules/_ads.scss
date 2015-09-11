@@ -3,6 +3,8 @@
  */
 $adMarkerSize: 1rem;
 
+@import 'ads-native';
+
 .ad-wrapper {
     overflow: hidden;
 }
@@ -20,6 +22,10 @@ $adMarkerSize: 1rem;
         @include paper();
         padding-top:0;
     }
+}
+
+#ad-topbanner {
+    margin-bottom:0;
 }
 
 .ad-marker:before {
