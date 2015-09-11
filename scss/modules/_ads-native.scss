@@ -5,8 +5,8 @@ article.category-annonse {
 
     .commercial-label {
         width:100%;
-        font-size: 2.6rem;
-        line-height:2*$verticalBase;
+        font-size: 1.4rem;
+        line-height:$verticalBase;
         padding:$verticalBase/2 0;
         background:$overlayColor;
         color:$whiteColor;
@@ -21,5 +21,14 @@ article.category-annonse {
     &.listicle .commercial-label {
         margin:$verticalBase $horizontalBase;
         width: calc(100% - 2*#{$horizontalBase});
+    }
+}
+
+@media screen and (min-width:$largeWidth) {
+    article.category-annonse {
+        .commercial-label {
+            font-size: 2.6rem;
+            line-height:2*$verticalBase;
+        }
     }
 }
