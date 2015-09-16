@@ -9,17 +9,51 @@
 <body>
 
 
-    <header id="page-header" data-reactid=".10d2xvzeubk.1.1">
-        <div id="page-header-content" data-reactid=".10d2xvzeubk.1.1.0">
-            <span id="header-menu" class="" data-reactid=".10d2xvzeubk.1.1.0.0"><i class="icon-menu" data-reactid=".10d2xvzeubk.1.1.0.0.0"></i></span>
-            <form id="header-search" action="http://www.kvasir.no/alle" data-reactid=".10d2xvzeubk.1.1.0.1"><input id="search-input" type="text" name="q" autocorrect="off" placeholder="Søk i Kvasir" data-reactid=".10d2xvzeubk.1.1.0.1.0"><input type="hidden" name="partnerid" value="sol" data-reactid=".10d2xvzeubk.1.1.0.1.1"><input type="hidden" name="source" value="search" data-reactid=".10d2xvzeubk.1.1.0.1.2"><button id="search-submit" type="submit" data-reactid=".10d2xvzeubk.1.1.0.1.3"><i class="icon-search" data-reactid=".10d2xvzeubk.1.1.0.1.3.0"></i></button></form>
-            <span id="header-title" data-reactid=".10d2xvzeubk.1.1.0.2"><a href="/" data-reactid=".10d2xvzeubk.1.1.0.2.0">www.sol.no</a><span id="header-text" data-reactid=".10d2xvzeubk.1.1.0.2.1"></span></span>
-        </div>
-    </header>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v2.3&appId=197647736926659";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="ads">
+    	<div class="ad-wrapper ad-topbanner" >
+    		<div id="ad_topbanner" class="banner-ad resize-ad"></div>
+    	</div>
 
+    	<div class="ad-wrapper ad-sticker-left" >
+    		<div id="ad_sticker_left" class="banner-ad">
+    			<div class="adTitle"></div>
+    		</div>
+    	</div>
 
-    <main id="main" class="site-main" role="main">
-        <article>
+    	<div class="ad-wrapper ad-sticker-right" >
+    		<div id="ad_sticker_right" class="banner-ad">
+    			<div class="adTitle"></div>
+    		</div>
+    	</div>
+
+    	<div class="ad-wrapper ad-horseshoe-left" >
+    		<div id="ad_horseshoe_left" class="banner-ad">
+    			<div class="adTitle"></div>
+    		</div>
+    	</div>
+
+    	<div class="ad-wrapper ad-horseshoe-right" >
+    		<div id="ad_horseshoe_right" class="banner-ad">
+    			<div class="adTitle"></div>
+    		</div>
+    	</div>
+    </div>
+    <script>
+    if(navigator.userAgent.indexOf('SVENAPP')>=0){
+    	document.getElementById("page-header").style.display ="none";
+    }
+    </script>
+    <main id="main-wrapper">
+        <div class="lp_is_start"></div>
+        <article id="post-53701" class="post-53701 post type-post status-publish format-standard hentry category-underholdning">
             <header>
                 <h1 class="entry-title">Markup: HTML Tags and Formatting</h1>
                 <div class="entry-meta">
@@ -192,6 +226,15 @@
                 <p><strong>Variable Tag</strong></p>
                 <p>This allows you to denote <var>variables</var>.</p>
             </div><!-- .entry-content -->
+
+            <aside class="entry-aside">
+                <div>
+                    <p>Here goes an ad.</p>
+                </div>
+                <div>
+                    <p>Here goes Facebook comments.</p>
+                </div>
+            </aside>
 
             <footer class="entry-footer entry-meta">
                 <div class="cat-links">

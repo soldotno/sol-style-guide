@@ -3,6 +3,8 @@
  */
 $adMarkerSize: 1rem;
 
+@import 'ads-native';
+
 .ad-wrapper {
     overflow: hidden;
 }
@@ -13,10 +15,17 @@ $adMarkerSize: 1rem;
     text-align: center;
     margin-bottom:$verticalBase;
 
+    // Above wallpaper, beneath everything else
+    z-index:2;
+
     .sparks & {
         @include paper();
         padding-top:0;
     }
+}
+
+#ad-topbanner {
+    margin-bottom:0;
 }
 
 .ad-marker:before {
@@ -34,10 +43,6 @@ $adMarkerSize: 1rem;
  * Layout-large.
  */
 @media screen and (min-width:$largeWidth) {
-    .ad-wrapper {
-        margin-left: $horizontalBase;
-        margin-right: $horizontalBase;
-    }
     @import 'ads-sticker';
     @import 'ads-wallpaper';
 }

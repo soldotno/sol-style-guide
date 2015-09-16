@@ -8,7 +8,12 @@
  */
 .listicle {
     @include nopaper();
-    @include margin();
+    @include padding();
+
+    // Adjust to wallpapers
+    &.has-post-thumbnail {
+        padding-top:$verticalBase;
+    }
 
     background:$bgColor;
 
@@ -50,6 +55,10 @@
           position:relative;
           overflow:hidden;
           min-height:4*$verticalBase;
+
+          &:first-child {
+            margin-top:0;
+          }
 
           // Bleeding list items on the very smallest screens
           @media screen and (max-width:349px) {
@@ -135,6 +144,6 @@
 
     .related-posts {
         max-width:$contentWidth;
-        margin:0 auto $verticalBase;
+        margin:0 0 $verticalBase;
     }
 }

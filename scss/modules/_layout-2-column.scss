@@ -1,0 +1,50 @@
+/**
+ * Two-column layout on large screens.
+ */
+@media screen and (min-width:$largeWidth) {
+    article {
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-between;
+
+        > header,
+        > footer,
+        > .entry-content,
+        > aside,
+        > .related-posts {
+            margin-left:0;
+            margin-right:0;
+        }
+
+        > header,
+        > footer {
+            flex: 1 1 100rem;
+        }
+
+        > .entry-content {
+            flex: 1 1 39rem;
+            margin-right:$horizontalBase;
+        }
+
+        > .fb-comments {
+            flex: 0 0 30rem;
+            width:30rem;
+            margin-top:0;
+
+            // Override inline styles for firefox on mac
+            iframe {
+                width:30rem !important;
+            }
+        }
+
+        > aside {
+            flex: 0 0 30rem;
+        }
+
+        > .related-posts {
+            flex:1 0 39rem;
+            order: 4;
+        }
+
+    }
+}
