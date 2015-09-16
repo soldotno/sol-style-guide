@@ -36,6 +36,20 @@
      */
     main {
         > header {
+            h1 {
+                position: relative;
+
+                .image-credential {
+                    padding: 0 $horizontalBase;
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: -0.8*$horizontalBase;
+                    right: 0;
+                    font-size: 14px;
+                    color: #777;
+                }
+            }
+
             .event-summary,
             .event-summary-footer {
                 float:left;
@@ -148,6 +162,11 @@ html {
             // Making space for a background image
             h1 {
                 padding:12.5*$verticalBase $horizontalBase 0.5*$verticalBase 3*$horizontalBase;
+
+                .image-credential {
+                    margin-bottom: -1.5*$horizontalBase;
+                    font-size: 16px;
+                }
             }
 
             > * {
