@@ -1,0 +1,34 @@
+@import 'icons';
+
+article.category-annonse {
+    position:relative;
+
+    .commercial-label {
+        width:100%;
+        font-size: 1.4rem;
+        line-height:$verticalBase;
+        padding:$verticalBase/2 0;
+        background:$overlayColor;
+        color:$whiteColor;
+        text-align:center;
+        text-transform:uppercase;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+    }
+
+    &.listicle .commercial-label {
+        margin:$verticalBase $horizontalBase;
+        width: calc(100% - 2*#{$horizontalBase});
+    }
+}
+
+@media screen and (min-width:$largeWidth) {
+    article.category-annonse {
+        .commercial-label {
+            font-size: 2.6rem;
+            line-height:2*$verticalBase;
+        }
+    }
+}
