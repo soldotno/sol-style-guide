@@ -17,9 +17,7 @@ $adMarkerSize: 1rem;
     margin-bottom:$verticalBase;
 
     // Above wallpaper, beneath everything else
-    &.ad-topbanner.wallpaper {
-        z-index:2;
-    }
+    z-index:2;
 
     .sparks & {
         @include paper();
