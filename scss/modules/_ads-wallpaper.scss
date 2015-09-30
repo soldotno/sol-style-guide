@@ -11,6 +11,10 @@
     z-index:1;
     height:1200px;
 
+    .frontpage & {
+        top:$solfrontHeaderHeight;
+    }
+
     a {
         display:block;
         width:100%;
