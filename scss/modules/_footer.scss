@@ -1,6 +1,6 @@
 .site-footer {
-  margin-bottom: -20px;
-  min-height: 400px;
+  margin-bottom: -2rem;
+  min-height: 40rem;
   background-color: $footerBgColor;
   text-align: center;
 
@@ -10,24 +10,24 @@
     text-decoration: none;
     list-style: none;
     margin: 0;
-    padding: 0 0 10px 0;
+    padding: 0 0 1rem 0;
 
     li {
       margin:0;
     }
   }
   .footer-logo {
-    height: 88px;
-    width: 88px;
+    height: 8.8rem;
+    width: 8.8rem;
     margin: 0 auto;
     text-indent: -9999px;
     background: url(http://www.sol.no/static/img/sol-footer-logo.png) 0 0 no-repeat;
-    background-size: 88px;
+    background-size: 8.8rem;
   }
   .footer-links {
-    margin-top: 30px;
-    padding-top: 43px;
-    border-top: 1px solid $footerBorderColor;
+    margin-top: 3rem;
+    padding-top: 4.3rem;
+    border-top: 0.1rem solid $footerBorderColor;
   }
   .address {
     color: $footerColor;
@@ -35,7 +35,7 @@
   a {
     color: $footerLightColor;
     padding: $verticalBase/2 $horizontalBase/2;
-    @include border-radius(3px);
+    @include border-radius(0.3rem);
 
     &:focus,
     &:active {
@@ -48,13 +48,21 @@
   }
   .content {
     color: $footerLightColor;
-    margin-top: 0;
+    margin: 0;
   }
 }
 
-@media screen and (min-width:1100px) {
+.footer-information h3.content {
+  padding: 0.4rem;
+}
+
+.footer-information h3.description {
+  padding-bottom: 0;
+}
+
+@media screen and (min-width:110rem) {
     footer.site-footer > * {
         margin: 0 auto;
-        max-width:1500px;
+        max-width:150rem;
     }
 }
