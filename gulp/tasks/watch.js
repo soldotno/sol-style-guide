@@ -8,6 +8,6 @@ gulp.task('watch', function () {
         server: "."
     });
 
-    gulp.watch('./scss/*.scss', ['sass']);
+    gulp.watch('./scss/**', ['sass']);
     gulp.watch('*.html').on('change', reload);
 });

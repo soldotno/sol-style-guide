@@ -13,12 +13,11 @@
     "gulp-eslint-style-checker": "2.0.5",
     "gulp-sass": "2.0.4",
     "gulp-watch": "4.1.1",
-    "serve-static": "1.10.0"
-  },
-  "devDependencies": {
+    "serve-static": "1.10.0",
     "gulp-autoprefixer": "3.1.0"
   },
   "scripts": {
+    "develop": "gulp develop",
     "test": "./node_modules/.bin/eslint -c ./node_modules/gulp-eslint-style-checker/eslintrc.json **/*.js",
     "prestart": "gulp build",
     "start": "node start.js"
