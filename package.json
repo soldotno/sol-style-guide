@@ -23,7 +23,8 @@
     "start": "node start.js"
   },
   "engines" :{
-    "node": "4.1.1"
+    "node": "4.1.1",
+    "npm": "3.3.5"
   },
   "repository": {
     "type": "git",
