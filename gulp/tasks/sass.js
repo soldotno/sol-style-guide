@@ -7,12 +7,12 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var production = process.env.NODE_ENV === 'production';
 
-gulp.task('sass', function() {
-    gulp.src('./scss/*.scss')
+gulp.task('sass', ['clean'], function() {
+    gulp.src('./src/scss/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
           browsers: ["> 2% in NO" ]
         }))
         .pipe(production ? cssmin() : (new NopStream()))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/css'))
 });
