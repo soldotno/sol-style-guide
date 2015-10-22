@@ -15,11 +15,12 @@ After a pull request has been approved to be merged into the gh-pages branch, bu
     npm publish
     git push
 
-# develop
+### Develop
 
-Run `gulp develop ` / `npm run develop` and all scss files will be compiled and
-  a webserver will start at port 3000 if free.
+Run `gulp develop ` / `npm run develop` and all scss and html files will be compiled and move to the dist folder
+  browsersync and nodemon will start and monitor changes in the src katalog and update the dist folder on file changes.
 
+### Structur
 
 
 NÅVÆRENDE STRUKTUR
