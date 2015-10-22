@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var del = require('del');
 
-gulp.task('clean', function (cb) {
-    del([
-        'css/**.css'
-    ], cb);
+gulp.task('clean', function () {
+    return del([
+        'dist/**'
+    ]);
 });

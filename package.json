@@ -4,17 +4,26 @@
   "description": "A style guide for projects at sol.no.",
   "main": "gulpfile.js",
   "dependencies": {
+    "babel": "5.8.23",
     "browser-sync": "2.9.11",
     "del": "2.0.2",
-    "gulp": "3.9.0",
-    "gulp-cssmin": "0.1.7",
-    "gulp-watch": "4.3.5",
-    "gulp-sass": "2.0.4"
+    "express": "4.13.3",
+    "gulp": "3.8.11",
+    "gulp-cssmin": "0.1.6",
+    "gulp-eslint-style-checker": "2.0.5",
+    "gulp-sass": "2.0.4",
+    "gulp-watch": "4.1.1",
+    "serve-static": "1.10.0",
+    "gulp-autoprefixer": "3.1.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "gulp develop"
+    "develop": "gulp develop",
+    "test": "./node_modules/gulp-eslint-style-checker/node_modules/.bin/eslint -c ./node_modules/gulp-eslint-style-checker/eslintrc.json **/*.js",
+    "prestart": "gulp build",
+    "start": "node start.js"
+  },
+  "engines" :{
+    "node": "4.2.1"
   },
   "repository": {
     "type": "git",
