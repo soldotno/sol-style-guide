@@ -28,6 +28,7 @@ article {
                 height:auto;
                 min-height:$verticalBase;
             }
+
             figcaption {
                 padding:0 $horizontalBase;
                 position:absolute;
@@ -47,6 +48,10 @@ article {
                         color:$textColor;
                     }
                 }
+            }
+
+            iframe.sedenne {
+              height:23*$verticalBase; // ~550px
             }
         }
     }
