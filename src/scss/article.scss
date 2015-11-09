@@ -52,6 +52,9 @@ article {
 
             iframe.sedenne {
               height:23*$verticalBase; // ~550px
+              width:100%;
+              border:none;
+              visibility:visible;
             }
         }
     }
