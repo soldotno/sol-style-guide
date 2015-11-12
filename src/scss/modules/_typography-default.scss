@@ -109,6 +109,7 @@ small {
 cite {
     @extend small;
 }
+.label,
 .source {
     color:$dangerousLowContrastColor;
 }
