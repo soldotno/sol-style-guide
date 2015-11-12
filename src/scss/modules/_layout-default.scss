@@ -1,13 +1,13 @@
 body {
     background:$bgColor;
     padding-top:$headerHeight;
-    max-width: $topbannerRestrictedWidth;
-    margin: auto;
 }
 
 main {
     z-index:3;
     position:relative;
+    max-width: $topbannerRestrictedWidth;
+    margin: auto;
 }
 
 article {
