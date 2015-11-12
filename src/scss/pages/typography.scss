@@ -6,12 +6,12 @@
  * project. You may be looking for modules/_typography.scss.
  */
 @import
-    'settings',
+    '../settings',
 
-    'modules/reset',
-    'modules/layout-mixins',
-    'modules/typography',
-    'modules/typography-event';
+    '../modules/reset',
+    '../modules/layout-mixins',
+    '../modules/typography',
+    '../modules/typography-event';
 
 body {
     background:$bgColor;

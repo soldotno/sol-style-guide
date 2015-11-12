@@ -1,0 +1,12 @@
+@import
+    '../settings',
+    '../modules/layout-mixins';
+
+.ad {
+  @import
+    '../modules/typography';
+
+  a {padding:0;}
+}
+
+@import '../modules/ads';

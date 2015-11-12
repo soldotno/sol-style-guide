@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var production = process.env.NODE_ENV === 'production';
 
 gulp.task('sass', ['clean'], function() {
-    gulp.src('./src/scss/*.scss')
+    gulp.src('./src/scss/pages/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({
           browsers: ["> 2% in NO" ]

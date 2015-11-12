@@ -1,19 +1,19 @@
 @import
-    'settings/colors',
-    'settings/variables',
-    'settings/mixins',
+    '../settings/colors',
+    '../settings/variables',
+    '../settings/mixins',
 
-    'modules/reset',
-    'modules/typography',
-    'modules/typography-event',
-    'modules/icons',
+    '../modules/reset',
+    '../modules/typography',
+    '../modules/typography-event',
+    '../modules/icons',
 
-    'modules/layout',
-    'modules/responsive-embeds',
-    'modules/ads',
-    'modules/advert',
-    'modules/image-gallery',
-    'modules/spark';
+    '../modules/layout',
+    '../modules/responsive-embeds',
+    '../modules/ads',
+    '../modules/advert',
+    '../modules/image-gallery',
+    '../modules/spark';
 
 /**
  * Template specific classes.
