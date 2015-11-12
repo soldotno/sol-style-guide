@@ -104,6 +104,7 @@ small {
     color:$lightTextColor;
 }
 
+.label,
 .source,
 cite {
     @extend small;
