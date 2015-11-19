@@ -1,53 +1,24 @@
 @import 'font-awesome';
 
-// @TODO Replace icomoon icons with font-awesome icons
-// They are mainly used in the menu.
-@font-face {
-    font-family:icomoon;
-    src:url('https://www.sol.no/static/fonts/icomoon.woff') format('woff');
-    font-weight:400;
-    font-style:normal;
-}
-
-.icon-search,
-.icon-arrow-right,
-.icon-arrow-down,
-.icon-menu {
-    font-family:icomoon;
-    speak:none;
-    font-style:normal;
-    font-weight:400;
-    font-variant:normal;
-    text-transform:none;
-    line-height:1;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-}
-
-.icon-search:before {
-    content:"\f002";
-}
-
-.icon-arrow-right:before {
-    content:"\f054";
-}
-
-.icon-arrow-down:before {
-    content:"\f078";
-}
-
-.icon-menu:before {
-    content:"\f0c9";
-}
-
-// New and improved: Using strictly font-awesome
 .icon-article {
     @extend .fa;
     @extend .fa-file-text-o;
 }
+.icon-bars {
+    @extend .fa;
+    @extend .fa-bars;
+}
 .icon-camera {
     @extend .fa;
     @extend .fa-camera;
+}
+.icon-arrow-down {
+    @extend .fa;
+    @extend .fa-caret-down;
+}
+.icon-arrow-right {
+    @extend .fa;
+    @extend .fa-caret-right;
 }
 .icon-arrow-circle-left {
     @extend .fa;
@@ -60,4 +31,11 @@
 .icon-commercial {
     @extend .fa;
     @extend .fa-shopping-cart;
+}
+.icon-menu {
+    @extend .icon-bars;
+}
+.icon-search {
+    @extend .fa;
+    @extend .fa-search;
 }
