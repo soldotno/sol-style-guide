@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:soldotno/style-guide.git"
+    "url": "git@github.com:soldotno/sol-style-guide.git"
   },
   "keywords": [
     "style-guide"
   ],
   "author": "Just Thomas Misund",
   "bugs": {
-    "url": "https://github.com/soldotno/style-guide/issues"
+    "url": "https://github.com/soldotno/sol-style-guide/issues"
   },
-  "homepage": "https://github.com/soldotno/style-guide"
+  "homepage": "http://www.sol.no/sol-style-guide/"
 }
