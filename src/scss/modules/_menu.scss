@@ -37,10 +37,10 @@
   display: block;
   height: 56px;
   float: left;
-  padding: 0 8px 10px 12px;
+  padding: 0 $horizontalBase;
   width: auto;
   cursor: pointer;
-  font-size:4.2rem; //42px
+  font-size:3.8rem;
   @include transition(all,.5s, ease);
 
   .icon-menu {
@@ -86,7 +86,6 @@
   #search-submit {
     width: 40px;
     height: 35px;
-    padding: 4px 0 0 0;
     border: 0;
     border-radius: 0;
     vertical-align: bottom;
