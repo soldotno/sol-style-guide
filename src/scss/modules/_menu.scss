@@ -112,6 +112,10 @@
   overflow: auto;
   bottom: 0;
 
+  a {
+    @extend %underline-on-hover;
+  }
+
   #main-menu {
     width: auto;
     padding: 0;

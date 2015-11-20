@@ -58,3 +58,11 @@
   transition: $transition-property $transition-time $method;
 }
 
+%underline-on-hover {
+  text-decoration: none;
+
+  &:active,&:hover,&:focus {
+    text-decoration:underline;
+  }
+}
+
