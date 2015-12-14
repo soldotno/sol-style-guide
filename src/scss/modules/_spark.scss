@@ -73,6 +73,20 @@
         bottom:$verticalBase/12;
     }
 
+    .item-footer {
+        position:absolute;
+        right:$horizontalBase;
+        bottom:$verticalBase/2;
+        font-size: 14px;
+        color:rgb(170, 170, 170);
+    }
+    .item-source {
+        font-weight: 800;
+    }
+    .item-desc {
+        margin-bottom:$verticalBase;
+    }
+
     // Items have a 'template' and a 'style' that
     // both should impact their visual appearance.
     //
