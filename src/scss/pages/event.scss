@@ -213,10 +213,13 @@ $soltvEventHeaderColor: #f00000;
 $soltvEventHeaderBorder: #303030;
 
 .soltv.event-page {
-  max-width: 48rem;
+  max-width: 100%;
+  min-width: 320px;
   background: $soltvEventBg;
 
   main {
+    background: $soltvEventBg;
+
     > aside,
     .sparks {
       flex: 99 1 1000px;
@@ -238,12 +241,13 @@ $soltvEventHeaderBorder: #303030;
   }
 
   .spark-header {
-    margin: 0 0.3*$verticalBase;
+    margin: 0 0.3*$verticalBase 17px;
     padding: 0 0.3*$verticalBase;
     background: transparent;
-    color:$soltvEventHeaderColor;
     border-bottom: 2px solid $soltvEventHeaderBorder;
     line-height: 1.5em;
+    text-transform: none;
+    color:$soltvEventHeaderColor;
   }
 
   .spark {
@@ -257,24 +261,33 @@ $soltvEventHeaderBorder: #303030;
     }
     .item {
       float:left;
-      margin-bottom:0.6*$verticalBase;;
-      padding:0 0.3*$verticalBase;;
+      overflow: hidden;
+      margin-bottom:0.6*$verticalBase;
+      padding:0 0.3*$verticalBase;
       width:50%;
+      height:245px;
       max-width: inherit;
       border:none;
+      text-align: center;
 
       h3,
       & {
         color:$soltvEventSecondColor;
       }
-      h3 {
-        padding: 0;
-        margin-bottom: 0.38*$verticalBase;;
+      .item-title {
+        position:absolute;
+        right:0.72rem;
+        bottom:0;
+        left:0.72rem;
+        //margin-bottom: 0.38*$verticalBase;
+        margin:0;
+        padding: 0.3*$verticalBase;
+        height:14rem;
+        background: $soltvEventItemBg;
+        text-align: left;
+        line-height: 1.3em;
         font-size:1.5rem;
         font-weight: 400;
-        line-height: 1.3em;
-        overflow: hidden;
-        height: 5.9rem;
       }
       .image-wrap {
         height:14.3rem;
@@ -283,7 +296,6 @@ $soltvEventHeaderBorder: #303030;
       img {
         margin:0;
         width:100%;
-        height:auto;
       }
       .source {
         display: block;
@@ -295,32 +307,46 @@ $soltvEventHeaderBorder: #303030;
       .info-wrap {
         padding:0.5*$verticalBase;;
       }
+      .item-footer {
+        font-size:1.2rem;
+      }
     }
     //.item-main {
-    .item:first-child {
+    .item.item-main {
       width:100%;
+      height:500px;
 
       h3,
       & {
         color: $soltvEventColor;
       }
-      h3 {
-        font-size:3.3rem;
+      .item-title {
+        font-size:2.5rem;
         font-weight:700;
-        height:auto;
       }
       .image-wrap {
         height:30.4rem;
       }
+
     }
     .item-desc {
       display: none;
     }
 
-    .item-main img {
-      margin: 0;
-      max-width:inherit;
     }
+  .ad-skyscraper-left,
+  .ad-skyscraper-right {display:none;}
+
+  .sparks {
+    .banner-ad {
+      border: 0;
+      box-shadow: none;
+      background: none;
+    }
+  }
+  .fb-comments {
+    display: block;
+    background: $soltvEventItemBg;
   }
 }
 
@@ -346,13 +372,23 @@ $soltvEventHeaderBorder: #303030;
     .spark {
       .item {
         width:25%;
+        height:243px;
+        
+        .item-title {
+          height: 10rem;
+        }
       }
-      .item:first-child {
+
+      .item.item-main {
         width: 50%;
-        h3 {
-          height: 159px;
+        height:500px;
+
+        .item-title {
+          height: 19.4rem;
         }
       }
     }
+    .ad-skyscraper-left,
+    .ad-skyscraper-right {display:block;}
   }
 }
