@@ -2,7 +2,8 @@
     'article',
 
     '../modules/typography-listicle',
-    '../modules/advert';
+    '../modules/advert',
+    '../modules/latest-articles';
 
 /**
  * Template specific classes
@@ -31,6 +32,7 @@
 
         background:$paperColor;
         margin:0;
+        margin-bottom: 20px;
         padding:0 $horizontalBase;
 
         h1,
@@ -146,33 +148,5 @@
     .related-posts {
         max-width:$contentWidth;
         margin:0 0 $verticalBase;
-    }
-}
-
-//Latest articles
-.latest-articles {
-    border: 1px solid #dfdfdf;
-    padding: 14px;
-    box-shadow: #ddd 0 0 2px;
-
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bold;
-        font-family: inherit;
-        font-size: 20px;
-    }
-
-    .latest-articles-box-header {
-        color: red;
-        font-family: roboto slab;
-        font-weight: bold;
-        font-size: 18px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .latest-article {
-        margin-bottom: 30px;
     }
 }

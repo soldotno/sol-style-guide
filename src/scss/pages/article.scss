@@ -7,7 +7,8 @@
     '../modules/addthis',
     '../modules/layout',
     '../modules/layout-2-column',
-    '../modules/ads';
+    '../modules/ads',
+    '../modules/latest-articles';
 
 /**
  * Template specific classes
@@ -232,32 +233,4 @@ article {
 html {
     position:relative;
     padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
-}
-
-//Latest articles
-.latest-articles {
-    border: 1px solid #dfdfdf;
-    padding: 14px;
-    box-shadow: #ddd 0 0 2px;
-
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-weight: bold;
-        font-family: inherit;
-        font-size: 20px;
-    }
-
-    .latest-articles-box-header {
-        color: red;
-        font-family: roboto slab;
-        font-weight: bold;
-        font-size: 18px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .latest-article {
-        margin-bottom: 30px;
-    }
 }
