@@ -13,7 +13,8 @@
     '../modules/ads',
     '../modules/advert',
     '../modules/image-gallery',
-    '../modules/spark';
+    '../modules/spark',
+    '../modules/latest-articles';
 
 /**
  * Template specific classes.
@@ -373,7 +374,7 @@ $soltvEventHeaderBorder: #303030;
       .item {
         width:25%;
         height:243px;
-        
+
         .item-title {
           height: 10rem;
         }
