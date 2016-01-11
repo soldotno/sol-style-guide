@@ -1,6 +1,4 @@
-//Latest articles
-
-.latest-articles {
+.latest-module {
     background-color: white;
     border: 1px solid #dfdfdf;
     padding: 14px;
@@ -12,14 +10,14 @@
         background: white;
     }
 
-    .latest-article-title {
+    .latest-module-title {
         font-weight: bold;
         font-family: inherit;
         font-size: 20px;
         color: #333;
     }
 
-    .latest-articles-box-header {
+    .latest-module-box-header {
         color: red;
         font-family: roboto slab;
         font-weight: bold;
@@ -28,7 +26,7 @@
         margin-bottom: 10px;
     }
 
-    .latest-article {
+    .latest-module-item {
         margin-bottom: 30px;
     }
 }
