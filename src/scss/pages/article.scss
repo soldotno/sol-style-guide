@@ -235,24 +235,6 @@ html {
     padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
 }
 
-
-
-/**** hack ***/
-
-@media (max-width: 767px) {
-	aside .latest-articles {
-		max-width: 100%;
-padding: 0;
-border: 0;
-box-shadow: none;
-	}
-	aside .latest-articles .latest-article a {
-		padding:0;
-		margin:0;
-	}
-}
-
-
 div.flexarticles{
         display: flex;
         flex-direction: row;

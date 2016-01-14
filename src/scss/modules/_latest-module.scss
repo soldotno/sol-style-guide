@@ -2,12 +2,16 @@
     background-color: white;
     border: 1px solid #dfdfdf;
     padding: 14px;
-    max-width: 300px;
+    max-width: 100%;
     box-shadow: #ddd 0 0 2px;
 
     a {
         text-decoration: none;
         background: white;
+    }
+
+    img {
+        width: 100%;
     }
 
     .latest-module-title {
