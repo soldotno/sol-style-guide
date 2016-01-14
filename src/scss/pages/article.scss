@@ -234,3 +234,51 @@ html {
     position:relative;
     padding-bottom:806px; // Making room for the footer @TODO Use flexbox instead
 }
+
+
+
+/**** hack ***/
+
+@media (max-width: 767px) {
+	aside .latest-articles {
+		max-width: 100%;
+padding: 0;
+border: 0;
+box-shadow: none;
+	}
+	aside .latest-articles .latest-article a {
+		padding:0;
+		margin:0;
+	}
+}
+
+
+div.flexarticles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+div.flexarticles article{
+    flex: 1 0 45%;
+    margin:10px 10px 0 10px;
+}
+
+.taglist ul{
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+.taglist ul li{
+    color: #aaa;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 3px 8px;
+    font-weight: normal;
+    border:solid 1px #CCC;
+    border-radius: 3px;
+    background-color: #FFF;
+}
+.taglist ul li a{
+    text-decoration: none;
+    font-weight: normal;
+}
