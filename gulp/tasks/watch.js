@@ -5,7 +5,7 @@ var reload = browserSync.reload;
 
 gulp.task('watch', function () {
     browserSync({
-        server: "."
+        server: "./dist/"
     });
 
     gulp.watch('./scss/**', ['sass']);
