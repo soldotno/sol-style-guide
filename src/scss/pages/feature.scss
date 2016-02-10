@@ -24,20 +24,6 @@
         font-size:2.0rem;
     }
 
-    header {
-        @include paper-shadow();
-
-        background:$paperColor;
-        margin:0;
-        margin-bottom: 20px;
-        padding:0 $horizontalBase;
-
-        h1,
-        p {
-            text-align: center;
-        }
-    }
-
     > iframe {
         width:100%;
         margin:0 auto $verticalBase !important;
