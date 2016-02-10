@@ -17,11 +17,19 @@
         font-size:2.0rem;
     }
     
+    .entry-header {
+        text-align:center;
+    }
+    
     .entry-content {
-        p {
-            max-width:$contentWidth;
-            margin-left:auto;
-            margin-right:auto;
-        }
+        flex:1 1 100%;
+        max-width:none;
+    }
+    
+    .related-posts,
+    .entry-content p {
+        max-width:$contentWidth;
+        margin-left:auto;
+        margin-right:auto;
     }
 }
