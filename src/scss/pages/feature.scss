@@ -9,13 +9,6 @@
  * Template specific classes
  */
 .feature {
-    // Adjust to wallpapers
-    &.has-post-thumbnail {
-        padding-top:$verticalBase;
-    }
-
-    background:$bgColor;
-
     // Typography overrides
     h1,h2,h5,h6 {
         font-family:$alternativeHeadingFont;
@@ -23,24 +16,12 @@
     h4 {
         font-size:2.0rem;
     }
-
-    > iframe {
-        width:100%;
-        margin:0 auto $verticalBase !important;
-
-        &:last-child {
-            margin-bottom:0 !important;
+    
+    .entry-content {
+        p {
+            max-width:$contentWidth;
+            margin-left:auto;
+            margin-right:auto;
         }
-    }
-
-    img.aligncenter {
-      width:100%;
-      height:auto;
-      margin-left:-$horizontalBase;
-    }
-
-    .related-posts {
-        max-width:$contentWidth;
-        margin:0 0 $verticalBase;
     }
 }
