@@ -264,3 +264,8 @@ div.flexarticles article{
     text-decoration: none;
     font-weight: normal;
 }
+
+// Hide preload images from horrible WordPress-plugin featured-video-plus on Apple devices
+img[alt="preload image"] {
+    display:none;
+}
