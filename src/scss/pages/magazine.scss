@@ -201,7 +201,10 @@
         article:last-child{
           text-align: center;
           padding: 2.5rem 7rem 0 7rem;
-          max-width: 50%;
+
+          @media screen and (min-width:$largeWidth) {
+            max-width: 50%;
+          }
 
           .article-title {
             font-weight: normal;
