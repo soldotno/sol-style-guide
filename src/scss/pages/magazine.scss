@@ -2,6 +2,10 @@
     'event',
     '../modules/typography-magazine';
 
+@media screen and (min-width:$largeWidth) {
+  $magazineBorderColor: #bfbfbf;
+}
+
 .commercial-warning {
   background-color: $easterColor;
   height: 7rem;
@@ -21,6 +25,7 @@
 }
 
 .event-page.magazine {
+  max-width: 100%;
   background-color: $magazineBg;
   font-family: $magazineFontFamily;
 
@@ -30,7 +35,7 @@
 
   main {
     background-color: $magazineBg;
-    max-width: 100%;
+    max-width: 101rem;
     min-width: 320px;
     border: 1px solid $magazineBorderColor;
 
@@ -45,10 +50,18 @@
         text-align: center;
         font-size: 4.4rem;
         font-family: inherit;
+
+        @media screen and (min-width:$largeWidth) {
+          font-size: 11rem;
+        }
       }
 
       p {
         text-align: center;
+
+        @media screen and (min-width:$largeWidth) {
+          margin-top: 4rem;
+        }
       }
     }
 
@@ -66,11 +79,30 @@
         border-bottom: none;
         font-family: inherit;
         border-top: 1px solid $magazineBorderColor;
+
+        @media screen and (min-width:$largeWidth) {
+          text-align: left;
+          font-size: 5rem;
+          line-height: 6rem;
+        }
       }
 
-      .spark {
+      img {
+        margin: 0;
+      }
+
+      .spark-main, .spark-default {
         border: none;
         box-shadow: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .item-default {
+          @media screen and (min-width:$largeWidth) {
+            max-width: 50%;
+          }
+        }
 
         article {
           padding: 0 $horizontalBase;
@@ -102,10 +134,14 @@
 
             .logo {
               display:block;
-              width: 3.2rem;
-              height: 3.2rem;
-              flex: 0 0 3.2rem;
+              width: 4.5rem;
+              height: 4.5rem;
+              flex: 0 0 4.5rem;
               margin-right: $horizontalBase/2;
+            }
+
+            .item-posted {
+              font-weight: 100;
             }
 
             .publisher-meta {
@@ -121,6 +157,11 @@
             color: $textColor;
             text-transform: none;
             padding: 1.8rem 0;
+
+            @media screen and (min-width:$largeWidth) {
+              font-size: 5rem;
+              line-height: 6rem;
+            }
           }
 
           a {
@@ -140,13 +181,6 @@
               padding: 10px;
               line-height: 1.1em;
             }
-            // When Media Queries level 4 is supported by major browsers,
-            // we can change this to @media (hover: hover)
-            @media screen and (min-width:$largeWidth) {
-              &:hover {
-                text-decoration:underline;
-              }
-            }
 
             // Hide focus style from mouse users
             &:focus:hover {
@@ -155,13 +189,19 @@
           }
 
           img {
-            width:100%;
+            width: 100%;
+          }
+
+          .item-desc {
+            margin-left: 0;
+            margin-right: 0;
           }
         }
 
-        .item:last-child{
+        article:last-child{
           text-align: center;
           padding: 2.5rem 7rem 0 7rem;
+          max-width: 50%;
 
           .article-title {
             font-weight: normal;
