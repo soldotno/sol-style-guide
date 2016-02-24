@@ -95,6 +95,14 @@ a {
     }
 }
 
+a.blocklink {
+    @include no-padded-text();
+
+    line-height:0;
+    display:block;
+    text-decoration:none;
+}
+
 strong {
     font-weight:bold;
 }

@@ -13,12 +13,6 @@
     }
 }
 
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-}
-
 @mixin box-sizing($value) {
     -webkit-box-sizing: $value;
     -moz-box-sizing: $value;
@@ -41,12 +35,13 @@
   padding:$verticalBase/10 $horizontalBase/4;
   margin:$verticalBase*-1/10 0;
   background:$linkBgColor;
-  @include border-radius(3px);
+  border-radius:0.3rem;
 }
 @mixin no-padded-text() {
   padding:0;
   margin:0;
   background:transparent;
+  border-radius:0;
 }
 
 

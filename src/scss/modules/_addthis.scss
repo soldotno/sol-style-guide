@@ -59,7 +59,7 @@
         font-size: 1.5rem;
         text-decoration: none;
 
-        @include border-radius(3px);
+        border-radius:0.3rem;
         @include box-sizing(border-box);
         -webkit-font-smoothing: antialiased;
 
