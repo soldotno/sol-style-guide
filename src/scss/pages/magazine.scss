@@ -38,6 +38,7 @@
     max-width: 101rem;
     min-width: 320px;
     border: 1px solid $magazineBorderColor;
+    border-top: none;
 
     > header.text-only,
     > header > * {
@@ -82,7 +83,7 @@
 
         @media screen and (min-width:$largeWidth) {
           text-align: left;
-          font-size: 5rem;
+          font-size: 4.8rem;
           line-height: 6rem;
         }
       }
@@ -111,7 +112,7 @@
           box-shadow: none;
 
           .article-header {
-            border-top: $magazineBorderColor solid 0.2rem;
+            border-top: 2px solid $magazineSecondBorderColor;
             display: flex;
             flex-direction: row;
 
@@ -124,7 +125,7 @@
               flex: 1 0 auto;
 
               display: flex;
-              padding: $verticalBase/2 $horizontalBase;
+              padding: 1.6rem $horizontalBase;
               padding-left:0;
 
               font-family: $magazineFontFamily;
@@ -134,17 +135,26 @@
 
             .logo {
               display:block;
-              width: 4.5rem;
-              height: 4.5rem;
-              flex: 0 0 4.5rem;
-              margin-right: $horizontalBase/2;
+              width: 3.2rem;
+              height: 3.2rem;
+              flex: 0 0 3.2rem;
+              margin-right: 12px;
+            }
+
+            .publisher-name {
+              font-size: 14px;
+              font-weight: bold;
+              color: #333;
             }
 
             .item-posted {
-              font-weight: 100;
+              font-weight: normal;
+              font-size: 13px;
+              color: #777;
             }
 
             .publisher-meta {
+              line-height: normal;
               flex: 1 1 5rem;
               display:flex;
               flex-direction:column;
@@ -154,12 +164,12 @@
           .article-title {
             font-size: 2.4rem;
             font-family: inherit;
-            color: $textColor;
+            color: #333;
             text-transform: none;
             padding: 1.8rem 0;
 
             @media screen and (min-width:$largeWidth) {
-              font-size: 5rem;
+              font-size: 6rem;
               line-height: 6rem;
             }
           }
@@ -173,7 +183,6 @@
             .header-title {
               background: #000;
               color: #FFF;
-              //flex: 1 0 100%;
               height: 2.1em;
               vertical-align: middle;
               display: block;
@@ -193,6 +202,8 @@
           }
 
           .item-desc {
+            font-size: 2rem;
+            color: #555;
             margin-left: 0;
             margin-right: 0;
           }
