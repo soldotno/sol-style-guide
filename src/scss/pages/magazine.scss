@@ -256,6 +256,7 @@
             color: #555;
             margin-left: 0;
             margin-right: 0;
+            max-width: 100%;
 
             @media screen and (min-width:$largeWidth) {
               font-size: 2rem;
