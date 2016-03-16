@@ -194,6 +194,10 @@ figure {
 ul, ol {
     padding-left:2*$horizontalBase;
     margin-bottom:$verticalBase;
+    
+    li {
+        margin-bottom:$verticalBase;
+    }
 }
 
 ul {
