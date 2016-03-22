@@ -162,8 +162,12 @@ ul, ol {
     padding-left:2*$horizontalBase;
     margin-bottom:$verticalBase;
 
+    ul, ol {
+        margin-top:$verticalBase/2
+    }
+
     li {
-        margin-bottom:$verticalBase;
+        margin-bottom:$verticalBase/2;
     }
 }
 
