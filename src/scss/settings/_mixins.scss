@@ -34,7 +34,7 @@
 @mixin padded-text() {
   padding:$verticalBase/10 $horizontalBase/4;
   margin:$verticalBase*-1/10 0;
-  background:$linkBgColor;
+  background:transparent;
   border-radius:0.3rem;
 }
 @mixin no-padded-text() {
@@ -60,4 +60,3 @@
     text-decoration:underline;
   }
 }
-

@@ -1,6 +1,6 @@
 {
   "name": "sol-style-guide",
-  "version": "2.25.6",
+  "version": "2.26.0",
   "description": "A style guide for projects at sol.no.",
   "main": "gulpfile.js",
   "dependencies": {

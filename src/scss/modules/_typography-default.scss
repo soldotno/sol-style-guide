@@ -50,7 +50,7 @@ body {
     color:$textColor;
 }
 
-// Workaronud for https://code.google.com/p/chromium/issues/detail?id=319623
+// Workaround for https://code.google.com/p/chromium/issues/detail?id=319623
 body {
     font-size:1.6em;
 }
@@ -68,39 +68,6 @@ p {
 // Lede
 h1 + p {
     font-size:1.8rem;
-}
-
-a {
-    @include padded-text();
-
-    text-decoration:underline;
-    color:$linkColor;
-    position:relative;
-
-    // &:hover,
-    &:active,
-    &:focus {
-        text-decoration:none;
-        background:$linkColor;
-        color:$linkHighlightColor;
-        z-index:9;
-    }
-
-    &:active {
-        top:1px;
-    }
-
-    &.image-link {
-        padding:0;
-    }
-}
-
-a.blocklink {
-    @include no-padded-text();
-
-    line-height:0;
-    display:block;
-    text-decoration:none;
 }
 
 strong {
@@ -194,6 +161,14 @@ figure {
 ul, ol {
     padding-left:2*$horizontalBase;
     margin-bottom:$verticalBase;
+
+    ul, ol {
+        margin-top:$verticalBase/2
+    }
+
+    li {
+        margin-bottom:$verticalBase/2;
+    }
 }
 
 ul {
