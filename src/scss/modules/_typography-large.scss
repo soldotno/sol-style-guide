@@ -27,22 +27,6 @@
         font-size:1.9rem;
     }
 
-    a {
-        @include no-padded-text();
-
-        &:hover,
-        &:active,
-        &:focus {
-            text-decoration:none;
-            background:transparent;
-            color:$linkColor;
-        }
-
-        &:focus {
-            outline:1px solid $linkColor;
-        }
-    }
-
     blockquote {
         margin-left:$verticalBase*2 + $horizontalBase;
     }
