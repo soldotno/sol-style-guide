@@ -281,7 +281,7 @@
           padding: 2.5rem 7rem 0 7rem;
 
           @media screen and (min-width:$largeWidth) {
-            max-width: 50%;
+            flex: 1 0 calc(50% - 1.4rem);
           }
 
           .article-title {
