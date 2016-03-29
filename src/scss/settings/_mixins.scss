@@ -32,7 +32,7 @@
 }
 
 @mixin padded-text() {
-  padding:$verticalBase/10 $horizontalBase/4;
+  padding:$verticalBase/10 $horizontalBase/8;
   margin:$verticalBase*-1/10 0;
   background:transparent;
   border-radius:0.3rem;
