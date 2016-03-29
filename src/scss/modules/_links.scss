@@ -1,8 +1,8 @@
 a {
     @include padded-text();
     border-radius: 0;
-    margin-left: -$horizontalBase/4;
-    margin-right: -$horizontalBase/4;
+    margin-left: -$horizontalBase/8;
+    margin-right: -$horizontalBase/8;
 
     text-decoration:none;
     color:$linkColor;
@@ -24,7 +24,7 @@ a {
         border-bottom-color:transparent;
         z-index:9;
         outline:none;
-        box-shadow: 0 0 0.3rem 0.2rem $linkColor;
+        box-shadow: 0 0 0.3rem 0.1rem $linkColor;
     }
 
     // Hide focus styles from mouse users
