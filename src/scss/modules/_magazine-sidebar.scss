@@ -1,0 +1,73 @@
+$sidebar-width: 250px;
+$sidebar-tab-height: 70px;
+
+/* Sidebar */
+
+div.c2-magazine-sidebar {
+    background-color: #232120;
+}
+
+div.c2-magazine-sidebar {
+    /* apply this when the new template is ready
+    position: fixed;
+    top: 0;
+    */
+    width: $sidebar-width;
+    height: 100vh;
+    vertical-align: top;
+}
+
+/* Logo */
+
+div.c2-magazine-logo {
+    height: 240px;
+    background-image: URL('https://solmedia.no/cloud/v1461146964/c2-magazine/framework/c2-logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Tab container */
+
+div.c2-magazine-sidebar-tab {
+    width: 100%;
+    height: $sidebar-tab-height;
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15pt;
+    font-weight: normal;
+}
+
+div.c2-magazine-sidebar-tab.active-tab {
+    color: #87F1FF;
+    background-color: #504B49;
+}
+
+div.c2-magazine-sidebar-tab.inactive-tab {
+    color: #1AE3ff;
+    background-color: #232120;
+}
+
+div.c2-magazine-sidebar-tab:hover {
+    background-color: #645D5C;
+}
+
+div.c2-magazine-sidebar-tab .caption {
+    color: inherit;
+    line-height: $sidebar-tab-height;
+    padding-left: 15px;
+}
+
+/* Shared */
+
+div.c2-magazine-logo,
+div.c2-magazine-sidebar-tab {
+    border-bottom: 1px solid #322F2E;
+}
+
+div.c2-magazine-logo,
+div.c2-magazine-logo *,
+div.c2-magazine-sidebar-tab,
+div.c2-magazine-sidebar-tab *
+{
+    cursor: pointer;
+}
