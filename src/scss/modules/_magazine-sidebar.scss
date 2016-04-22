@@ -26,10 +26,6 @@ div.c2-magazine-logo {
 div.c2-magazine-sidebar-tab {
     width: 100%;
     height: $c2-magazine-sidebar-tab-height;
-    text-transform: uppercase;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 15pt;
-    font-weight: normal;
 }
 
 div.c2-magazine-sidebar-tab.active-tab {
@@ -49,7 +45,19 @@ div.c2-magazine-sidebar-tab:hover {
 div.c2-magazine-sidebar-tab .caption {
     color: inherit;
     line-height: $c2-magazine-sidebar-tab-height;
-    padding-left: 1.5rem;
+    padding-left: 5rem;
+
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: normal;
+
+    background-position: 0.5rem center;
+    background-repeat: no-repeat;
+}
+
+div.c2-magazine-sidebar-tab .caption::first-letter {
+    font-size: 1.25em;
 }
 
 /* Shared */
@@ -66,3 +74,27 @@ div.c2-magazine-sidebar-tab *
 {
     cursor: pointer;
 }
+
+/* Category icons */
+
+
+div.c2-magazine-sidebar-tab .icon-food {
+    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_food.png');
+}
+
+div.c2-magazine-sidebar-tab .icon-entertainment {
+    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_entertainment.png');
+}
+
+div.c2-magazine-sidebar-tab .icon-travel {
+    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_travel.png');
+}
+
+div.c2-magazine-sidebar-tab .icon-hobbyAndSparetime {
+    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_hobbyAndSparetime.png');
+}
+
+div.c2-magazine-sidebar-tab .icon-houseAndGarden {
+    background-image: URL('https://solmedia.no/cloud/v1461313639/c2-magazine/framework/icons/icon_houseAndGarden.png');
+}
+
