@@ -1,6 +1,7 @@
 @import
     'event',
-    '../modules/typography-magazine';
+    '../modules/typography-magazine',
+    '../modules/magazine-sidebar';
 
 @media screen and (min-width:$largeWidth) {
   $magazineBorderColor: #bfbfbf;
