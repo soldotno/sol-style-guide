@@ -14,11 +14,21 @@ div.c2-magazine-sidebar {
 
 /* Logo */
 
+div.c2-magazine-logo,
+div.c2-magazine-sol-logo
+{
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 div.c2-magazine-logo {
     height: 24rem;
     background-image: URL('https://solmedia.no/cloud/v1461146964/c2-magazine/framework/c2-logo.png');
-    background-position: center center;
-    background-repeat: no-repeat;
+}
+
+div.c2-magazine-sol-logo {
+    height: 16rem;
+    background-image: URL('https://solmedia.no/cloud/v1439812265/static/sol-logo.png');
 }
 
 /* Tab container */
@@ -54,10 +64,6 @@ div.c2-magazine-sidebar-tab .caption {
 
     background-position: 0.5rem center;
     background-repeat: no-repeat;
-}
-
-div.c2-magazine-sidebar-tab .caption::first-letter {
-    font-size: 1.25em;
 }
 
 /* Shared */
