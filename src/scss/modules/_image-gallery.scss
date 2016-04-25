@@ -33,6 +33,7 @@ $ig-blue: #e20613;
     transition: transform .2s ease-out, color 0.16s ease-out;
     color: $whiteColor;
     text-decoration:none;
+    border: none;
 
     &:active{
       color:$ig-blue;
