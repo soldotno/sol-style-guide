@@ -17,18 +17,20 @@ div.c2-magazine-sidebar {
 div.c2-magazine-logo,
 div.c2-magazine-sol-logo
 {
-    background-position: center center;
-    background-repeat: no-repeat;
+    text-align: center;
 }
 
 div.c2-magazine-logo {
     height: 24rem;
-    background-image: URL('https://solmedia.no/cloud/v1461146964/c2-magazine/framework/c2-logo.png');
+}
+
+div.c2-magazine-logo img {
+    margin-top: 5rem;
 }
 
 div.c2-magazine-sol-logo {
     height: 16rem;
-    background-image: URL('https://solmedia.no/cloud/v1439812265/static/sol-logo.png');
+    line-height: 16rem;
 }
 
 /* Tab container */
@@ -73,8 +75,6 @@ div.c2-magazine-sidebar-tab {
     border-bottom: 1px solid #322F2E;
 }
 
-div.c2-magazine-logo,
-div.c2-magazine-logo *,
 div.c2-magazine-sidebar-tab,
 div.c2-magazine-sidebar-tab *
 {
@@ -82,7 +82,6 @@ div.c2-magazine-sidebar-tab *
 }
 
 /* Category icons */
-
 
 div.c2-magazine-sidebar-tab .icon-food {
     background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_food.png');
