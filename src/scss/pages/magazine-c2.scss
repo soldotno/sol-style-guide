@@ -29,10 +29,6 @@
     border: none;
     padding: 0;
 
-    .c2-magazine-sidebar {
-      display: none;
-    }
-
     @media screen and (min-width: $largeWidth) {
       .sparks {
         margin-left: $c2-magazine-sidebar-width;
