@@ -70,6 +70,10 @@
 
       @media screen and (min-width: $largeWidth) {
         height: 75vh;
+        margin: 0 0 5rem 0;
+      }
+
+      @media screen and (min-width: 1230px) {
         margin: 0 calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) 5rem calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) !important;
       }
 
