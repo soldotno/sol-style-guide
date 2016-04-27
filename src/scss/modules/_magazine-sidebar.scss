@@ -1,8 +1,4 @@
-/* Sidebar */
-
-div.c2-magazine-sidebar {
-    background-color: $c2-magazine-col-darkgray;
-}
+// Sidebar
 
 div.c2-magazine-sidebar {
     position: fixed;
@@ -10,9 +6,10 @@ div.c2-magazine-sidebar {
     width: $c2-magazine-sidebar-width;
     height: 100vh;
     vertical-align: top;
+    background-color: $c2-magazine-col-darkgray;
 }
 
-/* Logo */
+// Logo
 
 div.c2-magazine-logo,
 div.c2-magazine-sol-logo
@@ -33,7 +30,7 @@ div.c2-magazine-sol-logo {
     line-height: 16rem;
 }
 
-/* Tab container */
+// Tab container
 
 div.c2-magazine-sidebar-tab {
     width: 100%;
@@ -42,7 +39,7 @@ div.c2-magazine-sidebar-tab {
 
 div.c2-magazine-sidebar-tab.active-tab {
     color: #87F1FF;
-    background-color: lighten($c2-magazine-col-darkgray, 20%);  // orig: #504B49
+    background-color: lighten($c2-magazine-col-darkgray, 20%);
 }
 
 div.c2-magazine-sidebar-tab.inactive-tab {
@@ -51,7 +48,7 @@ div.c2-magazine-sidebar-tab.inactive-tab {
 }
 
 div.c2-magazine-sidebar-tab:hover {
-    background-color: lighten($c2-magazine-col-darkgray, 25%);  // orig: #645D5C
+    background-color: lighten($c2-magazine-col-darkgray, 25%);
 }
 
 div.c2-magazine-sidebar-tab .caption {
@@ -68,11 +65,11 @@ div.c2-magazine-sidebar-tab .caption {
     background-repeat: no-repeat;
 }
 
-/* Shared */
+// Shared
 
 div.c2-magazine-logo,
 div.c2-magazine-sidebar-tab {
-    border-bottom: 1px solid #322F2E;
+    border-bottom: 1px solid lighten($c2-magazine-col-darkgray, 15%);
 }
 
 div.c2-magazine-sidebar-tab,
@@ -81,32 +78,34 @@ div.c2-magazine-sidebar-tab *
     cursor: pointer;
 }
 
-/* Category icons */
+// Category icons
 
-div.c2-magazine-sidebar-tab .icon-food {
-    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_food.png');
+$c2-solmedia-baseURL: 'https://solmedia.no/cloud/v1461313641/c2-magazine/framework/';
+
+div.c2-magazine-sidebar-tab .icon-matOgDrikke {
+    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_matOgDrikke.png);
 }
 
-div.c2-magazine-sidebar-tab .icon-entertainment {
-    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_entertainment.png');
+div.c2-magazine-sidebar-tab .icon-underholdning {
+    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_underholdning.png);
 }
 
-div.c2-magazine-sidebar-tab .icon-travel {
-    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_travel.png');
+div.c2-magazine-sidebar-tab .icon-reise {
+    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_reise.png);
 }
 
-div.c2-magazine-sidebar-tab .icon-hobbyAndSparetime {
-    background-image: URL('https://solmedia.no/cloud/v1461313641/c2-magazine/framework/icons/icon_hobbyAndSparetime.png');
+div.c2-magazine-sidebar-tab .icon-hobbyOgFritid {
+    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_hobbyOgFritid.png);
 }
 
-div.c2-magazine-sidebar-tab .icon-houseAndGarden {
-    background-image: URL('https://solmedia.no/cloud/v1461313639/c2-magazine/framework/icons/icon_houseAndGarden.png');
+div.c2-magazine-sidebar-tab .icon-husOgHage {
+    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_husOgHage.png);
 }
 
-/* Responsive layout for mobile */
+// Responsive layout for mobile
 
-/*
-@media screen and (min-width: $c2-magazine-large-width) {
+
+@media screen and (max-width: $c2-magazine-large-width) {
 
     div.c2-magazine-sidebar {
         visibility: hidden;
@@ -114,4 +113,4 @@ div.c2-magazine-sidebar-tab .icon-houseAndGarden {
     }
 
 }
-*/
+
