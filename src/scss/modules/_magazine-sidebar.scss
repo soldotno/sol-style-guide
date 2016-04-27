@@ -1,7 +1,7 @@
 /* Sidebar */
 
 div.c2-magazine-sidebar {
-    background-color: #232120;
+    background-color: $c2-magazine-col-darkgray;
 }
 
 div.c2-magazine-sidebar {
@@ -42,16 +42,16 @@ div.c2-magazine-sidebar-tab {
 
 div.c2-magazine-sidebar-tab.active-tab {
     color: #87F1FF;
-    background-color: #504B49;
+    background-color: lighten($c2-magazine-col-darkgray, 20%);  // orig: #504B49
 }
 
 div.c2-magazine-sidebar-tab.inactive-tab {
     color: #1AE3ff;
-    background-color: #232120;
+    background-color: $c2-magazine-col-darkgray;
 }
 
 div.c2-magazine-sidebar-tab:hover {
-    background-color: #645D5C;
+    background-color: lighten($c2-magazine-col-darkgray, 25%);  // orig: #645D5C
 }
 
 div.c2-magazine-sidebar-tab .caption {
@@ -103,3 +103,15 @@ div.c2-magazine-sidebar-tab .icon-houseAndGarden {
     background-image: URL('https://solmedia.no/cloud/v1461313639/c2-magazine/framework/icons/icon_houseAndGarden.png');
 }
 
+/* Responsive layout for mobile */
+
+/*
+@media screen and (min-width: $c2-magazine-large-width) {
+
+    div.c2-magazine-sidebar {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+*/

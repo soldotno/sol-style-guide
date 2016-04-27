@@ -7,7 +7,7 @@
   padding: 0;
 
   main::before {
-    @media screen and (min-width: $largeWidth) {
+    @media screen and (min-width: $c2-magazine-large-width) {
       display: none;
     }
 
@@ -29,7 +29,7 @@
     border: none;
     padding: 0;
 
-    @media screen and (min-width: $largeWidth) {
+    @media screen and (min-width: $c2-magazine-large-width) {
       .sparks {
         margin-left: $c2-magazine-sidebar-width;
       }
@@ -39,7 +39,7 @@
       margin-top: 0;
     }
 
-    @media screen and (min-width: $largeWidth) {
+    @media screen and (min-width: $c2-magazine-large-width) {
       .magazine-main-article::before {
         content: "DETTE ER ET KOMMERSIELT MAGASIN FRA SOL";
         position: absolute;
@@ -68,7 +68,7 @@
       height: 65vh;
       position: relative;
 
-      @media screen and (min-width: $largeWidth) {
+      @media screen and (min-width: $c2-magazine-large-width) {
         height: 75vh;
         margin: 0 calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) 5rem calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) !important;
       }
@@ -80,7 +80,7 @@
         border: none;
         margin: 0 2rem;
 
-        @media screen and (min-width: $largeWidth) {
+        @media screen and (min-width: $c2-magazine-large-width) {
           bottom: 4rem;
         }
       }
@@ -100,7 +100,7 @@
         margin-bottom: -1.5rem;
         z-index: 1;
 
-        @media screen and (min-width: $largeWidth) {
+        @media screen and (min-width: $c2-magazine-large-width) {
           width: 28rem;
           padding: 0.5rem 3.6rem;
           font-size: 2.2rem;
