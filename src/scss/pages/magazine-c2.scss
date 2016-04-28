@@ -6,53 +6,87 @@
 .event-page.c2 {
   padding: 0;
 
+  main::before {
+    @media screen and (min-width: $c2-magazine-large-width) {
+      display: none;
+    }
+
+    content: "DETTE ER ET KOMMERSIELT MAGASIN FRA SOL";
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background-color: #555;
+    opacity: 0.7;
+    color: #F6F6F6;
+    width: 100%;
+    font-size: 1.3rem;
+    font-family: 'open sans';
+    z-index: 1;
+  }
+
   main {
     max-width: 100%;
     border: none;
     padding: 0;
 
-    .sparks {
-      margin-left: $c2-magazine-sidebar-width;
+    @media screen and (min-width: $c2-magazine-large-width) {
+      .sparks {
+        margin-left: $c2-magazine-sidebar-width;
+      }
     }
 
     .spark {
       margin-top: 0;
     }
 
-    .magazine-main-article::before {
-      content: "DETTE ER ET KOMMERSIELT MAGASIN FRA SOL";
-      position: absolute;
-      left: 0;
-      display: block;
-      text-align: center;
-      background-color: black;
-      opacity: 0.7;
-      color: #F6F6F6;
-      height: 4rem;
-      width: 100%;
-      font-size: 2rem;
-      font-family: 'open sans';
-      line-height: 4rem;
+    @media screen and (min-width: $c2-magazine-large-width) {
+      .magazine-main-article::before {
+        content: "DETTE ER ET KOMMERSIELT MAGASIN FRA SOL";
+        position: absolute;
+        left: 0;
+        display: block;
+        text-align: center;
+        background-color: black;
+        opacity: 0.7;
+        color: #F6F6F6;
+        height: 4rem;
+        width: 100%;
+        font-size: 2rem;
+        font-family: 'open sans';
+        line-height: 4rem;
+      }
     }
 
     .magazine-main-article {
       position: relative;
       background-repeat: no-repeat;
       background-size: cover;
-      /*padding-left: calc((100vw - 980px - 400px)/2) !important;*/
       padding-left: calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/2) !important;
       padding-right: calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/2) !important;
-      margin: 0 calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) 5rem calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) !important;
+      margin-bottom: 5rem !important;
       flex: 1 0 calc(100vw - #{$c2-magazine-sidebar-width}) !important;
-      height: 75vh;
+      height: 65vh;
       position: relative;
+
+      @media screen and (min-width: $c2-magazine-large-width) {
+        height: 75vh;
+        margin: 0 0 5rem 0;
+      }
+
+      @media screen and (min-width: 1230px) {
+        margin: 0 calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) 5rem calc((100vw - #{$paperWidth} - #{$c2-magazine-sidebar-width})/-2) !important;
+      }
 
       .article-context {
         position: absolute;
-        bottom: 4rem;
+        bottom: 1rem;
         max-width: $paperWidth;
         border: none;
         margin: 0 2rem;
+
+        @media screen and (min-width: $c2-magazine-large-width) {
+          bottom: 4rem;
+        }
       }
 
       .category-label {
@@ -60,14 +94,21 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 28rem;
+        width: 20rem;
         text-align: center;
         background-color: #02E3FE;
-        padding: 0.5rem 3.6rem;
+        padding: 0.2rem;
         color: #fff;
         text-transform: uppercase;
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         margin-bottom: -1.5rem;
+        z-index: 1;
+
+        @media screen and (min-width: $c2-magazine-large-width) {
+          width: 28rem;
+          padding: 0.5rem 3.6rem;
+          font-size: 2.2rem;
+        }
       }
 
       .article-title {
