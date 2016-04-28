@@ -1,6 +1,13 @@
+// Topbar
+
+div#c2-magazine-topbar {
+    visibility: hidden;
+    display: none;
+}
+
 // Sidebar
 
-div.c2-magazine-sidebar {
+div#c2-magazine-sidebar {
     position: fixed;
     top: 0;
     width: $c2-magazine-sidebar-width;
@@ -38,7 +45,8 @@ div.c2-magazine-sidebar-tab {
 }
 
 div.c2-magazine-sidebar-tab.active-tab {
-    color: #87F1FF;
+    //color: #87F1FF;
+    color: white;
     background-color: lighten($c2-magazine-col-darkgray, 20%);
 }
 
@@ -104,13 +112,73 @@ div.c2-magazine-sidebar-tab .icon-husOgHage {
 
 // Responsive layout for mobile
 
-
 @media screen and (max-width: $c2-magazine-large-width) {
 
-    div.c2-magazine-sidebar {
+    div#c2-magazine-sidebar {
         visibility: hidden;
         display: none;
     }
 
-}
+    // Topbar
 
+    div#c2-magazine-topbar {
+        visibility: visible;
+        display: block;
+        z-index: 1;
+
+        width: 100%;
+
+        background-color: $c2-magazine-col-darkgray;
+
+        ////////////////////
+        position: fixed;
+        top: 4rem;  // hack: keep free from "Dette er kommersielt"; needs fixed position
+        ////////////////////
+
+        // Child items
+
+        div.c2-magazine-topbar-item {
+            height: $c2-magazine-topbar-size;
+            line-height: $c2-magazine-topbar-size;
+
+            font-size: 20pt;
+        }
+
+        // Individual child styles
+
+        div.c2-magazine-topbar-item#log,
+        div.c2-magazine-topbar-item#cap {
+            float: left;
+        }
+
+        div.c2-magazine-topbar-item#log,
+        div.c2-magazine-topbar-item#ham {
+            width: $c2-magazine-topbar-size;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        div.c2-magazine-topbar-item#log {
+            background-size: calc(#{$c2-magazine-topbar-size} * 0.8) calc(#{$c2-magazine-topbar-size} * 0.8);
+            background-image: url(#{$c2-solmedia-baseURL}/c2-logo.png);
+        }
+
+        div.c2-magazine-topbar-item#cap {
+            padding-left: 1.5rem;
+        }
+
+        div.c2-magazine-topbar-item#ham {
+            float: right;
+            background-image: url(#{$c2-solmedia-baseURL}/icons/icon_hamburger_w.png);
+        }
+
+        // Clear float
+
+        br {
+            clear: both;
+        }
+
+    } // div#c2-magazine-topbar
+
+}
