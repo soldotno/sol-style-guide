@@ -1,3 +1,7 @@
+@function cloudURL($vSignature, $relPath) {
+    @return url(#{$solmedia-baseURL}#{$vSignature}/c2-magazine/framework/#{$relPath});
+}
+
 // Topbar
 
 div#c2-magazine-topbar {
@@ -21,7 +25,7 @@ div#c2-magazine-sidebar {
     @media screen and (max-width: $c2-magazine-large-width) {
         visibility: hidden;
         display: none;
-        top: calc(#{$c2-magazine-topbar-size} + 2.4rem);   // TODO Height of "Dette er"-bar as variable, also in magazine-c2.scss
+        top: calc(#{$c2-magazine-topbar-size} + 2.4rem);  // TODO Height of "Dette er"-bar as variable, also in magazine-c2.scss
         width: 100%;
         z-index: 1;
     }
@@ -132,26 +136,24 @@ div.c2-magazine-sidebar-tab *
 
 // Category icons
 
-$c2-solmedia-baseURL: 'https://solmedia.no/cloud/v1461313641/c2-magazine/framework';
-
 div.c2-magazine-sidebar-tab .icon-matOgDrikke {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_matOgDrikke.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_matOgDrikke.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-underholdning {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_underholdning.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_underholdning.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-reise {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_reise.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_reise.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-hobbyOgFritid {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_hobbyOgFritid.png);
+    background-image: cloudURL('v1462257200', 'icons/icon_hobbyOgFritid.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-husOgHage {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_husOgHage.png);
+    background-image: cloudURL('v1461313639', 'icons/icon_husOgHage.png');
 }
 
 // Responsive layout for mobile
@@ -168,8 +170,8 @@ div.c2-magazine-sidebar-tab .icon-husOgHage {
     div.c2-magazine-sidebar-tab,
     div.c2-magazine-sidebar-tab .caption
     {
-        height: $c2-magazine-topbar-size; // calc(#{$c2-magazine-sidebar-tab-height} * 1.1);
-        line-height: $c2-magazine-topbar-size; // calc(#{$c2-magazine-sidebar-tab-height} * 1.1);
+        height: $c2-magazine-topbar-size;
+        line-height: $c2-magazine-topbar-size;
     }
 
     // Topbar
@@ -208,7 +210,7 @@ div.c2-magazine-sidebar-tab .icon-husOgHage {
         }
 
         div.c2-magazine-topbar-item#log {
-            background-image: url(#{$c2-solmedia-baseURL}/c2-logo.png);
+            background-image: cloudURL('v1461146964', 'c2-logo.png');
             background-size: calc(#{$c2-magazine-topbar-size} * 0.75) calc(#{$c2-magazine-topbar-size} * 0.75);
         }
 
@@ -225,11 +227,11 @@ div.c2-magazine-sidebar-tab .icon-husOgHage {
 
         div.c2-magazine-topbar-item#ham {
             float: right;
-            background-image: url(#{$c2-solmedia-baseURL}/icons/icon_hamburger_w.png);
+            background-image: cloudURL('v1462196244', 'icons/icon_hamburger_w.png');
             background-size: calc(#{$c2-magazine-topbar-size} * 0.4) calc(#{$c2-magazine-topbar-size} * 0.4);
         }
 
-        // Clear float
+        // Clear float after topbar child <div>s
 
         br {
             clear: both;
