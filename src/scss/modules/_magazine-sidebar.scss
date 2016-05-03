@@ -67,8 +67,11 @@ div.c2-magazine-logo img {
 }
 
 div.c2-magazine-sol-logo {
-    height: 16rem;
-    line-height: 16rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    line-height: 10rem;
 }
 
 // Tab container
@@ -85,8 +88,7 @@ div.c2-magazine-sidebar-tab {
 }
 
 div.c2-magazine-sidebar-tab.active-tab {
-    //color: #87F1FF;
-    color: white;
+    color: #87F1FF;
     background-color: lighten($c2-magazine-col-darkgray, 20%);
 }
 
@@ -239,4 +241,4 @@ div.c2-magazine-sidebar-tab .icon-husOgHage {
 
     } // div#c2-magazine-topbar
 
-}
+} // @media
