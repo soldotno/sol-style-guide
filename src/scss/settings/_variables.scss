@@ -1,3 +1,5 @@
+$solmedia-baseURL: 'https://solmedia.no/cloud/';
+
 $verticalBase: 2.4rem;
 $horizontalBase: 1.4rem;
 
@@ -15,7 +17,10 @@ $solfrontHeaderHeight:7.5rem; // The header in solfront is different
 // C2 Magazine
 $c2-magazine-large-width: $largeWidth;
 
+$c2-magazine-topbar-size: 6rem;
+
 $c2-magazine-sidebar-width: 25rem;
 $c2-magazine-sidebar-tab-height: 7rem;
 
 $c2-magazine-col-darkgray: #232120;
+$c2-magazine-col-txtwhite: #F6F6F6;

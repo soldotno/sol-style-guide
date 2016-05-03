@@ -1,12 +1,53 @@
+@function cloudURL($vSignature, $relPath) {
+    @return url(#{$solmedia-baseURL}#{$vSignature}/c2-magazine/framework/#{$relPath});
+}
+
+// Topbar
+
+div#c2-magazine-topbar {
+    visibility: hidden;
+    display: none;
+}
+
 // Sidebar
 
-div.c2-magazine-sidebar {
+div#c2-magazine-sidebar {
     position: fixed;
-    top: 0;
-    width: $c2-magazine-sidebar-width;
-    height: 100vh;
     vertical-align: top;
     background-color: $c2-magazine-col-darkgray;
+
+    @media screen and (min-width: $c2-magazine-large-width) {
+        top: 0;
+        width: $c2-magazine-sidebar-width;
+        height: 100vh;
+    }
+
+    @media screen and (max-width: $c2-magazine-large-width) {
+        visibility: hidden;
+        display: none;
+        top: calc(#{$c2-magazine-topbar-size} + 2.4rem);  // TODO Height of "Dette er"-bar as variable, also in magazine-c2.scss
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+// Spacer for mobile layout to separate the topbar from the (mutated-into-menu) sidebar
+
+@media screen and (min-width: $c2-magazine-large-width) {
+    div#c2-magazine-sidebar div#topbar-spacer {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: $c2-magazine-large-width) {
+    div#c2-magazine-sidebar div#topbar-spacer {
+        display: block;
+        visibility: visible;
+        width: 100%;
+        height: 0.3rem;
+        background-color: lighten($c2-magazine-col-darkgray, 15%);
+    }
 }
 
 // Logo
@@ -26,8 +67,11 @@ div.c2-magazine-logo img {
 }
 
 div.c2-magazine-sol-logo {
-    height: 16rem;
-    line-height: 16rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    line-height: 10rem;
 }
 
 // Tab container
@@ -35,6 +79,12 @@ div.c2-magazine-sol-logo {
 div.c2-magazine-sidebar-tab {
     width: 100%;
     height: $c2-magazine-sidebar-tab-height;
+}
+
+@media screen and (max-width: $c2-magazine-large-width) {
+    div.c2-magazine-sidebar-tab::first {
+        border-top: 3px solid lighten($c2-magazine-col-darkgray, 15%);
+    }
 }
 
 div.c2-magazine-sidebar-tab.active-tab {
@@ -54,15 +104,23 @@ div.c2-magazine-sidebar-tab:hover {
 div.c2-magazine-sidebar-tab .caption {
     color: inherit;
     line-height: $c2-magazine-sidebar-tab-height;
-    padding-left: 5rem;
 
     text-transform: uppercase;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14pt;
     font-weight: normal;
 
-    background-position: 0.5rem center;
     background-repeat: no-repeat;
+
+    @media screen and (min-width: $c2-magazine-large-width) {
+        padding-left: 5rem;
+        background-position: 0.5rem center;
+    }
+
+    @media screen and (max-width: $c2-magazine-large-width) {
+        padding-left: 7.5rem;
+        background-position: 1rem center;
+    }
 }
 
 // Shared
@@ -80,37 +138,107 @@ div.c2-magazine-sidebar-tab *
 
 // Category icons
 
-$c2-solmedia-baseURL: 'https://solmedia.no/cloud/v1461313641/c2-magazine/framework/';
-
 div.c2-magazine-sidebar-tab .icon-matOgDrikke {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_matOgDrikke.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_matOgDrikke.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-underholdning {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_underholdning.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_underholdning.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-reise {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_reise.png);
+    background-image: cloudURL('v1461313641', 'icons/icon_reise.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-hobbyOgFritid {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_hobbyOgFritid.png);
+    background-image: cloudURL('v1462257200', 'icons/icon_hobbyOgFritid.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-husOgHage {
-    background-image: url(#{$c2-solmedia-baseURL}/icons/icon_husOgHage.png);
+    background-image: cloudURL('v1461313639', 'icons/icon_husOgHage.png');
 }
 
 // Responsive layout for mobile
 
-
 @media screen and (max-width: $c2-magazine-large-width) {
 
-    div.c2-magazine-sidebar {
+    div.c2-magazine-logo,
+    div.c2-magazine-sol-logo
+    {
         visibility: hidden;
         display: none;
     }
 
-}
+    div.c2-magazine-sidebar-tab,
+    div.c2-magazine-sidebar-tab .caption
+    {
+        height: $c2-magazine-topbar-size;
+        line-height: $c2-magazine-topbar-size;
+    }
 
+    // Topbar
+
+    div#c2-magazine-topbar {
+        visibility: visible;
+        display: block;
+        z-index: 1;
+
+        position: fixed;
+        top: 2.4rem;
+        width: 100%;
+
+        background-color: $c2-magazine-col-darkgray;
+
+        // Child items
+
+        div.c2-magazine-topbar-item {
+            height: $c2-magazine-topbar-size;
+            line-height: $c2-magazine-topbar-size;
+        }
+
+        // Individual child styles
+
+        div.c2-magazine-topbar-item#log,
+        div.c2-magazine-topbar-item#cap {
+            float: left;
+        }
+
+        div.c2-magazine-topbar-item#log,
+        div.c2-magazine-topbar-item#ham {
+            width: $c2-magazine-topbar-size;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        div.c2-magazine-topbar-item#log {
+            background-image: cloudURL('v1461146964', 'c2-logo.png');
+            background-size: calc(#{$c2-magazine-topbar-size} * 0.75) calc(#{$c2-magazine-topbar-size} * 0.75);
+        }
+
+        div.c2-magazine-topbar-item#cap {
+            color: $c2-magazine-col-txtwhite;
+            padding-left: 1rem;
+            font-size: 18pt;
+            font-weight: bold;
+            // Don't wrap, cut long texts, lest they destroy the layout
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        div.c2-magazine-topbar-item#ham {
+            float: right;
+            background-image: cloudURL('v1462196244', 'icons/icon_hamburger_w.png');
+            background-size: calc(#{$c2-magazine-topbar-size} * 0.4) calc(#{$c2-magazine-topbar-size} * 0.4);
+        }
+
+        // Clear float after topbar child <div>s
+
+        br {
+            clear: both;
+        }
+
+    } // div#c2-magazine-topbar
+
+} // @media
