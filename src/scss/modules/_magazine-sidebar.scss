@@ -111,6 +111,7 @@ div.c2-magazine-sidebar-tab .caption {
     font-weight: normal;
 
     background-repeat: no-repeat;
+    background-size: calc(#{$c2-magazine-sidebar-tab-height} * 0.6) calc(#{$c2-magazine-sidebar-tab-height} * 0.6);
 
     @media screen and (min-width: $c2-magazine-large-width) {
         padding-left: 5rem;
@@ -139,23 +140,27 @@ div.c2-magazine-sidebar-tab *
 // Category icons
 
 div.c2-magazine-sidebar-tab .icon-matOgDrikke {
-    background-image: cloudURL('v1461313641', 'icons/icon_matOgDrikke.png');
+    background-image: cloudURL('v1463139119', 'icons/icon_matOgDrikke_80.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-underholdning {
-    background-image: cloudURL('v1461313641', 'icons/icon_underholdning.png');
+    background-image: cloudURL('v1463139119', 'icons/icon_underholdning_80.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-reise {
-    background-image: cloudURL('v1461313641', 'icons/icon_reise.png');
+    background-image: cloudURL('v1463139119', 'icons/icon_reise_80.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-hobbyOgFritid {
-    background-image: cloudURL('v1462257200', 'icons/icon_hobbyOgFritid.png');
+    background-image: cloudURL('v1463138659', 'icons/icon_hobbyOgFritid_80.png');
 }
 
 div.c2-magazine-sidebar-tab .icon-husOgHage {
-    background-image: cloudURL('v1461313639', 'icons/icon_husOgHage.png');
+    background-image: cloudURL('v1463139119', 'icons/icon_husOgHage_80.png');
+}
+
+div.c2-magazine-sidebar-tab .icon-motor {
+    background-image: cloudURL('v1463139119', 'icons/icon_motor_80.png');
 }
 
 // Responsive layout for mobile
