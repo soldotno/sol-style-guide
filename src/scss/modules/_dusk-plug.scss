@@ -4,7 +4,7 @@
   '../settings/mixins';
 
 // Set border-box all over the place
-.dawn-plug {
+.dusk-plug {
   box-sizing: border-box;
 
   * {
@@ -12,7 +12,7 @@
   }
 }
 
-.dawn-plug {
+.dusk-plug {
   margin: 0 0 $verticalBase/2;
   padding: 0 $horizontalBase;
 
@@ -21,54 +21,63 @@
   flex-shrink: 0;
   flex-basis: calc(100% - #{2*$horizontalBase});
 
-  display: flex;
-  flex-direction: column;
-
   h1,h2,h3,h4 {
     line-height: 1.1em;
     color: $headingColor;
   }
 
   .plug-header {
-    order: 2;
-
+    border-top: #eeeeee solid 0.2rem;
     display: flex;
     flex-direction: row;
 
-    // @TODO Find a better hover indicator,
-    // then remove the media query
-    @media screen and (min-width:$largeWidth) {
-      &:hover {
-        text-decoration:underline;
-      }
+    .source {
+      flex: 1 0 auto;
+
+      display: flex;
+      padding: $verticalBase/2 $horizontalBase;
+      padding-left:0;
+
+      font-family: Georgia, serif;
+      font-size: 1.4rem;
+      color: #666;
     }
-  }
+    .logo {
+      display:block;
+      width: $verticalBase;
+      height: $verticalBase;
+      flex: 0 0 $verticalBase;
+      margin-right: $horizontalBase/2;
+    }
 
-  .source {
-    flex: 1 0 auto;
+    .publisher-meta {
+      flex: 1 1 auto;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+    }
 
-    display: flex;
-    padding: 0 $horizontalBase $verticalBase/2;
-    padding-left:0;
+    .name,
+    .ago {
+      font-size: 1.2rem;
+      height: 1.6rem;
+      line-height: $verticalBase;
 
-    font-family: Georgia, serif;
-    font-size: 1.4rem;
-    color: #666;
-  }
-  .logo {
-    display:block;
-    width: $verticalBase;
-    height: $verticalBase;
-    flex: 0 0 $verticalBase;
-    margin-right: $horizontalBase/2;
-  }
+    }
 
-  .publisher-name {
-    font-size: 1.3rem;
-    line-height: $verticalBase;
-    font-weight: bold;
+    .name {
+      font-size: 1.3rem;
+      color: #333;
+      font-weight: bold;
+      flex: 0 0 auto;
+      flex: 1 1 50%;
+    }
 
-    flex: 1 1 auto;
+    .ago {
+      color: #aaa;
+      flex: 1 1 50%;
+      text-align: right;
+    }
   }
 
   // Rename?
@@ -83,16 +92,6 @@
   .plug-link {
     display:block;
     color:#333;
-
-    // Steng
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 1.2rem;
-      background: white;
-      border-top: 0.2rem solid #eee;
-    }
 
     // @TODO Find a better hover indicator,
     // then remove the media query
@@ -151,10 +150,6 @@
   .headline {
     font-size:2.4rem;
     line-height: 3rem;
-
-    &:first-child {
-      padding-top: $verticalBase/2;
-    }
   }
 
   .lede {
@@ -186,22 +181,22 @@
 }
 
 @media (min-width: 481px) {
-  .dawn-plug {
+  .dusk-plug {
     margin: 0 0 $verticalBase;
 
-    /*
-    img.logo {
-      width: 3.6rem;
-      height: 3.6rem;
-      flex: 0 0 3.6rem;
-    }
-    */
+    .plug-header {
+      img.logo {
+        width: 3.6rem;
+        height: 3.6rem;
+        flex: 0 0 3.6rem;
+      }
 
-    .source:hover {
-      text-decoration:none;
+      .source:hover {
+        text-decoration:none;
 
-      .name {
-        text-decoration:underline;
+        .name {
+          text-decoration:underline;
+        }
       }
     }
 
@@ -227,12 +222,10 @@
     &.half {
       /* IE11 doesn't support calc() in flex shorthand */
       flex-basis: calc(50% - #{2*$horizontalBase});
-      // flex-basis: calc(41.75% - #{2*$horizontalBase});
     }
     &.third {
       /* IE11 doesn't support calc() in flex shorthand */
       flex-basis: calc(33.33% - #{2*$horizontalBase});
-      // flex-basis: calc(25.15% - #{2*$horizontalBase});
     }
   }
 
