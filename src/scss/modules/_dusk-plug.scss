@@ -1,0 +1,239 @@
+@import
+  '../settings/variables',
+  '../settings/colors',
+  '../settings/mixins';
+
+// Set border-box all over the place
+.dawn-plug {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.dawn-plug {
+  margin: 0 0 $verticalBase/2;
+  padding: 0 $horizontalBase;
+
+  /* IE11 doesn't support calc() in flex shorthand */
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: calc(100% - #{2*$horizontalBase});
+
+  display: flex;
+  flex-direction: column;
+
+  h1,h2,h3,h4 {
+    line-height: 1.1em;
+    color: $headingColor;
+  }
+
+  .plug-header {
+    order: 2;
+
+    display: flex;
+    flex-direction: row;
+
+    // @TODO Find a better hover indicator,
+    // then remove the media query
+    @media screen and (min-width:$largeWidth) {
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+
+  .source {
+    flex: 1 0 auto;
+
+    display: flex;
+    padding: 0 $horizontalBase $verticalBase/2;
+    padding-left:0;
+
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    color: #666;
+  }
+  .logo {
+    display:block;
+    width: $verticalBase;
+    height: $verticalBase;
+    flex: 0 0 $verticalBase;
+    margin-right: $horizontalBase/2;
+  }
+
+  .publisher-name {
+    font-size: 1.3rem;
+    line-height: $verticalBase;
+    font-weight: bold;
+
+    flex: 1 1 auto;
+  }
+
+  // Rename?
+  .header-title {
+    background: #000;
+    color:$whiteColor;
+    padding: $verticalBase/4 $horizontalBase;
+    font-size:1.6rem;
+    line-height: $verticalBase;
+  }
+
+  .plug-link {
+    display:block;
+    color:#333;
+
+    // Steng
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1.2rem;
+      background: white;
+      border-top: 0.2rem solid #eee;
+    }
+
+    // @TODO Find a better hover indicator,
+    // then remove the media query
+    @media screen and (min-width:$largeWidth) {
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+
+    &:active {
+      top:0;
+
+      .header-title,
+      .featured-image,
+      .kicker,
+      .headline {
+        position:relative;
+        top:1px;
+      }
+    }
+  }
+
+  .featured-image {
+    position: relative;
+    margin-bottom: $verticalBase/2;
+
+    img {
+      width:100%;
+    }
+
+    figcaption {
+      display: block;
+      background-color: $overlayColor;
+      color: $offwhiteColor;
+      font-size: 14px;
+      padding: $verticalBase/4 $horizontalBase;
+      line-height: $verticalBase;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .plug-link > img,
+  .headline,
+  .lede {
+    padding:0 0 $verticalBase/2;
+  }
+
+  .kicker {
+    font-size: 2.0rem;
+    font-weight: normal;
+    padding: $verticalBase/4 0;
+  }
+
+  .headline {
+    font-size:2.4rem;
+    line-height: 3rem;
+
+    &:first-child {
+      padding-top: $verticalBase/2;
+    }
+  }
+
+  .lede {
+    margin-bottom:0;
+  }
+
+  .related-articles {
+    dl {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+
+      dt {
+        color: #f10000;
+        font-weight: bold;
+        flex: 0 0 auto;
+      }
+
+      dd {
+        flex: 0 0 auto;
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: inside;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .dawn-plug {
+    margin: 0 0 $verticalBase;
+
+    /*
+    img.logo {
+      width: 3.6rem;
+      height: 3.6rem;
+      flex: 0 0 3.6rem;
+    }
+    */
+
+    .source:hover {
+      text-decoration:none;
+
+      .name {
+        text-decoration:underline;
+      }
+    }
+
+    .kicker {
+      font-size: 2.4rem;
+    }
+
+    .headline {
+      font-size: 3.6rem;
+      line-height: 4.0rem;
+    }
+
+    &.full {
+      .kicker {
+        font-size:3.2rem;
+      }
+
+      .headline {
+        font-size: 5rem;
+        line-height: 5.2rem;
+      }
+    }
+    &.half {
+      /* IE11 doesn't support calc() in flex shorthand */
+      flex-basis: calc(50% - #{2*$horizontalBase});
+      // flex-basis: calc(41.75% - #{2*$horizontalBase});
+    }
+    &.third {
+      /* IE11 doesn't support calc() in flex shorthand */
+      flex-basis: calc(33.33% - #{2*$horizontalBase});
+      // flex-basis: calc(25.15% - #{2*$horizontalBase});
+    }
+  }
+
+}
