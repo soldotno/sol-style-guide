@@ -39,6 +39,36 @@ $adMarkerSize: 1rem;
     }
 }
 
+.ad-fullscreen {
+  height: calc(100vh - 54px);
+  width: 100vw;
+  margin-bottom: $verticalBase*3/2 !important;
+
+  flex-basis: 100vw;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media (min-width: 1000px) {
+    margin-right: calc(( 100vw - 1008px) * -0.5 - -8px) !important;
+    margin-left: calc(( 100vw - 1008px) * -0.5 - 14px) !important;
+  }
+
+  > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip: rect(auto, auto, auto, auto);
+  }
+
+  > div iframe {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
 .ad-marker:before {
     margin-top: $verticalBase - $adMarkerSize;
     font-size: $adMarkerSize;
