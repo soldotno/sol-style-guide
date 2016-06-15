@@ -58,6 +58,11 @@ $adMarkerSize: 1rem;
     height: 100%;
     position: absolute;
     clip: rect(auto, auto, auto, auto);
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      clip: auto;
+      -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+    }
   }
 
   > div iframe {
