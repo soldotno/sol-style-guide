@@ -53,15 +53,6 @@ $adMarkerSize: 1rem;
     margin-left: calc(( 100vw - 1008px) * -0.5 - 14px) !important;
   }
 
-  > div, iframe {
-    display: none;
-
-  }
-
-  &.active > div, iframe {
-    display: block;
-  }
-
   > div {
     width: 100%;
     height: 100%;
