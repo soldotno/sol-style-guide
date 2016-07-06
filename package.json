@@ -18,7 +18,7 @@
   },
   "scripts": {
     "develop": "gulp develop",
-    "test": "./node_modules/gulp-eslint-style-checker/node_modules/.bin/eslint -c ./node_modules/gulp-eslint-style-checker/eslintrc.json **/*.js",
+    "test": "./node_modules/gulp-eslint-style-checker/node_modules/.bin/eslint -c ./node_modules/gulp-eslint-style-checker/eslintrc.json *.js src/**/*.js",
     "prestart": "gulp build",
     "start": "node start.js"
   },
