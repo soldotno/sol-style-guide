@@ -14,7 +14,7 @@
     "gulp-cssmin": "0.1.7",
     "gulp-eslint-style-checker": "4.0.1",
     "gulp-sass": "2.3.2",
-    "gulp-watch": "4.3.8",
+    "gulp-watch": "4.3.9",
     "serve-static": "1.11.1"
   },
   "scripts": {
