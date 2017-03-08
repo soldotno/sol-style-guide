@@ -1,4 +1,6 @@
 # SOL's style guide
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/soldotno/sol-style-guide.svg)](https://greenkeeper.io/)
 Providing a consistent visual profile across projects.
 
 http://sol-style-guide.herokuapp.com/sol-style-guide
